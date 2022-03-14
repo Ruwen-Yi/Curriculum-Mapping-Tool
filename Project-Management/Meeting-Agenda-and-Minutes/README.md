@@ -1,6 +1,6 @@
 For one client Meeting and at least one group meeting of each sprint.
 
-Remember to include informal lists of things to do, tasks etc.
+Remember to include informal lists of things to do, tasks etc at the end of Meeting Minutes.
 
 Example:
 
