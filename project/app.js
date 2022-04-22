@@ -2,6 +2,8 @@
 const express = require('express');
 const app = express();
 
+/* Import Mysql */
+
 /* Import routes for showing degree name */
 const degreeName = require('./degree-name/degree-name-routes');
 /* Import routes for showing degree structure */
