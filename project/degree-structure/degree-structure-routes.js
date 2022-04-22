@@ -8,8 +8,6 @@ const renderDegreeStructure = require('./degree-structure-controller');
 const router = express.Router();
 
 /* Specifiy what function will be used after accessing a route with a http request */
-// router.route('/:degreeID').get(getCoreCourses);
-// router.route('/:degreeID').get(getElectiveCourses);
 router.route('/:degreeID').get(renderDegreeStructure);
 
 /* Export router to be used by app.js */

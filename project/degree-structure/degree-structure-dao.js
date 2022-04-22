@@ -5,8 +5,8 @@ DegreeStructureDAO.getCoreCourses = (degreeID) => {
     return `search core courses of degree ${degreeID}`;
 }
 
-DegreeStructureDAO.getElectiveCourses(degreeID){
+DegreeStructureDAO.getElectoveCourses = (degreeID) => {
     return `search elective courses of degree ${degreeID}`;
 }
 
-export default DegreeStructureDAO;
+module.exports = {DegreeStructureDAO};
