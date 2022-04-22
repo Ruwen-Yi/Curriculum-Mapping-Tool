@@ -1,19 +1,11 @@
-/* Get core courses from the database */
-let courseData = {};
+/* Import DAO object which contains data access function */
+const { default: DegreeStructureDAO } = require("./degree-structure-dao");
 
-// const getCoreCourses = (req, res, next) => {
-//     let degreeID = req.params.degreeID;
-//     courseData.core = `Expect all core course of degree ${degreeID}`;
-// };
 
-// const getElectiveCourses = (req, res, next) => {
-//     let degreeID = req.query.degreeID;
-//     courseData.elective = `Expect all elective courses of degree ${degreeID}`;
-// };
-
+/* Get core courses from the database and then render them */
 const renderDegreeStructure = (req, res) => {
-    // getCoreCourses();
-    // getElectiveCourses();
+    let degreeStructure = {};
+    degreeStructure.core = DegreeStructureDAO.getCoreCourses();
     res.status(200).send(`Render Data: \n`);
 }
 
