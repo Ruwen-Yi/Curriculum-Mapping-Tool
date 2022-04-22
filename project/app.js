@@ -5,7 +5,7 @@ const app = express();
 /* Import Mysql */
 
 /* Import routes for showing degree name */
-const degreeName = require('./degree-name/degree-name-routes');
+const degreeName = require('./homepage-degree-name/degree-name-routes');
 /* Import routes for showing degree structure */
 const degreeStructure = require('./degree-structure/degree-structure-routes');
 
