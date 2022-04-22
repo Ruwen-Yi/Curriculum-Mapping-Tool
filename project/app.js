@@ -14,21 +14,12 @@ const degreeStructure = require('./degree-structure/degree-structure-routes');
 /* Set up parent routes for degree structure */
 app.use('/degree-structure', degreeStructure);
 
-/* Set up a server */
-// app.listen(5000, ()=>{
-//     console.log('Server is listening on port 5000...');
-// });
-
-
-
-
-
-
-/*  */
+/* ----------------------------------------------------------------------------------------------------------------------------------------------- */
 
 const mysql = require('mysql');
 const bodyParser = require("body-parser");
 const database = require('mime-db');
+
 
 app.set('view engine','ejs');
 app.set('views', `${__dirname}/views`);
@@ -60,23 +51,12 @@ mysqlConnection.connect((err) => {
 //use adelaide database
 mysqlConnection.query(`USE adelaide;`);
 
-
 // Set up server
 app.listen(5000, ()=>{
     console.log('Server is listening on port 5000...');
 });
-// Render
-app.get("/", function(req,res){
-    let qq= 'SELECT * FROM adelaide.content;'
-    mysqlConnection.query(qq, (err, info, fields) => {
-        if (!err){
-            var data =JSON.stringify(info);
-            data = JSON.parse(data);
-            console.log(data[1].degree);
-            res.render("main",{degreeContent:data});
-        }
-        else{
-            console.log(err);
-        }
-    })
-});
+
+module.exports = mysqlConnection;
+
+const renderDegree = require('./render');
+app.get("/", renderDegree)
