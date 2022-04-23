@@ -2,20 +2,6 @@
 const express = require('express');
 const app = express();
 
-/* Import routes for showing degree name */
-const degreeName = require('./homepage-degree-name/degree-name-routes');
-/* Import routes for showing degree structure */
-const degreeStructure = require('./degree-structure/degree-structure-routes');
-
-
-/* Set up parent routes for degreeName */
-//app.use('/', degreeName);
-
-/* Set up parent routes for degree structure */
-app.use('/degree-structure', degreeStructure);
-
-/* ----------------------------------------------------------------------------------------------------------------------------------------------- */
-
 const mysql = require('mysql');
 const bodyParser = require("body-parser");
 const database = require('mime-db');
@@ -28,10 +14,10 @@ app.use(bodyParser.urlencoded({
   extended: true
 }));
 
-// Used for sending the Json Data to Node API  
+/* Used for sending the Json Data to Node API   */
 app.use(express.json());
 
-// Connection String to Database  
+/* Connection String to Database */
 var mysqlConnection = mysql.createConnection({
     host: 'database-2.cwlp4i7l59rt.ap-southeast-2.rds.amazonaws.com',
     user: 'admin',
@@ -39,7 +25,7 @@ var mysqlConnection = mysql.createConnection({
     port: '3306'
 });
 
-// To check whether the connection is succeed for Failed while running the project in console.  
+/* To check whether the connection is succeed for Failed while running the project in console. */  
 mysqlConnection.connect((err) => {
     if (!err) {
         console.log("Db Connection Succeed");
@@ -47,16 +33,29 @@ mysqlConnection.connect((err) => {
         console.log("Db connect Failed \n Error :" + JSON.stringify(err, undefined, 2));
     }
 });
-
-//use adelaide database
+/* Use adelaide database */
 mysqlConnection.query(`USE adelaide;`);
 
-// Set up server
+/* Export database */
+module.exports = mysqlConnection;
+
+/* Set up server */
 app.listen(5000, ()=>{
     console.log('Server is listening on port 5000...');
 });
 
-module.exports = mysqlConnection;
+
+/* Import routes for showing degree name */
+const degreeName = require('./homepage-degree-name/degree-name-routes');
+/* Import routes for showing degree structure */
+const degreeStructure = require('./degree-structure/degree-structure-routes');
+
+
+/* Set up parent routes for degreeName */
+//app.use('/', degreeName);
+
+/* Set up parent routes for degree structure */
+app.use('/degree-structure', degreeStructure);
 
 const renderDegree = require('./render');
 app.get("/", renderDegree)

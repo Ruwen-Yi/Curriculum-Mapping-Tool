@@ -2,3 +2,7 @@
 ./node_modules
 
 ./DAO.js
+
+./render.js
+
+./homepage-degree-name/degree-name-dao.js

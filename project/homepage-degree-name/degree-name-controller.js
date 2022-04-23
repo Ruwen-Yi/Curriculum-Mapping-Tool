@@ -1,12 +1,20 @@
-/* Render ejs files */
+/* Access database*/
+const mysqlConnection = require('../app');
 
-/* Import DAO*/
-const getAllDegreeName = require('./degree-name-dao');
-
-/* Render degree names with data return from degree-name-dao.js */
+/* Access data and render degree names*/
 const renderAllDegreeName = (req, res) => {
-    let data = getAllDegreeName();
-    res.status(200).send(`Data ${data} comes from dao.js, and then render degree names in this page`);
+    let qq= 'SELECT * FROM adelaide.content;'
+    mysqlConnection.query(qq, (err, info, fields) => {
+        if (!err){
+            var data =JSON.stringify(info);
+            data = JSON.parse(data);
+            console.log(data[1].degree);
+            res.render("main",{degreeContent:data});
+        }
+        else{
+            console.log(err);
+        }
+    })
 };
 
 /* Export the function to be used by routes.js */
