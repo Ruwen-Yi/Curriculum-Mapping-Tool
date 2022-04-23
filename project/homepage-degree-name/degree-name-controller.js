@@ -9,7 +9,7 @@ const renderAllDegreeName = (req, res) => {
             var data =JSON.stringify(info);
             data = JSON.parse(data);
             console.log(data[1].degree);
-            res.render("main",{degreeContent:data});
+            res.render("../views/index.ejs",{degreeContent:data});
         }
         else{
             console.log(err);

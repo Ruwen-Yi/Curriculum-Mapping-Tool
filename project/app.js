@@ -57,5 +57,5 @@ const degreeStructure = require('./degree-structure/degree-structure-routes');
 /* Set up parent routes for degree structure */
 app.use('/degree-structure', degreeStructure);
 
-const renderDegree = require('./render');
-app.get("/", renderDegree)
+const renderAllDegreeName = require('./homepage-degree-name/degree-name-controller');
+app.get("/", renderAllDegreeName);
