@@ -2,6 +2,7 @@
 const express = require('express');
 const app = express();
 
+
 const mysql = require('mysql');
 const bodyParser = require("body-parser");
 const database = require('mime-db');
@@ -39,23 +40,19 @@ mysqlConnection.query(`USE adelaide;`);
 /* Export database */
 module.exports = mysqlConnection;
 
-/* Set up server */
-app.listen(5000, ()=>{
-    console.log('Server is listening on port 5000...');
-});
 
 
 /* Import routes for showing degree name */
 const degreeName = require('./homepage-degree-name/degree-name-routes');
+
 /* Import routes for showing degree structure */
 const degreeStructure = require('./degree-structure/degree-structure-routes');
 
-
-/* Set up parent routes for degreeName */
-//app.use('/', degreeName);
-
 /* Set up parent routes for degree structure */
+app.use("/", degreeName);
 app.use('/degree-structure', degreeStructure);
 
-const renderAllDegreeName = require('./homepage-degree-name/degree-name-controller');
-app.get("/", renderAllDegreeName);
+/* Set up server */
+app.listen(5000, ()=>{
+    console.log('Server is listening on port 5000...');
+});
