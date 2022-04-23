@@ -1,21 +1,14 @@
-/* Import DAO object which contains data access function */
-const { DegreeStructureDAO } = require("./degree-structure-dao");
+/* Access database*/
+const mysqlConnection = require('../app');
 
 /* Get core/elec courses from the database and then render them */
 const renderDegreeStructure = (req, res) => {
-    let degreeID = req.params.degreeID;
-
-    // We only have 6 degrees, any other attempts are invalid
-    if (degreeID < 0 || degreeID > 6)
-        return res.status(200).send(`Not exists`);
-
-    // Get core/elec courses by using functions in DAO
-    let degreeStructure = {};
-    degreeStructure.core = DegreeStructureDAO.getCoreCourses(degreeID);
-    degreeStructure.elec = DegreeStructureDAO.getElectoveCourses(degreeID);
+    let degreeName = req.params.degreeName;
+    degreeName = degreeName.split('-').join(' ');
+    // Search database[Unfinished]
 
     // Render data, according to your UI desing
-    res.status(200).send(`${degreeStructure.core} <br> ${degreeStructure.elec} <br> Render!!`);
+    res.status(200).send(`Find core & elec courses of ${degreeName} <br> <br> Render degree structure of ${degreeName}`);
 }
 
 module.exports = renderDegreeStructure;

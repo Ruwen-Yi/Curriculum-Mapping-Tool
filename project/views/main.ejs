@@ -40,7 +40,9 @@
       <img class="card-icon" src="https://image.ibb.co/cFV8mR/monitoring.png" alt="monitoring" >
       <h3 class="card-title"><%= degreeContent[i].degree %></h3>
       <p class="card-text"><%= degreeContent[i].content %></p>
-      <a class="card-link" href="#">Learn more</a>
+      
+      <% let degreeName = degreeContent[i].degree.split(" ").join("-"); %>
+      <a class="card-link" href="/degree-structure/<%= degreeName %>">Learn more</a>
       </div>
     </div> 
   

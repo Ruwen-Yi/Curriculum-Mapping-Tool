@@ -6,3 +6,5 @@
 ./render.js
 
 ./homepage-degree-name/degree-name-dao.js
+
+./degree-structure/degree-structure-dao.js
