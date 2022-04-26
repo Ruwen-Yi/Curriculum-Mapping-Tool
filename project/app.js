@@ -44,13 +44,15 @@ module.exports = mysqlConnection;
 
 /* Import routes for showing degree name */
 const degreeName = require('./homepage-degree-name/degree-name-routes');
-
 /* Import routes for showing degree structure */
 const degreeStructure = require('./degree-structure/degree-structure-routes');
+/* Import routes for searching functionality */
+const courseSearching = require('./search/search-course-route');
 
 /* Set up parent routes for degree structure */
-app.use("/", degreeName);
+app.use('/', degreeName);
 app.use('/degree-structure', degreeStructure);
+app.use('/search', courseSearching);
 
 /* Set up server */
 app.listen(5000, ()=>{
