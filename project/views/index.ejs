@@ -22,12 +22,19 @@
 
 <!--Banner-->
 <section class="banner">
-  <div class="container">   
-    <input id="searchBar" class="searchbar" type="text" placeholder="Search a course">
-  <a id="btnSearch" class="btn-search"><i class="fa fa-search"></i></a>
-    </div> 
+  <form action="/search">
+    <input id="searchBar" class="searchbar" type="text" name="course_name" placeholder="Search a course by course name">
+    <button id="btnSearch" class="btn-search"><i class="fa fa-search">Search</i></button>
+  </form>
+
+  <form action="/search">
+    <input id="searchBar" class="searchbar" type="text" name="major_name" placeholder="Search courses by major name">
+    <button id="btnSearch" class="btn-search"><i class="fa fa-search">Search</i></button>
+  </form>
+  
+  </div> 
     
-  </div>
+
   <img class="banner-image" src="https://preview.ibb.co/bMi5Y6/banner_img.png" alt="monitoring" >
 </section>
 
