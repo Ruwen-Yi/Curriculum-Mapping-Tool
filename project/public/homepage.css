@@ -54,6 +54,9 @@
 
 .homepage .card-row {
   align-items: center;
+  /* add wrap to make cards wrapped */
+  flex-wrap: wrap;
+
   display: flex;
   gap: 40px;
   justify-content: center;
@@ -91,7 +94,8 @@
   height: 28px;
   letter-spacing: 0;
   line-height: 28.0px;
-  white-space: nowrap;
+  /* to wrap your text, do not set white-space:nowrap */
+  /* white-space: nowrap; */
   width: 336px;
 }
 
