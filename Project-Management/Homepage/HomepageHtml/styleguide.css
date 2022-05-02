@@ -1,0 +1,103 @@
+:root { 
+  --black: #000000;
+  --cyprus: #053742;
+  --gun-powder: #3b3f5c;
+  --masala: #3d3d3d;
+  --mystic: #e0e6ed;
+  --rfh85d: #e8f0f2;
+  --white: #ffffff;
+  --wild-sand: #f2f4f7;
+ 
+  --font-size-l2: 24px;
+  --font-size-l3: 14px;
+  --font-size-m2: 20px;
+  --font-size-xs: 16px;
+  --font-size-xxl2: 60px;
+ 
+  --font-family-belleza: "Belleza", Helvetica;
+  --font-family-blinker: "Blinker", Helvetica;
+  --font-family-cabin: "Cabin", Helvetica;
+}
+.cabin-normal-gun-powder-16px {
+  color: var(--gun-powder);
+  font-family: var(--font-family-cabin);
+  font-size: var(--font-size-xs);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.blinker-bold-gun-powder-20px {
+  color: var(--gun-powder);
+  font-family: var(--font-family-blinker);
+  font-size: var(--font-size-m2);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.blinker-bold-cyprus-20px {
+  color: var(--cyprus);
+  font-family: var(--font-family-blinker);
+  font-size: var(--font-size-m2);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.blinker-light-aqua-squeeze-14px {
+  color: var(--rfh85d);
+  font-family: var(--font-family-blinker);
+  font-size: var(--font-size-l3);
+  font-style: normal;
+  font-weight: 300;
+}
+
+.belleza-normal-black-60px {
+  color: var(--black);
+  font-family: var(--font-family-belleza);
+  font-size: var(--font-size-xxl2);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.blinker-normal-black-24px {
+  color: var(--black);
+  font-family: var(--font-family-blinker);
+  font-size: var(--font-size-l2);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.blinker-light-black-20px {
+  color: var(--black);
+  font-family: var(--font-family-blinker);
+  font-size: var(--font-size-m2);
+  font-style: normal;
+  font-weight: 300;
+}
+
+.blinker-semi-bold-black-20px {
+  color: var(--black);
+  font-family: var(--font-family-blinker);
+  font-size: var(--font-size-m2);
+  font-style: normal;
+  font-weight: 600;
+}
+
+.blinker-semi-bold-white-20px {
+  color: var(--white);
+  font-family: var(--font-family-blinker);
+  font-size: var(--font-size-m2);
+  font-style: normal;
+  font-weight: 600;
+}
+
+.blinker-normal-aqua-squeeze-16px {
+  color: var(--rfh85d);
+  font-family: var(--font-family-blinker);
+  font-size: var(--font-size-xs);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.border-2px-mystic {
+  border: 2px solid var(--mystic);
+}
