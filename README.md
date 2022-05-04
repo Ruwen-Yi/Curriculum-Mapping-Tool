@@ -1,4 +1,5 @@
 # Team-07
+
 Team 7  Curriculum mapping tool
 
 This project will develop a tool to visualise the courses in the Computer Science curriculum, 
@@ -8,6 +9,7 @@ identify pathways and gaps.
 
 # File Structure
 
+```
 project/
 ├── app.js
 ├── degree-structure
@@ -27,3 +29,4 @@ project/
 │   └── search-course-route.js
 └── views
     └── index.ejs
+```
