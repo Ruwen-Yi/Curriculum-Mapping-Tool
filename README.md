@@ -77,8 +77,6 @@ Project-Management/
 
 
 ### Requirement Documentation
-[For details, check here]()
-
 Overview:
 ```
     Requirement 1: Focus on six computer science degrees [Finished] 
@@ -89,3 +87,18 @@ Overview:
     Requirement 6: Add, delete, and edit a course 
     Requirement 7: A list of all courses 
 ```
+[For details, check here]()
+
+### Contributions
+
+#### Week 2 Mileston
+
+#### Week 3 Mileston
+
+#### Week 4 Mileston
+
+#### Week 5 Mileston
+
+#### Week 6 Mileston
+
+#### Week 7 Mileston
