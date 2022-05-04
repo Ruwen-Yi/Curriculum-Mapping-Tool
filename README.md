@@ -1,13 +1,32 @@
-# Team-07
+# Team-07 Curriculum mapping tool
 
-Team 7  Curriculum mapping tool
+This project will develop a tool to visualise the courses in the Computer Science curriculum, identifying their connections, level, and degrees they are being taught in.
 
-This project will develop a tool to visualise the courses in the Computer Science curriculum, 
-identifying their connections, level, and degrees they are being taught in. The aim of the 
-tool is to provide an easy way for students and lecturers to visualise our degree offering, 
-identify pathways and gaps. 
+##### Client
 
-# File Structure
+Claudia Szabo
+
+##### Goal
+
+The aim of the tool is to provide an easy way for students and lecturers to visualise our degree offering, identify pathways and gaps. 
+
+##### Members:
+
+```
+1. Yuhao Wang     a1818938
+2. Ruwen YI       a1790940
+3. Ying Liao      a1812504
+4. Yingyu Wei     a1835541
+```
+
+##### Roles:
+
+```
+Back-end developers: Yuhao, Ruwen
+Front-end developers: Ying, Yingyu
+```
+
+##### File structure
 
 ```
 project/
@@ -49,3 +68,23 @@ Project-Management/
     ├── YingYu-Wei
     └── Yuhao-Wang
 ```
+
+##### Requirement Documentation
+
+[For details, check here]()
+
+Overview:
+
+- Requirement 1: Focus on six computer science degrees [Finished] 
+
+- Requirement 2: Required course information 
+
+- Requirement 3: Degree structure 
+
+- Requirement 4: Course relationships  
+
+- Requirement 5: A search functionality  
+
+- Requirement 6: Add, delete, and edit a course 
+
+- Requirement 7: A list of all courses 
