@@ -28,6 +28,8 @@ The aim of the tool is to provide an easy way for students and lecturers to visu
 ```
 Back-end developers: Yuhao, Ruwen
 Front-end developers: Ying, Yingyu
+Project Manager: Ying Liao
+Product Owner: Yingyu Wei
 ```
 
 
