@@ -30,3 +30,22 @@ project/
 └── views
     └── index.ejs
 ```
+
+```
+Project-Management/
+├── Business-Case-and-Project-Plan
+├── Design-Documentation
+├── Meeting-Agenda-and-Minutes
+│   ├── Sprint-01
+│   ├── Sprint-02
+│   ├── Sprint-03
+│   ├── Sprint-04
+│   └── Sprint-05
+├── Pitch
+├── Requirement-Documentation
+└── Timesheets
+    ├── Ruwen-YI
+    ├── Ying-Liao
+    ├── YingYu-Wei
+    └── Yuhao-Wang
+```
