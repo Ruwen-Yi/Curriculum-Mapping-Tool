@@ -87,7 +87,7 @@ Overview:
     Requirement 6: Add, delete, and edit a course 
     Requirement 7: A list of all courses 
 ```
-[For details, check here]()
+For details, [check here]()
 
 ### Contributions
 
