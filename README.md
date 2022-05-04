@@ -5,19 +5,16 @@ This project will develop a tool to visualise the courses in the Computer Scienc
 
 
 ### Client
-
 Claudia Szabo
 
 
 
 ### Goal
-
 The aim of the tool is to provide an easy way for students and lecturers to visualise our degree offering, identify pathways and gaps. 
 
 
 
 ### Members:
-
 ```
 1. Yuhao Wang     a1818938
 2. Ruwen YI       a1790940
@@ -28,7 +25,6 @@ The aim of the tool is to provide an easy way for students and lecturers to visu
 
 
 ### Roles:
-
 ```
 Back-end developers: Yuhao, Ruwen
 Front-end developers: Ying, Yingyu
@@ -37,7 +33,6 @@ Front-end developers: Ying, Yingyu
 
 
 ### File structure
-
 ```
 project/
 ├── app.js
@@ -82,7 +77,6 @@ Project-Management/
 
 
 ### Requirement Documentation
-
 [For details, check here]()
 
 Overview:
