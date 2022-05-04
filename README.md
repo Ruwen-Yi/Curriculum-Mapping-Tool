@@ -86,17 +86,12 @@ Project-Management/
 [For details, check here]()
 
 Overview:
-
-- Requirement 1: Focus on six computer science degrees [Finished] 
-
-- Requirement 2: Required course information 
-
-- Requirement 3: Degree structure 
-
-- Requirement 4: Course relationships  
-
-- Requirement 5: A search functionality  
-
-- Requirement 6: Add, delete, and edit a course 
-
-- Requirement 7: A list of all courses 
+```
+    Requirement 1: Focus on six computer science degrees [Finished] 
+    Requirement 2: Required course information 
+    Requirement 3: Degree structure 
+    Requirement 4: Course relationships  
+    Requirement 5: A search functionality  
+    Requirement 6: Add, delete, and edit a course 
+    Requirement 7: A list of all courses 
+```
