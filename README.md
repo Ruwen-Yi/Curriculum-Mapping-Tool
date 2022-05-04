@@ -2,15 +2,21 @@
 
 This project will develop a tool to visualise the courses in the Computer Science curriculum, identifying their connections, level, and degrees they are being taught in.
 
-##### Client
+
+
+### Client
 
 Claudia Szabo
 
-##### Goal
+
+
+### Goal
 
 The aim of the tool is to provide an easy way for students and lecturers to visualise our degree offering, identify pathways and gaps. 
 
-##### Members:
+
+
+### Members:
 
 ```
 1. Yuhao Wang     a1818938
@@ -19,14 +25,18 @@ The aim of the tool is to provide an easy way for students and lecturers to visu
 4. Yingyu Wei     a1835541
 ```
 
-##### Roles:
+
+
+### Roles:
 
 ```
 Back-end developers: Yuhao, Ruwen
 Front-end developers: Ying, Yingyu
 ```
 
-##### File structure
+
+
+### File structure
 
 ```
 project/
@@ -69,7 +79,9 @@ Project-Management/
     └── Yuhao-Wang
 ```
 
-##### Requirement Documentation
+
+
+### Requirement Documentation
 
 [For details, check here]()
 
