@@ -79,7 +79,7 @@ Project-Management/
 
 
 ### Requirement Documentation
-Overview:
+Overview: (For details, [check here]())
 ```
     Requirement 1: Focus on six computer science degrees [Finished] 
     Requirement 2: Required course information 
@@ -89,7 +89,7 @@ Overview:
     Requirement 6: Add, delete, and edit a course 
     Requirement 7: A list of all courses 
 ```
-For details, [check here]()
+
 
 
 
