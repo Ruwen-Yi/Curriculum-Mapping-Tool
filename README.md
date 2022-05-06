@@ -91,16 +91,12 @@ Overview:
 ```
 For details, [check here]()
 
-### Contributions
 
-#### Week 2 Mileston
 
-#### Week 3 Mileston
-
-#### Week 4 Mileston
-
-#### Week 5 Mileston
-
-#### Week 6 Mileston
-
-#### Week 7 Mileston
+### Languages and Tools
+```
+VERSION CONTROL:  Git, Github
+COMMUNICATION:    Discord, Microsoft Team, Email
+BACK       END:   EJS view engine, Node.js, Express, MYSQL
+FRONT      END:   CSS, HTML, Javascript
+```
