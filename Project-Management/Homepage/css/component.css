@@ -1,0 +1,3214 @@
+/* screen - component */
+
+.component {
+  background-color: var(--white);
+  height: 100vh;
+  margin: 0px;
+  min-height: 3216px;
+  min-width: 2222px;
+  mix-blend-mode: normal;
+  overflow: hidden;
+  overflow-x: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.component .drop-down-1DAUkX {
+  background-color: transparent;
+  height: 417px;
+  left: 1px;
+  position: absolute;
+  top: -5px;
+  width: 832px;
+}
+
+.component .nav-navigation-menu-1DAUkX {
+  align-items: center;
+  background-color: transparent;
+  display: flex;
+  gap: 16px;
+  justify-content: flex-start;
+  left: 1000px;
+  padding-bottom: 16px;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 16px;
+  position: absolute;
+  top: 54px;
+}
+
+.component .nav-list-item-jvEQEs {
+  align-items: center;
+  background-color: transparent;
+  display: flex;
+  gap: 10px;
+  justify-content: flex-start;
+  min-height: 39px;
+  min-width: 75px;
+  overflow: hidden;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  position: relative;
+}
+
+.component .label-xBxMau {
+  background-color: transparent;
+  color: #7b8db0;
+  font-family: var(--font-family-blinker);
+  font-size: var(--font-size-xxl);
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: center;
+  width: auto;
+}
+
+.component .nav-list-item-guxsYb {
+  align-items: center;
+  background-color: transparent;
+  display: flex;
+  gap: 10px;
+  justify-content: flex-start;
+  min-height: 39px;
+  min-width: 74px;
+  overflow: hidden;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  position: relative;
+}
+
+.component .label-3b7EML {
+  background-color: transparent;
+  color: #7b8db0;
+  font-family: var(--font-family-blinker);
+  font-size: var(--font-size-xxl);
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: center;
+  width: auto;
+}
+
+.component .card-1DAUkX {
+  align-items: flex-start;
+  background-color: var(--white);
+  border-radius: 11px;
+  box-shadow: 0px 7px 14px #d3dae2;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  justify-content: flex-start;
+  left: 54px;
+  mix-blend-mode: normal;
+  padding-bottom: 32px;
+  padding-left: 32px;
+  padding-right: 32px;
+  padding-top: 40px;
+  position: absolute;
+  top: 580px;
+  width: 400px;
+}
+
+.component .frame-1-Gq1IYe {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  justify-content: flex-start;
+  min-height: 32px;
+  position: relative;
+}
+
+.component .khan-academy-dEyzRK {
+  align-self: stretch;
+  background-color: transparent;
+  color: var(--gun-powder);
+  font-family: var(--font-family-blinker);
+  font-size: var(--font-size-xxxxl);
+  font-style: normal;
+  font-weight: 700;
+  height: 32px;
+  letter-spacing: 0.14px;
+  line-height: 32.0px;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: 336px;
+}
+
+.component .learn-for-free-about-Gq1IYe {
+  align-self: stretch;
+  background-color: transparent;
+  height: 78px;
+  letter-spacing: 0.14px;
+  line-height: 25.6px;
+  mix-blend-mode: normal;
+  opacity: 0.8;
+  position: relative;
+  text-align: left;
+  width: 336px;
+}
+
+.component .search-box-1DAUkX {
+  background-color: transparent;
+  height: 605px;
+  left: 588px;
+  position: absolute;
+  top: 582px;
+  width: 485px;
+}
+
+.component .search-box-tag-1DAUkX {
+  align-items: flex-start;
+  background-color: var(--white);
+  border: 2px solid #e8eaee;
+  border-radius: 4px;
+  display: flex;
+  gap: 4px;
+  height: 32px;
+  justify-content: flex-start;
+  left: 1357px;
+  mix-blend-mode: normal;
+  overflow: hidden;
+  padding-bottom: 8px;
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-top: 8px;
+  position: absolute;
+  top: 77px;
+}
+
+.component .this-is-a-tag-djdiDp {
+  background-color: transparent;
+  color: var(--gunsmoke);
+  font-family: var(--font-family-blinker);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  height: 16px;
+  letter-spacing: 0.00px;
+  line-height: 16px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: auto;
+}
+
+.component .taskcourse-card-2-1DAUkX {
+  align-items: center;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  justify-content: center;
+  left: 86px;
+  mix-blend-mode: normal;
+  position: absolute;
+  top: 1138px;
+  width: 305px;
+}
+
+.component .taskcard-2-KwkDBZ {
+  align-items: flex-start;
+  background-color: var(--white);
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px #00000040;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: flex-start;
+  min-height: 186px;
+  mix-blend-mode: normal;
+  overflow: hidden;
+  padding-bottom: 16px;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 16px;
+  position: relative;
+  width: 312px;
+}
+
+.component .frame-1-mygbrQ {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  justify-content: flex-start;
+  min-height: 40px;
+  position: relative;
+}
+
+.component .comp-sci-3001-2Pf1E1 {
+  align-self: stretch;
+  background-color: transparent;
+  height: 14px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  width: 280px;
+}
+
+.component .computer-networks-applications-2Pf1E1 {
+  align-self: stretch;
+  background-color: transparent;
+  height: 19px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  width: 280px;
+}
+
+.component .rectangle-1-mygbrQ {
+  align-self: stretch;
+  background-color: var(--gallery);
+  height: 1px;
+  mix-blend-mode: normal;
+  position: relative;
+}
+
+.component .frame-1-tl6uKF {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 93px;
+  justify-content: flex-start;
+  overflow: hidden;
+  position: relative;
+}
+
+.component .belongs-to-zhlQLS {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  gap: 4px;
+  justify-content: flex-start;
+  min-height: 36px;
+  min-width: 276px;
+  overflow: hidden;
+  position: relative;
+}
+
+.component .belongs-to-mXhWGG {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  width: auto;
+}
+
+.component .column-mXhWGG {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  justify-content: flex-start;
+  min-height: 36px;
+  min-width: 220px;
+  position: relative;
+}
+
+.component .first-NzJI4r {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  gap: 4px;
+  justify-content: flex-start;
+  min-height: 16px;
+  min-width: 147px;
+  position: relative;
+}
+
+.component .degree-qcxVV1 {
+  align-items: center;
+  background-color: var(--winter-wizard);
+  border-radius: 100px;
+  display: flex;
+  gap: 8px;
+  justify-content: flex-start;
+  min-height: 16px;
+  min-width: 147px;
+  mix-blend-mode: normal;
+  overflow: hidden;
+  padding-bottom: 2px;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 2px;
+  position: relative;
+}
+
+.component .low-EebZqg {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  width: auto;
+}
+
+.component .second-NzJI4r {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  gap: 4px;
+  justify-content: flex-start;
+  min-height: 16px;
+  min-width: 220px;
+  position: relative;
+}
+
+.component .degree-xxN54c {
+  align-items: center;
+  background-color: var(--winter-wizard);
+  border-radius: 100px;
+  display: flex;
+  gap: 8px;
+  justify-content: flex-start;
+  min-height: 16px;
+  min-width: 220px;
+  mix-blend-mode: normal;
+  overflow: hidden;
+  padding-bottom: 2px;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 2px;
+  position: relative;
+}
+
+.component .low-xbOrHY {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  width: auto;
+}
+
+.component .prerequisites-zhlQLS {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  gap: 4px;
+  justify-content: flex-start;
+  min-height: 24px;
+  overflow: hidden;
+  position: relative;
+  width: 302px;
+}
+
+.component .prerequisites-1bK0UC {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  width: auto;
+}
+
+.component .one-of-comp-sci-1103-1bK0UC {
+  background-color: transparent;
+  height: 24px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  width: 234px;
+}
+
+.component .incompatible-zhlQLS {
+  align-items: center;
+  background-color: transparent;
+  display: flex;
+  gap: 4px;
+  justify-content: flex-start;
+  min-height: 13px;
+  min-width: 126px;
+  overflow: hidden;
+  position: relative;
+}
+
+.component .due-date-xvmoKf {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  width: auto;
+}
+
+.component .due-date-0xJDkp {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  width: auto;
+}
+
+.component .tag-1DAUkX {
+  align-items: center;
+  background-color: #f5f8fa;
+  border-radius: 100px;
+  display: flex;
+  gap: 8px;
+  justify-content: flex-start;
+  left: 400px;
+  mix-blend-mode: normal;
+  overflow: hidden;
+  padding-bottom: 2px;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 2px;
+  position: absolute;
+  top: 874px;
+}
+
+.component .tag-YGJKhb {
+  background-color: transparent;
+  color: var(--fiord);
+  font-family: var(--font-family-roboto-bold);
+  font-size: var(--font-size-xl);
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  width: auto;
+}
+
+.component .prioritylow-1DAUkX {
+  align-items: center;
+  background-color: #39a2db1a;
+  border-radius: 100px;
+  display: flex;
+  gap: 8px;
+  justify-content: flex-start;
+  left: 336px;
+  mix-blend-mode: normal;
+  overflow: hidden;
+  padding-bottom: 2px;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 2px;
+  position: absolute;
+  top: 872px;
+}
+
+.component .low-gaBDAA {
+  background-color: transparent;
+  color: #56baf8;
+  font-family: var(--font-family-roboto-bold);
+  font-size: var(--font-size-xl);
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  width: auto;
+}
+
+.component .checkbox-1DAUkX {
+  background-color: transparent;
+  height: 163px;
+  left: 608px;
+  position: absolute;
+  top: 1262px;
+  width: 344px;
+}
+
+.component .app-top-1DAUkX {
+  align-items: center;
+  background-color: var(--cyprus-2);
+  display: flex;
+  gap: 10px;
+  height: 90px;
+  justify-content: flex-start;
+  left: 31px;
+  mix-blend-mode: normal;
+  overflow: hidden;
+  padding-left: 37px;
+  padding-right: 37px;
+  position: absolute;
+  top: 449px;
+  width: calc(100.00% - 1198px);
+}
+
+.component .curriculum-helper-mOxC5P {
+  background-color: transparent;
+  color: #f2f4f8;
+  font-family: var(--font-family-blinker);
+  font-size: var(--font-size-xxxxxl);
+  font-style: normal;
+  font-weight: 600;
+  height: 29px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: center;
+  width: auto;
+}
+
+.component .app-bottom-1DAUkX {
+  align-items: flex-start;
+  background-color: var(--cyprus-2);
+  display: flex;
+  gap: 10px;
+  justify-content: flex-start;
+  left: 1139px;
+  mix-blend-mode: normal;
+  overflow: hidden;
+  padding-bottom: 19px;
+  padding-left: 125px;
+  padding-right: 125px;
+  padding-top: 19px;
+  position: absolute;
+  top: 455px;
+  width: calc(100.00% - 1735px);
+}
+
+.component .frame-238-YxXqTB {
+  align-items: center;
+  background-color: transparent;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  min-height: 40px;
+  min-width: 231px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  position: relative;
+}
+
+.component .team_07-2022-all-rights-reserved-8xapYb {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: 19.6px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: auto;
+}
+
+.component .button-1DAUkX {
+  align-items: center;
+  background-color: var(--cyprus-2);
+  border-radius: 12px;
+  box-shadow: 0px 0px 10px #0000004c;
+  display: flex;
+  gap: 10px;
+  justify-content: flex-start;
+  left: 1517px;
+  mix-blend-mode: normal;
+  overflow: hidden;
+  padding-bottom: 24px;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-top: 24px;
+  position: absolute;
+  top: 76px;
+}
+
+.component .this-is-a-button-1EZK5H {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: 26px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: auto;
+}
+
+.component .tab-button-1DAUkX {
+  background-color: transparent;
+  height: 188px;
+  left: 1180px;
+  position: absolute;
+  top: 222px;
+  width: 512px;
+}
+
+.component .card-row-1DAUkX {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  gap: 40px;
+  justify-content: flex-start;
+  left: 78px;
+  position: absolute;
+  top: 1520px;
+}
+
+.component .card-full-card-EvvkWm {
+  align-items: flex-start;
+  background-color: var(--white);
+  border-radius: 12px;
+  box-shadow: 0px 12px 32px #0000000d , 0px 2px 4px #1b044c1a;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  justify-content: flex-start;
+  min-height: 381px;
+  mix-blend-mode: normal;
+  overflow: hidden;
+  position: relative;
+  width: 380px;
+}
+
+.component .image-zf5hST {
+  align-self: stretch;
+  background-color: transparent;
+  height: 300px;
+  mix-blend-mode: normal;
+  object-fit: cover;
+  position: relative;
+}
+
+.component .data-zf5hST {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  justify-content: flex-start;
+  min-height: 76px;
+  mix-blend-mode: normal;
+  padding-bottom: 16px;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-top: 16px;
+  position: relative;
+}
+
+.component .title-row-5MfeA8 {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  gap: 0px;
+  justify-content: flex-start;
+  min-height: 44px;
+  position: relative;
+}
+
+.component .name-FkC1qK {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: relative;
+  text-align: left;
+  width: auto;
+}
+
+.component .span0-hPNLzE {
+}
+
+.component .span1-hPNLzE {
+}
+
+.component .span2-hPNLzE {
+}
+
+.component .card-full-card-NS0hkI {
+  align-items: flex-start;
+  background-color: var(--white);
+  border-radius: 12px;
+  box-shadow: 0px 12px 32px #0000000d , 0px 2px 4px #1b044c1a;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  justify-content: flex-start;
+  min-height: 381px;
+  mix-blend-mode: normal;
+  overflow: hidden;
+  position: relative;
+  width: 380px;
+}
+
+.component .image-AiUij0 {
+  align-self: stretch;
+  background-color: transparent;
+  height: 300px;
+  mix-blend-mode: normal;
+  object-fit: cover;
+  position: relative;
+}
+
+.component .data-AiUij0 {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  justify-content: flex-start;
+  min-height: 76px;
+  mix-blend-mode: normal;
+  padding-bottom: 16px;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-top: 16px;
+  position: relative;
+}
+
+.component .title-row-uHQt5x {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  gap: 4px;
+  justify-content: flex-start;
+  min-height: 44px;
+  position: relative;
+}
+
+.component .name-QFy9sj {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: relative;
+  text-align: left;
+  width: auto;
+}
+
+.component .span0-pdd0RI {
+}
+
+.component .span1-pdd0RI {
+}
+
+.component .span2-pdd0RI {
+}
+
+.component .card-full-card-yQb0Wc {
+  align-items: flex-start;
+  background-color: var(--white);
+  border-radius: 12px;
+  box-shadow: 0px 12px 32px #0000000d , 0px 2px 4px #1b044c1a;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  justify-content: flex-start;
+  min-height: 381px;
+  min-width: 380px;
+  mix-blend-mode: normal;
+  overflow: hidden;
+  position: relative;
+}
+
+.component .image-53ftcs {
+  background-color: transparent;
+  height: 300px;
+  mix-blend-mode: normal;
+  object-fit: cover;
+  position: relative;
+  width: 380px;
+}
+
+.component .data-53ftcs {
+  align-items: flex-start;
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  justify-content: flex-start;
+  min-height: 76px;
+  mix-blend-mode: normal;
+  padding-bottom: 16px;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-top: 16px;
+  position: relative;
+  width: 380px;
+}
+
+.component .title-row-xnOIgw {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  gap: 0px;
+  justify-content: flex-start;
+  min-height: 44px;
+  position: relative;
+}
+
+.component .name-VuEmbk {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: relative;
+  text-align: left;
+  width: auto;
+}
+
+.component .span0-5WZqzz {
+}
+
+.component .span1-5WZqzz {
+}
+
+.component .span2-5WZqzz {
+}
+
+.component .card-full-card-1DAUkX {
+  align-items: flex-start;
+  background-color: var(--white);
+  border-radius: 12px;
+  box-shadow: 0px 12px 32px #0000000d , 0px 2px 4px #1b044c1a;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: flex-start;
+  left: 1270px;
+  mix-blend-mode: normal;
+  overflow: hidden;
+  position: absolute;
+  top: 1150px;
+  width: 380px;
+}
+
+.component .image-RVUNiR {
+  align-self: stretch;
+  background-color: transparent;
+  height: 300px;
+  mix-blend-mode: normal;
+  object-fit: cover;
+  position: relative;
+}
+
+.component .data-RVUNiR {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  justify-content: flex-start;
+  min-height: 76px;
+  mix-blend-mode: normal;
+  padding-bottom: 16px;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-top: 16px;
+  position: relative;
+}
+
+.component .title-row-opcGU4 {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  gap: 0px;
+  justify-content: flex-start;
+  min-height: 44px;
+  position: relative;
+}
+
+.component .name-YzFSLl {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: relative;
+  text-align: left;
+  width: auto;
+}
+
+.component .span0-7nuWpc {
+}
+
+.component .span1-7nuWpc {
+}
+
+.component .span2-7nuWpc {
+}
+
+.component .course-card-row-1DAUkX {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  gap: 40px;
+  justify-content: flex-start;
+  left: 78px;
+  mix-blend-mode: normal;
+  position: absolute;
+  top: 1949px;
+}
+
+.component .taskcourse-card-2-fe4VLU {
+  align-items: center;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  justify-content: center;
+  min-height: 186px;
+  min-width: 312px;
+  mix-blend-mode: normal;
+  position: relative;
+}
+
+.component .taskcard-2-g10L6n {
+  align-items: flex-start;
+  background-color: var(--white);
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px #00000040;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: flex-start;
+  min-height: 186px;
+  mix-blend-mode: normal;
+  overflow: hidden;
+  padding-bottom: 16px;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 16px;
+  position: relative;
+  width: 312px;
+}
+
+.component .frame-1-T8Ud0z {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  justify-content: flex-start;
+  min-height: 40px;
+  position: relative;
+}
+
+.component .comp-sci-3001-405Ulm {
+  align-self: stretch;
+  background-color: transparent;
+  height: 14px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  width: 280px;
+}
+
+.component .computer-networks-applications-405Ulm {
+  align-self: stretch;
+  background-color: transparent;
+  height: 19px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  width: 280px;
+}
+
+.component .rectangle-1-T8Ud0z {
+  align-self: stretch;
+  background-color: var(--gallery);
+  height: 1px;
+  mix-blend-mode: normal;
+  position: relative;
+}
+
+.component .frame-1-po24jK {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 93px;
+  justify-content: flex-start;
+  overflow: hidden;
+  position: relative;
+}
+
+.component .belongs-to-zszD3r {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  gap: 4px;
+  justify-content: flex-start;
+  min-height: 36px;
+  min-width: 276px;
+  overflow: hidden;
+  position: relative;
+}
+
+.component .belongs-to-rrRoaY {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  width: auto;
+}
+
+.component .column-rrRoaY {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  justify-content: flex-start;
+  min-height: 36px;
+  min-width: 220px;
+  position: relative;
+}
+
+.component .first-qrkxgB {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  gap: 4px;
+  justify-content: flex-start;
+  min-height: 16px;
+  min-width: 147px;
+  position: relative;
+}
+
+.component .degree-fD9rKB {
+  align-items: center;
+  background-color: var(--winter-wizard);
+  border-radius: 100px;
+  display: flex;
+  gap: 8px;
+  justify-content: flex-start;
+  min-height: 16px;
+  min-width: 147px;
+  mix-blend-mode: normal;
+  overflow: hidden;
+  padding-bottom: 2px;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 2px;
+  position: relative;
+}
+
+.component .low-sx1mGg {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  width: auto;
+}
+
+.component .second-qrkxgB {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  gap: 4px;
+  justify-content: flex-start;
+  min-height: 16px;
+  min-width: 220px;
+  position: relative;
+}
+
+.component .degree-vSbL7N {
+  align-items: center;
+  background-color: var(--winter-wizard);
+  border-radius: 100px;
+  display: flex;
+  gap: 8px;
+  justify-content: flex-start;
+  min-height: 16px;
+  min-width: 220px;
+  mix-blend-mode: normal;
+  overflow: hidden;
+  padding-bottom: 2px;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 2px;
+  position: relative;
+}
+
+.component .low-vxxwgH {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  width: auto;
+}
+
+.component .prerequisites-zszD3r {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  gap: 4px;
+  justify-content: flex-start;
+  min-height: 24px;
+  overflow: hidden;
+  position: relative;
+  width: 302px;
+}
+
+.component .prerequisites-8biO0k {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  width: auto;
+}
+
+.component .one-of-comp-sci-1103-8biO0k {
+  background-color: transparent;
+  height: 24px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  width: 234px;
+}
+
+.component .incompatible-zszD3r {
+  align-items: center;
+  background-color: transparent;
+  display: flex;
+  gap: 4px;
+  justify-content: flex-start;
+  min-height: 13px;
+  min-width: 126px;
+  overflow: hidden;
+  position: relative;
+}
+
+.component .due-date-kx9Kz4 {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  width: auto;
+}
+
+.component .due-date-MjDJvd {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  width: auto;
+}
+
+.component .taskcourse-card-2-xVixwR {
+  align-items: center;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  justify-content: center;
+  min-height: 186px;
+  mix-blend-mode: normal;
+  position: relative;
+  width: 307.5437316894531px;
+}
+
+.component .taskcard-2-xb4VzQ {
+  align-items: flex-start;
+  background-color: var(--white);
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px #00000040;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: flex-start;
+  min-height: 186px;
+  mix-blend-mode: normal;
+  overflow: hidden;
+  padding-bottom: 16px;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 16px;
+  position: relative;
+  width: 312px;
+}
+
+.component .frame-1-aNXUne {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  justify-content: flex-start;
+  min-height: 40px;
+  position: relative;
+}
+
+.component .comp-sci-3001-ljjbus {
+  align-self: stretch;
+  background-color: transparent;
+  height: 14px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  width: 280px;
+}
+
+.component .computer-networks-applications-ljjbus {
+  align-self: stretch;
+  background-color: transparent;
+  height: 19px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  width: 280px;
+}
+
+.component .rectangle-1-aNXUne {
+  align-self: stretch;
+  background-color: var(--gallery);
+  height: 1px;
+  mix-blend-mode: normal;
+  position: relative;
+}
+
+.component .frame-1-dM0Bmf {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 93px;
+  justify-content: flex-start;
+  overflow: hidden;
+  position: relative;
+}
+
+.component .belongs-to-h6uRKH {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  gap: 4px;
+  justify-content: flex-start;
+  min-height: 36px;
+  min-width: 276px;
+  overflow: hidden;
+  position: relative;
+}
+
+.component .belongs-to-nG4u9V {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  width: auto;
+}
+
+.component .column-nG4u9V {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  justify-content: flex-start;
+  min-height: 36px;
+  min-width: 220px;
+  position: relative;
+}
+
+.component .first-9Gb1tc {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  gap: 4px;
+  justify-content: flex-start;
+  min-height: 16px;
+  min-width: 147px;
+  position: relative;
+}
+
+.component .degree-F7PpsI {
+  align-items: center;
+  background-color: var(--winter-wizard);
+  border-radius: 100px;
+  display: flex;
+  gap: 8px;
+  justify-content: flex-start;
+  min-height: 16px;
+  min-width: 147px;
+  mix-blend-mode: normal;
+  overflow: hidden;
+  padding-bottom: 2px;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 2px;
+  position: relative;
+}
+
+.component .low-8M9Wn9 {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  width: auto;
+}
+
+.component .second-9Gb1tc {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  gap: 4px;
+  justify-content: flex-start;
+  min-height: 16px;
+  min-width: 220px;
+  position: relative;
+}
+
+.component .degree-2eakUg {
+  align-items: center;
+  background-color: var(--winter-wizard);
+  border-radius: 100px;
+  display: flex;
+  gap: 8px;
+  justify-content: flex-start;
+  min-height: 16px;
+  min-width: 220px;
+  mix-blend-mode: normal;
+  overflow: hidden;
+  padding-bottom: 2px;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 2px;
+  position: relative;
+}
+
+.component .low-MhfSq5 {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  width: auto;
+}
+
+.component .prerequisites-h6uRKH {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  gap: 4px;
+  justify-content: flex-start;
+  min-height: 24px;
+  overflow: hidden;
+  position: relative;
+  width: 302px;
+}
+
+.component .prerequisites-6w5rZD {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  width: auto;
+}
+
+.component .one-of-comp-sci-1103-6w5rZD {
+  background-color: transparent;
+  height: 24px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  width: 234px;
+}
+
+.component .incompatible-h6uRKH {
+  align-items: center;
+  background-color: transparent;
+  display: flex;
+  gap: 4px;
+  justify-content: flex-start;
+  min-height: 13px;
+  min-width: 126px;
+  overflow: hidden;
+  position: relative;
+}
+
+.component .due-date-WQsVxM {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  width: auto;
+}
+
+.component .due-date-jIM3iz {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  width: auto;
+}
+
+.component .taskcourse-card-2-cmuF6t {
+  align-items: center;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  justify-content: center;
+  min-height: 186px;
+  mix-blend-mode: normal;
+  position: relative;
+  width: 307.54376220703125px;
+}
+
+.component .taskcard-2-J51mOa {
+  align-items: flex-start;
+  background-color: var(--white);
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px #00000040;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: flex-start;
+  min-height: 186px;
+  mix-blend-mode: normal;
+  overflow: hidden;
+  padding-bottom: 16px;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 16px;
+  position: relative;
+  width: 312px;
+}
+
+.component .frame-1-oq5koP {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  justify-content: flex-start;
+  min-height: 40px;
+  position: relative;
+}
+
+.component .comp-sci-3001-L17kST {
+  align-self: stretch;
+  background-color: transparent;
+  height: 14px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  width: 280px;
+}
+
+.component .computer-networks-applications-L17kST {
+  align-self: stretch;
+  background-color: transparent;
+  height: 19px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  width: 280px;
+}
+
+.component .rectangle-1-oq5koP {
+  align-self: stretch;
+  background-color: var(--gallery);
+  height: 1px;
+  mix-blend-mode: normal;
+  position: relative;
+}
+
+.component .frame-1-9SyJlg {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 93px;
+  justify-content: flex-start;
+  overflow: hidden;
+  position: relative;
+}
+
+.component .belongs-to-WFFyx8 {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  gap: 4px;
+  justify-content: flex-start;
+  min-height: 36px;
+  min-width: 276px;
+  overflow: hidden;
+  position: relative;
+}
+
+.component .belongs-to-qMMALx {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  width: auto;
+}
+
+.component .column-qMMALx {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  justify-content: flex-start;
+  min-height: 36px;
+  min-width: 220px;
+  position: relative;
+}
+
+.component .first-xqLn68 {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  gap: 4px;
+  justify-content: flex-start;
+  min-height: 16px;
+  min-width: 147px;
+  position: relative;
+}
+
+.component .degree-dnnUkj {
+  align-items: center;
+  background-color: var(--winter-wizard);
+  border-radius: 100px;
+  display: flex;
+  gap: 8px;
+  justify-content: flex-start;
+  min-height: 16px;
+  min-width: 147px;
+  mix-blend-mode: normal;
+  overflow: hidden;
+  padding-bottom: 2px;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 2px;
+  position: relative;
+}
+
+.component .low-8eG7gI {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  width: auto;
+}
+
+.component .second-xqLn68 {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  gap: 4px;
+  justify-content: flex-start;
+  min-height: 16px;
+  min-width: 220px;
+  position: relative;
+}
+
+.component .degree-8eLEYz {
+  align-items: center;
+  background-color: var(--winter-wizard);
+  border-radius: 100px;
+  display: flex;
+  gap: 8px;
+  justify-content: flex-start;
+  min-height: 16px;
+  min-width: 220px;
+  mix-blend-mode: normal;
+  overflow: hidden;
+  padding-bottom: 2px;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 2px;
+  position: relative;
+}
+
+.component .low-Mexmx2 {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  width: auto;
+}
+
+.component .prerequisites-WFFyx8 {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  gap: 4px;
+  justify-content: flex-start;
+  min-height: 24px;
+  overflow: hidden;
+  position: relative;
+  width: 302px;
+}
+
+.component .prerequisites-hDDTxo {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  width: auto;
+}
+
+.component .one-of-comp-sci-1103-hDDTxo {
+  background-color: transparent;
+  height: 24px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  width: 234px;
+}
+
+.component .incompatible-WFFyx8 {
+  align-items: center;
+  background-color: transparent;
+  display: flex;
+  gap: 4px;
+  justify-content: flex-start;
+  min-height: 13px;
+  min-width: 126px;
+  overflow: hidden;
+  position: relative;
+}
+
+.component .due-date-iQR4Zv {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  width: auto;
+}
+
+.component .due-date-UcOaxr {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  width: auto;
+}
+
+.component .taskcourse-card-2-MSKI0K {
+  align-items: center;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  justify-content: center;
+  min-height: 186px;
+  mix-blend-mode: normal;
+  position: relative;
+  width: 307.5438232421875px;
+}
+
+.component .taskcard-2-fIqS7u {
+  align-items: flex-start;
+  background-color: var(--white);
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px #00000040;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: flex-start;
+  min-height: 186px;
+  mix-blend-mode: normal;
+  overflow: hidden;
+  padding-bottom: 16px;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 16px;
+  position: relative;
+  width: 312px;
+}
+
+.component .frame-1-ZsZfSL {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  justify-content: flex-start;
+  min-height: 40px;
+  position: relative;
+}
+
+.component .comp-sci-3001-G1KqMk {
+  align-self: stretch;
+  background-color: transparent;
+  height: 14px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  width: 280px;
+}
+
+.component .computer-networks-applications-G1KqMk {
+  align-self: stretch;
+  background-color: transparent;
+  height: 19px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  width: 280px;
+}
+
+.component .rectangle-1-ZsZfSL {
+  align-self: stretch;
+  background-color: var(--gallery);
+  height: 1px;
+  mix-blend-mode: normal;
+  position: relative;
+}
+
+.component .frame-1-Lx3dNx {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 93px;
+  justify-content: flex-start;
+  overflow: hidden;
+  position: relative;
+}
+
+.component .belongs-to-kxP6iv {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  gap: 4px;
+  justify-content: flex-start;
+  min-height: 36px;
+  min-width: 276px;
+  overflow: hidden;
+  position: relative;
+}
+
+.component .belongs-to-BfJDEV {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  width: auto;
+}
+
+.component .column-BfJDEV {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  justify-content: flex-start;
+  min-height: 36px;
+  min-width: 220px;
+  position: relative;
+}
+
+.component .first-3AJrIJ {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  gap: 4px;
+  justify-content: flex-start;
+  min-height: 16px;
+  min-width: 147px;
+  position: relative;
+}
+
+.component .degree-SPyDFs {
+  align-items: center;
+  background-color: var(--winter-wizard);
+  border-radius: 100px;
+  display: flex;
+  gap: 8px;
+  justify-content: flex-start;
+  min-height: 16px;
+  min-width: 147px;
+  mix-blend-mode: normal;
+  overflow: hidden;
+  padding-bottom: 2px;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 2px;
+  position: relative;
+}
+
+.component .low-LHfYLR {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  width: auto;
+}
+
+.component .second-3AJrIJ {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  gap: 4px;
+  justify-content: flex-start;
+  min-height: 16px;
+  min-width: 220px;
+  position: relative;
+}
+
+.component .degree-hImKkl {
+  align-items: center;
+  background-color: var(--winter-wizard);
+  border-radius: 100px;
+  display: flex;
+  gap: 8px;
+  justify-content: flex-start;
+  min-height: 16px;
+  min-width: 220px;
+  mix-blend-mode: normal;
+  overflow: hidden;
+  padding-bottom: 2px;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 2px;
+  position: relative;
+}
+
+.component .low-BZ3igz {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  width: auto;
+}
+
+.component .prerequisites-kxP6iv {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  gap: 4px;
+  justify-content: flex-start;
+  min-height: 24px;
+  overflow: hidden;
+  position: relative;
+  width: 302px;
+}
+
+.component .prerequisites-7XpCFL {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  width: auto;
+}
+
+.component .one-of-comp-sci-1103-7XpCFL {
+  background-color: transparent;
+  height: 24px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  width: 234px;
+}
+
+.component .incompatible-kxP6iv {
+  align-items: center;
+  background-color: transparent;
+  display: flex;
+  gap: 4px;
+  justify-content: flex-start;
+  min-height: 13px;
+  min-width: 126px;
+  overflow: hidden;
+  position: relative;
+}
+
+.component .due-date-6DV34u {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  width: auto;
+}
+
+.component .due-date-WxSFZi {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  width: auto;
+}
+
+.component .course-card-row-with-title-1DAUkX {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  justify-content: flex-start;
+  left: calc(50.00% - 772px);
+  position: absolute;
+  top: 2190px;
+  width: 1314px;
+}
+
+.component .title-row-nPxy0v {
+  align-items: center;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  justify-content: space-between;
+  min-height: 32px;
+  position: relative;
+}
+
+.component .core-courses-uqYAx3 {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  width: auto;
+}
+
+.component .see-all-uqYAx3 {
+  align-items: center;
+  background-color: transparent;
+  display: flex;
+  gap: 4px;
+  justify-content: flex-start;
+  min-height: 32px;
+  min-width: 60px;
+  position: relative;
+}
+
+.component .all-rQYeFD {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: right;
+  width: auto;
+}
+
+.component .x32-arrow-right-rQYeFD {
+  background-color: transparent;
+  height: 32px;
+  mix-blend-mode: normal;
+  position: relative;
+  width: 32px;
+}
+
+.component .course-card-row-nPxy0v {
+  align-items: center;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  gap: 30px;
+  height: 238px;
+  justify-content: center;
+  mix-blend-mode: normal;
+  position: relative;
+}
+
+.component .taskcourse-card-2-wkCUjd {
+  align-items: center;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  justify-content: center;
+  margin-left: -5.3156585693359375px;
+  min-height: 186px;
+  min-width: 312px;
+  mix-blend-mode: normal;
+  position: relative;
+}
+
+.component .taskcard-2-8q8SIK {
+  align-items: flex-start;
+  background-color: var(--white);
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px #00000040;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: flex-start;
+  min-height: 186px;
+  mix-blend-mode: normal;
+  overflow: hidden;
+  padding-bottom: 16px;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 16px;
+  position: relative;
+  width: 312px;
+}
+
+.component .frame-1-iEL3fF {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  justify-content: flex-start;
+  min-height: 40px;
+  position: relative;
+}
+
+.component .comp-sci-3001-B7zjPS {
+  align-self: stretch;
+  background-color: transparent;
+  height: 14px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  width: 280px;
+}
+
+.component .computer-networks-applications-B7zjPS {
+  align-self: stretch;
+  background-color: transparent;
+  height: 19px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  width: 280px;
+}
+
+.component .rectangle-1-iEL3fF {
+  align-self: stretch;
+  background-color: var(--gallery);
+  height: 1px;
+  mix-blend-mode: normal;
+  position: relative;
+}
+
+.component .frame-1-Xc7Wke {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 93px;
+  justify-content: flex-start;
+  overflow: hidden;
+  position: relative;
+}
+
+.component .belongs-to-pqBdQt {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  gap: 4px;
+  justify-content: flex-start;
+  min-height: 36px;
+  min-width: 276px;
+  overflow: hidden;
+  position: relative;
+}
+
+.component .belongs-to-WpUli9 {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  width: auto;
+}
+
+.component .column-WpUli9 {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  justify-content: flex-start;
+  min-height: 36px;
+  min-width: 220px;
+  position: relative;
+}
+
+.component .first-spfOEX {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  gap: 4px;
+  justify-content: flex-start;
+  min-height: 16px;
+  min-width: 147px;
+  position: relative;
+}
+
+.component .degree-zIpVn4 {
+  align-items: center;
+  background-color: var(--winter-wizard);
+  border-radius: 100px;
+  display: flex;
+  gap: 8px;
+  justify-content: flex-start;
+  min-height: 16px;
+  min-width: 147px;
+  mix-blend-mode: normal;
+  overflow: hidden;
+  padding-bottom: 2px;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 2px;
+  position: relative;
+}
+
+.component .low-E4rQDW {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  width: auto;
+}
+
+.component .second-spfOEX {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  gap: 4px;
+  justify-content: flex-start;
+  min-height: 16px;
+  min-width: 220px;
+  position: relative;
+}
+
+.component .degree-yowWQA {
+  align-items: center;
+  background-color: var(--winter-wizard);
+  border-radius: 100px;
+  display: flex;
+  gap: 8px;
+  justify-content: flex-start;
+  min-height: 16px;
+  min-width: 220px;
+  mix-blend-mode: normal;
+  overflow: hidden;
+  padding-bottom: 2px;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 2px;
+  position: relative;
+}
+
+.component .low-IIAmR5 {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  width: auto;
+}
+
+.component .prerequisites-pqBdQt {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  gap: 4px;
+  justify-content: flex-start;
+  min-height: 24px;
+  overflow: hidden;
+  position: relative;
+  width: 302px;
+}
+
+.component .prerequisites-vdJMvx {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  width: auto;
+}
+
+.component .one-of-comp-sci-1103-vdJMvx {
+  background-color: transparent;
+  height: 24px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  width: 234px;
+}
+
+.component .incompatible-pqBdQt {
+  align-items: center;
+  background-color: transparent;
+  display: flex;
+  gap: 4px;
+  justify-content: flex-start;
+  min-height: 13px;
+  min-width: 126px;
+  overflow: hidden;
+  position: relative;
+}
+
+.component .due-date-j9GW1y {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  width: auto;
+}
+
+.component .due-date-x8i72F {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  width: auto;
+}
+
+.component .taskcourse-card-2-Bc8luO {
+  align-items: center;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  justify-content: center;
+  min-height: 186px;
+  mix-blend-mode: normal;
+  position: relative;
+  width: 307.5437316894531px;
+}
+
+.component .taskcard-2-IfkArk {
+  align-items: flex-start;
+  background-color: var(--white);
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px #00000040;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: flex-start;
+  min-height: 186px;
+  mix-blend-mode: normal;
+  overflow: hidden;
+  padding-bottom: 16px;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 16px;
+  position: relative;
+  width: 312px;
+}
+
+.component .frame-1-SzBVo2 {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  justify-content: flex-start;
+  min-height: 40px;
+  position: relative;
+}
+
+.component .comp-sci-3001-iCxNxN {
+  align-self: stretch;
+  background-color: transparent;
+  height: 14px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  width: 280px;
+}
+
+.component .computer-networks-applications-iCxNxN {
+  align-self: stretch;
+  background-color: transparent;
+  height: 19px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  width: 280px;
+}
+
+.component .rectangle-1-SzBVo2 {
+  align-self: stretch;
+  background-color: var(--gallery);
+  height: 1px;
+  mix-blend-mode: normal;
+  position: relative;
+}
+
+.component .frame-1-pwrpFx {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 93px;
+  justify-content: flex-start;
+  overflow: hidden;
+  position: relative;
+}
+
+.component .belongs-to-rWjCRS {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  gap: 4px;
+  justify-content: flex-start;
+  min-height: 36px;
+  min-width: 276px;
+  overflow: hidden;
+  position: relative;
+}
+
+.component .belongs-to-RbZrcL {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  width: auto;
+}
+
+.component .column-RbZrcL {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  justify-content: flex-start;
+  min-height: 36px;
+  min-width: 220px;
+  position: relative;
+}
+
+.component .first-IRsOUV {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  gap: 4px;
+  justify-content: flex-start;
+  min-height: 16px;
+  min-width: 147px;
+  position: relative;
+}
+
+.component .degree-WG7Tyx {
+  align-items: center;
+  background-color: var(--winter-wizard);
+  border-radius: 100px;
+  display: flex;
+  gap: 8px;
+  justify-content: flex-start;
+  min-height: 16px;
+  min-width: 147px;
+  mix-blend-mode: normal;
+  overflow: hidden;
+  padding-bottom: 2px;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 2px;
+  position: relative;
+}
+
+.component .low-tNl7Ex {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  width: auto;
+}
+
+.component .second-IRsOUV {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  gap: 4px;
+  justify-content: flex-start;
+  min-height: 16px;
+  min-width: 220px;
+  position: relative;
+}
+
+.component .degree-AmxEKh {
+  align-items: center;
+  background-color: var(--winter-wizard);
+  border-radius: 100px;
+  display: flex;
+  gap: 8px;
+  justify-content: flex-start;
+  min-height: 16px;
+  min-width: 220px;
+  mix-blend-mode: normal;
+  overflow: hidden;
+  padding-bottom: 2px;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 2px;
+  position: relative;
+}
+
+.component .low-OWahyI {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  width: auto;
+}
+
+.component .prerequisites-rWjCRS {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  gap: 4px;
+  justify-content: flex-start;
+  min-height: 24px;
+  overflow: hidden;
+  position: relative;
+  width: 302px;
+}
+
+.component .prerequisites-xkhppN {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  width: auto;
+}
+
+.component .one-of-comp-sci-1103-xkhppN {
+  background-color: transparent;
+  height: 24px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  width: 234px;
+}
+
+.component .incompatible-rWjCRS {
+  align-items: center;
+  background-color: transparent;
+  display: flex;
+  gap: 4px;
+  justify-content: flex-start;
+  min-height: 13px;
+  min-width: 126px;
+  overflow: hidden;
+  position: relative;
+}
+
+.component .due-date-xDapAV {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  width: auto;
+}
+
+.component .due-date-6a0cf4 {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  width: auto;
+}
+
+.component .taskcourse-card-2-5xxW02 {
+  align-items: center;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  justify-content: center;
+  min-height: 186px;
+  mix-blend-mode: normal;
+  position: relative;
+  width: 307.54376220703125px;
+}
+
+.component .taskcard-2-s46A4w {
+  align-items: flex-start;
+  background-color: var(--white);
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px #00000040;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: flex-start;
+  min-height: 186px;
+  mix-blend-mode: normal;
+  overflow: hidden;
+  padding-bottom: 16px;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 16px;
+  position: relative;
+  width: 312px;
+}
+
+.component .frame-1-5UiWbj {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  justify-content: flex-start;
+  min-height: 40px;
+  position: relative;
+}
+
+.component .comp-sci-3001-uwDElF {
+  align-self: stretch;
+  background-color: transparent;
+  height: 14px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  width: 280px;
+}
+
+.component .computer-networks-applications-uwDElF {
+  align-self: stretch;
+  background-color: transparent;
+  height: 19px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  width: 280px;
+}
+
+.component .rectangle-1-5UiWbj {
+  align-self: stretch;
+  background-color: var(--gallery);
+  height: 1px;
+  mix-blend-mode: normal;
+  position: relative;
+}
+
+.component .frame-1-zOeuBh {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 93px;
+  justify-content: flex-start;
+  overflow: hidden;
+  position: relative;
+}
+
+.component .belongs-to-Gnx9FK {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  gap: 4px;
+  justify-content: flex-start;
+  min-height: 36px;
+  min-width: 276px;
+  overflow: hidden;
+  position: relative;
+}
+
+.component .belongs-to-MVWN06 {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  width: auto;
+}
+
+.component .column-MVWN06 {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  justify-content: flex-start;
+  min-height: 36px;
+  min-width: 220px;
+  position: relative;
+}
+
+.component .first-hGGqCQ {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  gap: 4px;
+  justify-content: flex-start;
+  min-height: 16px;
+  min-width: 147px;
+  position: relative;
+}
+
+.component .degree-K3xxjv {
+  align-items: center;
+  background-color: var(--winter-wizard);
+  border-radius: 100px;
+  display: flex;
+  gap: 8px;
+  justify-content: flex-start;
+  min-height: 16px;
+  min-width: 147px;
+  mix-blend-mode: normal;
+  overflow: hidden;
+  padding-bottom: 2px;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 2px;
+  position: relative;
+}
+
+.component .low-rfIPKd {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  width: auto;
+}
+
+.component .second-hGGqCQ {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  gap: 4px;
+  justify-content: flex-start;
+  min-height: 16px;
+  min-width: 220px;
+  position: relative;
+}
+
+.component .degree-RyrxmG {
+  align-items: center;
+  background-color: var(--winter-wizard);
+  border-radius: 100px;
+  display: flex;
+  gap: 8px;
+  justify-content: flex-start;
+  min-height: 16px;
+  min-width: 220px;
+  mix-blend-mode: normal;
+  overflow: hidden;
+  padding-bottom: 2px;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 2px;
+  position: relative;
+}
+
+.component .low-9qiY0Q {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  width: auto;
+}
+
+.component .prerequisites-Gnx9FK {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  gap: 4px;
+  justify-content: flex-start;
+  min-height: 24px;
+  overflow: hidden;
+  position: relative;
+  width: 302px;
+}
+
+.component .prerequisites-kO45dM {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  width: auto;
+}
+
+.component .one-of-comp-sci-1103-kO45dM {
+  background-color: transparent;
+  height: 24px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  width: 234px;
+}
+
+.component .incompatible-Gnx9FK {
+  align-items: center;
+  background-color: transparent;
+  display: flex;
+  gap: 4px;
+  justify-content: flex-start;
+  min-height: 13px;
+  min-width: 126px;
+  overflow: hidden;
+  position: relative;
+}
+
+.component .due-date-osDBKy {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  width: auto;
+}
+
+.component .due-date-b9maMh {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  width: auto;
+}
+
+.component .taskcourse-card-2-5J2EgR {
+  align-items: center;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  justify-content: center;
+  margin-right: -5.31561279296875px;
+  min-height: 186px;
+  mix-blend-mode: normal;
+  position: relative;
+  width: 307.5438232421875px;
+}
+
+.component .taskcard-2-BdiSz7 {
+  align-items: flex-start;
+  background-color: var(--white);
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px #00000040;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: flex-start;
+  min-height: 186px;
+  mix-blend-mode: normal;
+  overflow: hidden;
+  padding-bottom: 16px;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 16px;
+  position: relative;
+  width: 312px;
+}
+
+.component .frame-1-j5Bq8Q {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  justify-content: flex-start;
+  min-height: 40px;
+  position: relative;
+}
+
+.component .comp-sci-3001-hZ0ixW {
+  align-self: stretch;
+  background-color: transparent;
+  height: 14px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  margin-top: -1px;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  width: 280px;
+}
+
+.component .computer-networks-applications-hZ0ixW {
+  align-self: stretch;
+  background-color: transparent;
+  height: 19px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  width: 280px;
+}
+
+.component .rectangle-1-j5Bq8Q {
+  align-self: stretch;
+  background-color: var(--gallery);
+  height: 1px;
+  mix-blend-mode: normal;
+  position: relative;
+}
+
+.component .frame-1-bbL81w {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 93px;
+  justify-content: flex-start;
+  overflow: hidden;
+  position: relative;
+}
+
+.component .belongs-to-fxrFde {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  gap: 4px;
+  justify-content: flex-start;
+  min-height: 36px;
+  min-width: 276px;
+  overflow: hidden;
+  position: relative;
+}
+
+.component .belongs-to-l9laYH {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  width: auto;
+}
+
+.component .column-l9laYH {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  justify-content: flex-start;
+  min-height: 36px;
+  min-width: 220px;
+  position: relative;
+}
+
+.component .first-T5dHsu {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  gap: 4px;
+  justify-content: flex-start;
+  min-height: 16px;
+  min-width: 147px;
+  position: relative;
+}
+
+.component .degree-6sjrFq {
+  align-items: center;
+  background-color: var(--winter-wizard);
+  border-radius: 100px;
+  display: flex;
+  gap: 8px;
+  justify-content: flex-start;
+  min-height: 16px;
+  min-width: 147px;
+  mix-blend-mode: normal;
+  overflow: hidden;
+  padding-bottom: 2px;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 2px;
+  position: relative;
+}
+
+.component .low-1NWHbs {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  width: auto;
+}
+
+.component .second-T5dHsu {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  gap: 4px;
+  justify-content: flex-start;
+  min-height: 16px;
+  min-width: 220px;
+  position: relative;
+}
+
+.component .degree-3mQ1GA {
+  align-items: center;
+  background-color: var(--winter-wizard);
+  border-radius: 100px;
+  display: flex;
+  gap: 8px;
+  justify-content: flex-start;
+  min-height: 16px;
+  min-width: 220px;
+  mix-blend-mode: normal;
+  overflow: hidden;
+  padding-bottom: 2px;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 2px;
+  position: relative;
+}
+
+.component .low-KyV8oQ {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  width: auto;
+}
+
+.component .prerequisites-fxrFde {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  gap: 4px;
+  justify-content: flex-start;
+  min-height: 24px;
+  overflow: hidden;
+  position: relative;
+  width: 302px;
+}
+
+.component .prerequisites-MpavJT {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  width: auto;
+}
+
+.component .one-of-comp-sci-1103-MpavJT {
+  background-color: transparent;
+  height: 24px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  width: 234px;
+}
+
+.component .incompatible-fxrFde {
+  align-items: center;
+  background-color: transparent;
+  display: flex;
+  gap: 4px;
+  justify-content: flex-start;
+  min-height: 13px;
+  min-width: 126px;
+  overflow: hidden;
+  position: relative;
+}
+
+.component .due-date-yffx2c {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  width: auto;
+}
+
+.component .due-date-1ZtWjU {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  mix-blend-mode: normal;
+  position: relative;
+  text-align: left;
+  width: auto;
+}
+
+.component .button-raised-filled-1DAUkX {
+  background-color: transparent;
+  border-radius: 4px;
+  height: 36px;
+  left: 1998px;
+  mix-blend-mode: normal;
+  position: absolute;
+  top: 698px;
+  width: 122px;
+}
+
+.button-raised-filled-1DAUkX {
+  height: auto !important;
+  width: auto !important;
+}
