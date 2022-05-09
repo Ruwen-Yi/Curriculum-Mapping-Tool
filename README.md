@@ -79,7 +79,7 @@ Project-Management/
 
 
 ### Requirement Documentation
-Overview: (For details, [check here]())
+Overview: (For details, [check here](https://uao365-my.sharepoint.com/:w:/g/personal/a1812504_adelaide_edu_au/ETe1OxF8f-BGgkDxHUQxRGMBsODAfC_TF3_ALao0pbYzhg?e=lrIoTV))
 ```
     Requirement 1: Focus on six computer science degrees [Finished] 
     Requirement 2: Required course information 
