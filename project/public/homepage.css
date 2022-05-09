@@ -1,0 +1,515 @@
+/* screen - homepage */
+
+.homepage {
+  align-items: flex-start;
+  background-color: var(--white);
+  display: flex;
+  height: 1128px;
+  overflow: hidden;
+  width: 1440px;
+}
+
+.homepage .overlap-group1 {
+  height: 1077px;
+  margin-left: -5px;
+  margin-top: 87px;
+  position: relative;
+  width: 1461px;
+  z-index: 1;
+}
+
+.homepage .body {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  height: 675px;
+  left: 5px;
+  position: absolute;
+  top: 402px;
+  width: 1440px;
+}
+
+.homepage .body-1 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  min-height: 1px;
+  min-width: 1441px;
+}
+
+.homepage .cards {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+  height: 1px;
+  padding-bottom: 40px;
+  padding-left: 64px;
+  padding-right: 64px;
+  padding-top: 60px;
+  width: 1441px;
+}
+
+.homepage .card-row {
+  align-items: center;
+  /* add wrap to make cards wrapped */
+  flex-wrap: wrap;
+
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  min-height: 206px;
+  min-width: 1280px;
+}
+
+.homepage .card {
+  align-items: flex-start;
+  background-color: var(--white);
+  border-radius: 11px;
+  box-shadow: 0px 7px 14px #d3dae2;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  min-height: 202px;
+  padding-bottom: 32px;
+  padding-left: 32px;
+  padding-right: 32px;
+  padding-top: 40px;
+  width: 400px;
+}
+
+.homepage .frame-1 {
+  align-items: flex-start;
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-height: 28px;
+}
+
+.homepage .khan-academy {
+  align-self: stretch;
+  height: 28px;
+  letter-spacing: 0;
+  line-height: 28.0px;
+  /* to wrap your text, do not set white-space:nowrap */
+  /* white-space: nowrap; */
+  width: 336px;
+}
+
+.homepage .learn-for-free-about {
+  align-self: stretch;
+  height: 78px;
+  letter-spacing: 0.14px;
+  line-height: 25.6px;
+  opacity: 0.8;
+  width: 336px;
+}
+
+.homepage .card-2 {
+  align-items: flex-start;
+  background-color: var(--white);
+  border-radius: 11px;
+  box-shadow: 0px 7px 14px #d3dae2;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  min-height: 206px;
+  padding-bottom: 32px;
+  padding-left: 32px;
+  padding-right: 32px;
+  padding-top: 40px;
+  width: 400px;
+}
+
+.homepage .frame-1-1 {
+  align-items: flex-start;
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-height: 32px;
+}
+
+.homepage .khan-academy-1 {
+  align-self: stretch;
+  height: 32px;
+  letter-spacing: 0.14px;
+  line-height: 32.0px;
+  white-space: nowrap;
+  width: 336px;
+}
+
+.homepage .card-row-1 {
+  align-items: center;
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  margin-bottom: -578px;
+  min-height: 238px;
+  min-width: 1280px;
+}
+
+.homepage .card-1 {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: var(--white);
+  border-radius: 11px;
+  box-shadow: 0px 7px 14px #d3dae2;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding-bottom: 32px;
+  padding-left: 32px;
+  padding-right: 32px;
+  padding-top: 40px;
+  width: 400px;
+}
+
+.homepage .card-3 {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: var(--white);
+  border-radius: 11px;
+  box-shadow: 0px 7px 14px #d3dae2;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  min-width: 400px;
+  padding-bottom: 32px;
+  padding-left: 32px;
+  padding-right: 32px;
+  padding-top: 40px;
+}
+
+.homepage .frame-1-2 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-height: 64px;
+  width: 336px;
+}
+
+.homepage .khan-academy-2 {
+  align-self: stretch;
+  height: 64px;
+  letter-spacing: 0.14px;
+  line-height: 32.0px;
+  width: 336px;
+}
+
+.homepage .desktop-footer {
+  align-items: center;
+  background-color: var(--cyprus);
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+  height: 48px;
+  left: 0;
+  padding-bottom: 16px;
+  padding-top: 16px;
+  position: absolute;
+  top: 993px;
+  width: 1461px;
+}
+
+.homepage .bottom {
+  align-items: flex-end;
+  align-self: stretch;
+  display: flex;
+  flex: 1;
+  gap: 0;
+  justify-content: center;
+  padding-bottom: 12px;
+  padding-left: 120px;
+  padding-right: 120px;
+  padding-top: 12px;
+}
+
+.homepage .copyright {
+  height: 20px;
+  letter-spacing: 0;
+  line-height: 19.6px;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.homepage .overlap-group {
+  align-items: flex-start;
+  background-image: url(https://anima-uploads.s3.amazonaws.com/projects/626ae7916ff5cd6d9202df32/releases/626dbcfca9c75c624334b3de/img/hero@1x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  display: flex;
+  height: 502px;
+  justify-content: flex-end;
+  left: 5px;
+  min-width: 1440px;
+  padding: 8px 65px;
+  position: absolute;
+  top: 0;
+}
+
+.homepage .head {
+  align-items: center;
+  display: flex;
+  gap: 0;
+  height: 413px;
+}
+
+.homepage .drop-down {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  min-height: 370px;
+  padding: 20.5px 0;
+  width: 788px;
+}
+
+.homepage .title-and-slogan {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.homepage .title {
+  align-items: flex-start;
+  gap: 10px;
+  min-height: 89px;
+  min-width: 759px;
+  opacity: 0;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  transform: translate(0, 25px);
+}
+
+.homepage .title.animate-enter {
+  animation: animate-enter-frames 0.20s ease-in-out 0.00s 1 normal forwards;
+  opacity: 0;
+  transform: translate(0, 25px);
+}
+
+@keyframes animate-enter-frames {
+  from{opacity: 0;
+transform: translate(0, 25px);
+}
+to{opacity: 1;
+transform: translate(0,0);
+}
+}
+
+.homepage .make-your-coordination-easier {
+  -webkit-text-stroke: 0.6px var(--masala);
+  letter-spacing: 0;
+  margin-left: -0.6px;
+}
+
+.homepage .description {
+  align-items: flex-start;
+  display: flex;
+  gap: 10px;
+  min-height: 50px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  width: 744px;
+}
+
+.homepage .browse-degree-conten {
+  letter-spacing: 0.72px;
+  line-height: 30px;
+  margin-right: -6px;
+  white-space: nowrap;
+}
+
+.homepage .flex-row {
+  align-items: center;
+  align-self: flex-end;
+  display: flex;
+  height: 74px;
+  margin-top: 72px;
+  min-width: 764px;
+}
+
+.homepage .search-box {
+  align-items: flex-start;
+  background-color: var(--wild-sand);
+  border-radius: 12px;
+  display: flex;
+  gap: 10px;
+  overflow: hidden;
+  padding-bottom: 24px;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-top: 24px;
+  width: 447px;
+}
+
+.homepage .search-icon {
+  align-items: flex-start;
+  display: flex;
+  height: 25px;
+  min-width: 24px;
+}
+
+.homepage .icon-search {
+  height: 24px;
+  margin-top: -0.01px;
+  width: 23px;
+}
+
+.homepage .article-name-or-keywords {
+  height: 26px;
+  letter-spacing: 0;
+  line-height: 26px;
+  margin-right: -195px;
+  white-space: nowrap;
+}
+
+.homepage .drop-down-1 {
+  align-items: center;
+  background-image: url(https://anima-uploads.s3.amazonaws.com/projects/626ae7916ff5cd6d9202df32/releases/626dbcfca9c75c624334b3de/img/rectangle-5@2x.png);
+  background-size: 100% 100%;
+  cursor: pointer;
+  display: flex;
+  height: 68px;
+  justify-content: flex-end;
+  margin-left: 16px;
+  min-width: 180px;
+  padding: 20px 18.1px;
+}
+
+.homepage .all-categories {
+  align-self: flex-end;
+  height: 26px;
+  letter-spacing: 0;
+  line-height: 26px;
+  white-space: nowrap;
+  width: 118px;
+}
+
+.homepage .caret {
+  height: 9px;
+  margin-left: 6px;
+  margin-top: 6.76px;
+  width: 15px;
+}
+
+.homepage .button {
+  align-items: center;
+  background-color: var(--cyprus);
+  border-radius: 12px;
+  display: flex;
+  gap: 10px;
+  margin-left: 16px;
+  overflow: hidden;
+  padding-bottom: 24px;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-top: 24px;
+}
+
+.homepage .search {
+  letter-spacing: 0;
+  line-height: 26px;
+  white-space: nowrap;
+}
+
+.homepage .version-control-bro-1 {
+  align-items: flex-end;
+  display: flex;
+  height: 502px;
+  justify-content: flex-end;
+  min-width: 521px;
+  padding: 46.5px 0;
+}
+
+.homepage .version-control-bro-1-1 {
+  height: 408px;
+  object-fit: cover;
+  width: 423px;
+}
+
+.homepage .desktop-full {
+  align-items: center;
+  background-color: var(--cyprus);
+  display: flex;
+  justify-content: space-between;
+  left: 0;
+  padding-bottom: 8px;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-top: 8px;
+  position: fixed;
+  top: 0;
+  width: 1440px;
+  z-index: 2;
+}
+
+.homepage .curriculum-helper {
+  color: var(--rfh85d);
+  font-family: var(--font-family-blinker);
+  font-size: var(--font-size-l2);
+  font-weight: 800;
+  height: 29px;
+  letter-spacing: 0;
+  text-align: center;
+  width: 248px;
+}
+
+.homepage .nav-navigation-menu {
+  align-items: center;
+  display: flex;
+  gap: 16px;
+  justify-content: flex-end;
+  min-height: 71px;
+  min-width: 197px;
+  padding-bottom: 16px;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 16px;
+}
+
+.homepage .nav-list-item {
+  align-items: center;
+  display: flex;
+  gap: 10px;
+  min-height: 39px;
+  min-width: 75px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+}
+
+.homepage .label {
+  color: var(--white);
+  font-family: var(--font-family-blinker);
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  letter-spacing: 0;
+  text-align: center;
+}
+
+.homepage .nav-list-item-1 {
+  align-items: center;
+  display: flex;
+  gap: 10px;
+  min-height: 39px;
+  min-width: 74px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+}
+
+.homepage .label-1 {
+  letter-spacing: 0;
+  text-align: center;
+}
