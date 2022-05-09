@@ -59,7 +59,10 @@ project/
 
 ```
 Project-Management/
-├── Business-Case-and-Project-Plan
+├── Archived-Assignments
+│   ├── 1. Pitch
+│   ├── 2. Business-Case-and-Project-Plan
+│   ├── 3. Milestone1-Report
 ├── Design-Documentation
 ├── Meeting-Agenda-and-Minutes
 │   ├── Sprint-01
@@ -67,7 +70,6 @@ Project-Management/
 │   ├── Sprint-03
 │   ├── Sprint-04
 │   └── Sprint-05
-├── Pitch
 ├── Requirement-Documentation
 └── Timesheets
     ├── Ruwen-YI
