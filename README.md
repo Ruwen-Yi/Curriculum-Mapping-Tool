@@ -67,8 +67,8 @@ Project-Management/
 │   ├── 1. Wireframe-Design
 │   ├── 2. Prototype-Design
 │   ├── 3. Design-System
-│   ├── 4.Database-Structure
-│   ├── 5.Software-Architecture
+│   ├── 4. Database-Structure
+│   ├── 5. Software-Architecture
 ├── Meeting-Agenda-and-Minutes
 │   ├── Sprint-01
 │   ├── Sprint-02
