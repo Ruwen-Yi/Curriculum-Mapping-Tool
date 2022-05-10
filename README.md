@@ -64,6 +64,11 @@ Project-Management/
 │   ├── 2. Business-Case-and-Project-Plan
 │   ├── 3. Milestone1-Report
 ├── Design-Documentation
+│   ├── 1. Wireframe-Design
+│   ├── 2. Prototype-Design
+│   ├── 3. Design-System
+│   ├── 4.Database-Structure
+│   ├── 5.Software-Architecture
 ├── Meeting-Agenda-and-Minutes
 │   ├── Sprint-01
 │   ├── Sprint-02
