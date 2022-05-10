@@ -5,3 +5,9 @@ Current need to be fixed:
 - [ ]  the static page jump to degree-course page
 - [ ]  auto-card (like last time shown by Yuhao)
 - [ ]  the format (color and font) of drop-down
+
+Update at 23:21 of 10/05, version 1.0.1
+  - add homepage-course.html
+  - add homepage-course.css, styleguide-hpcs.css,global-hpcs.css
+  
+  Didn't change the previous code because I know Yuhao is modifing the search bar. Will combine the styleguide and global file later.
