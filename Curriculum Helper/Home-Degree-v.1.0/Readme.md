@@ -11,3 +11,8 @@ Update at 23:21 of 10/05, version 1.0.1
   - add homepage-course.css, styleguide-hpcs.css,global-hpcs.css
   
   Didn't change the previous code because I know Yuhao is modifing the search bar. Will combine the styleguide and global file later.
+  
+Update at 22:09 of 11/05, version 1.0.2
+  - add degree-structure-page.html
+  - add degree-structure-page.css, styleguide-dsp.css,global-dsp.css to css/
+  - add vector@2x.png to img/
