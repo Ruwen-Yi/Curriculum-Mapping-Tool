@@ -1,0 +1,481 @@
+/* Variables */
+
+:root {
+    --black: rgba(0, 0, 0, 1);
+    --cyprus: rgba(5, 55, 66, 0.698);
+    --cyprus2: rgba(5, 55, 66, 1);
+    --pacific-blue-2: rgba(13, 171, 193, 1);
+    --pacific-blue: rgba(14, 172, 193, 0.102);
+    --moonstone: rgba(57, 162, 219, 1);
+    --gun-powder: rgba(59, 63, 92, 1);
+    --masala: rgba(61, 61, 61, 1);
+    --fiord: rgba(69, 82, 102, 1);
+    --royal-blue: rgba(96, 93, 236, 1);
+    --storm-gray: rgba(109, 115, 145, 1);
+    --storm-gray-2: rgba(110, 116, 145, 1);
+    --wild-blue-yonder: rgba(123, 141, 176, 1);
+    --gunsmoke: rgba(128, 135, 143, 1);
+    --winter-wizard: rgba(162, 219, 250, 0.251);
+    --winter-wizard2: rgba(162, 219, 250, 1);
+    --mystic: rgba(224, 230, 237, 1);
+    --rfh85d: rgba(232, 240, 242, 1);
+    --gallery: rgba(238, 238, 238, 1);
+    --wild-sand: rgba(242, 244, 247, 1);
+    --whisper: rgba(245, 245, 250, 1);
+    --white: rgba(255, 255, 255, 1);
+
+    --font-size-s: 18px;
+    --font-size-m: 10px;
+    --font-size-l: 11px;
+    --font-size-xxxxl: 36px;
+    --font-size-m3: 12px;
+    --font-size-l3: 14px;
+    --font-size-m2: 20px;
+    --font-size-l2: 24px;
+    --font-size-xs2: 16px;
+    --font-size-xl2: 32px;
+    --font-size-xxl2: 60px;
+
+    --font-family-belleza: "Belleza";
+    --font-family-belleza-regular: "Belleza-Regular";
+    --font-family-blinker: "Blinker";
+    --font-family-blinker-extrabold: "Blinker-ExtraBold";
+    --font-family-blinker-semibold: "Blinker-SemiBold";
+    --font-family-cabin: "Cabin";
+    --font-family-cabin-regular: "Cabin-Regular";
+    --font-family-nunito_sans: "Nunito Sans";
+    --font-family-nunito_sans-regular: "Nunito Sans-Regular";
+    --font-family-open_sans: "Open Sans";
+    --font-family-open_sans-bold: "Open Sans-Bold";
+    --font-family-open_sans-regular: "Open Sans-Regular";
+    --font-family-open_sans_semibold-regular: "Open Sans SemiBold-Regular";
+    --font-family-roboto: "Roboto";
+    --font-family-roboto-bold: "Roboto-Bold";
+}
+
+/* Classes */
+
+.belleza-regular-normal-black-60px {
+    color: var(--black);
+    font-family: var(--font-family-belleza-regular);
+    font-size: 60px;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.cabin-normal-black-12px {
+    color: var(--black);
+    font-family: var(--font-family-cabin);
+    font-size: var(--font-size-m3);
+    font-weight: 400;
+    font-style: normal;
+}
+
+.blinker-semi-bold-royal-blue-18px {
+    color: var(--royal-blue);
+    font-family: var(--font-family-blinker);
+    font-size: var(--font-size-s);
+    font-weight: 600;
+    font-style: normal;
+}
+
+.blinker-normal-aqua-squeeze-24px {
+    color: var(--rfh85d);
+    font-family: var(--font-family-blinker);
+    font-size: var(--font-size-l2);
+    font-weight: 400;
+    font-style: normal;
+}
+
+.cabin-regular-normal-black-12px {
+    color: var(--black);
+    font-family: var(--font-family-cabin-regular);
+    font-size: var(--font-size-m3);
+    font-weight: 400;
+    font-style: normal;
+}
+
+.blinker-bold-gun-powder-20px {
+    color: var(--gun-powder);
+    font-family: var(--font-family-blinker);
+    font-size: var(--font-size-m2);
+    font-weight: 700;
+    font-style: normal;
+}
+
+.opensans-normal-gun-powder-20px {
+    color: var(--gun-powder);
+    font-family: var(--font-family-open_sans);
+    font-size: var(--font-size-m2);
+    font-weight: 400;
+    font-style: normal;
+}
+
+.blinker-bold-storm-gray-22px {
+    color: var(--storm-gray-2);
+    font-family: var(--font-family-blinker);
+    font-size: 22px;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.blinker-light-gunsmoke-16px {
+    color: var(--gunsmoke);
+    font-family: var(--font-family-blinker);
+    font-size: var(--font-size-xs2);
+    font-weight: 300;
+    font-style: normal;
+}
+
+.blinker-light-aqua-squeeze-14px {
+    color: var(--rfh85d);
+    font-family: var(--font-family-blinker);
+    font-size: 14px;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.blinker-light-black-20px {
+    color: var(--black);
+    font-family: var(--font-family-blinker);
+    font-size: var(--font-size-m2);
+    font-weight: 300;
+    font-style: normal;
+}
+
+.blinker-semi-bold-wild-blue-yonder-16px {
+    color: var(--wild-blue-yonder);
+    font-family: var(--font-family-blinker);
+    font-size: var(--font-size-xs2);
+    font-weight: 600;
+    font-style: normal;
+}
+
+.nunitosans-normal-winter-wizard-18px {
+    color: var(--winter-wizard2);
+    font-family: var(--font-family-nunito_sans);
+    font-size: var(--font-size-s);
+    font-weight: 400;
+    font-style: normal;
+}
+
+.blinker-normal-aqua-squeeze-16px {
+    color: var(--rfh85d);
+    font-family: var(--font-family-blinker);
+    font-size: var(--font-size-xs2);
+    font-weight: 400;
+    font-style: normal;
+}
+
+.blinker-semi-bold-fiord-10px {
+    color: var(--fiord);
+    font-family: var(--font-family-blinker);
+    font-size: var(--font-size-m);
+    font-weight: 600;
+    font-style: normal;
+}
+
+.blinker-bold-cyprus-10px {
+    color: var(--cyprus);
+    font-family: var(--font-family-blinker);
+    font-size: var(--font-size-m);
+    font-weight: 700;
+    font-style: normal;
+}
+
+.blinker-bold-cyprus-24px {
+    color: var(--cyprus2);
+    font-family: var(--font-family-blinker);
+    font-size: var(--font-size-l2);
+    font-weight: 700;
+    font-style: normal;
+}
+
+.roboto-bold-fiord-12px {
+    color: var(--fiord);
+    font-family: var(--font-family-roboto);
+    font-size: var(--font-size-m3);
+    font-weight: 700;
+    font-style: normal;
+}
+
+.opensans-normal-gun-powder-16px {
+    color: var(--gun-powder);
+    font-family: var(--font-family-open_sans);
+    font-size: var(--font-size-xs2);
+    font-weight: 400;
+    font-style: normal;
+}
+
+.belleza-normal-black-60px {
+    color: var(--black);
+    font-family: var(--font-family-belleza);
+    font-size: 60px;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.opensans-regular-normal-gun-powder-16px {
+    color: var(--gun-powder);
+    font-family: var(--font-family-open_sans-regular);
+    font-size: var(--font-size-xs2);
+    font-weight: 400;
+    font-style: normal;
+}
+
+.cabin-regular-normal-moonstone-16px {
+    color: var(--moonstone);
+    font-family: var(--font-family-cabin-regular);
+    font-size: var(--font-size-xs2);
+    font-weight: 400;
+    font-style: normal;
+}
+
+.blinker-semi-bold-storm-gray-20px {
+    color: var(--storm-gray-2);
+    font-family: var(--font-family-blinker);
+    font-size: var(--font-size-m2);
+    font-weight: 600;
+    font-style: normal;
+}
+
+.blinker-semi-bold-white-20px {
+    color: var(--white);
+    font-family: var(--font-family-blinker);
+    font-size: var(--font-size-m2);
+    font-weight: 600;
+    font-style: normal;
+}
+
+.blinker-normal-fiord-12px {
+    color: var(--fiord);
+    font-family: var(--font-family-blinker);
+    font-size: var(--font-size-m3);
+    font-weight: 400;
+    font-style: normal;
+}
+
+.border-1px-gallery {
+    border-width: 1px;
+    border-style: solid;
+    border-color: var(--gallery);
+}
+
+.opensans-bold-gun-powder-32px {
+    color: var(--gun-powder);
+    font-family: var(--font-family-open_sans-bold);
+    font-size: var(--font-size-xl2);
+    font-weight: 700;
+    font-style: normal;
+}
+
+.blinker-extra-bold-aqua-squeeze-24px {
+    color: var(--rfh85d);
+    font-family: var(--font-family-blinker);
+    font-size: var(--font-size-l2);
+    font-weight: 800;
+    font-style: normal;
+}
+
+.blinker-semi-bold-storm-gray-18px {
+    color: var(--storm-gray);
+    font-family: var(--font-family-blinker);
+    font-size: var(--font-size-s);
+    font-weight: 600;
+    font-style: normal;
+}
+
+.blinker-semi-bold-cyprus-10px {
+    color: var(--cyprus2);
+    font-family: var(--font-family-blinker);
+    font-size: var(--font-size-m);
+    font-weight: 600;
+    font-style: normal;
+}
+
+.opensanssemibold-regular-normal-gun-powder-16px {
+    color: var(--gun-powder);
+    font-family: var(--font-family-open_sans_semibold-regular);
+    font-size: var(--font-size-xs2);
+    font-weight: 400;
+    font-style: normal;
+}
+
+.blinker-semi-bold-white-16px {
+    color: var(--white);
+    font-family: var(--font-family-blinker);
+    font-size: var(--font-size-xs2);
+    font-weight: 600;
+    font-style: normal;
+}
+
+.blinker-semi-bold-moonstone-10px {
+    color: var(--moonstone);
+    font-family: var(--font-family-blinker);
+    font-size: var(--font-size-m);
+    font-weight: 600;
+    font-style: normal;
+}
+
+.blinker-bold-aqua-squeeze-24px {
+    color: var(--rfh85d);
+    font-family: var(--font-family-blinker);
+    font-size: var(--font-size-l2);
+    font-weight: 700;
+    font-style: normal;
+}
+
+.cabin-normal-moonstone-16px {
+    color: var(--moonstone);
+    font-family: var(--font-family-cabin);
+    font-size: var(--font-size-xs2);
+    font-weight: 400;
+    font-style: normal;
+}
+
+.blinker-semi-bold-aqua-squeeze-24px {
+    color: var(--rfh85d);
+    font-family: var(--font-family-blinker);
+    font-size: var(--font-size-l2);
+    font-weight: 600;
+    font-style: normal;
+}
+
+.opensans-regular-normal-gun-powder-20px {
+    color: var(--gun-powder);
+    font-family: var(--font-family-open_sans-regular);
+    font-size: var(--font-size-m2);
+    font-weight: 400;
+    font-style: normal;
+}
+
+.blinker-bold-fiord-12px {
+    color: var(--fiord);
+    font-family: var(--font-family-blinker);
+    font-size: var(--font-size-m3);
+    font-weight: 700;
+    font-style: normal;
+}
+
+.blinker-bold-fiord-16px {
+    color: var(--fiord);
+    font-family: var(--font-family-blinker);
+    font-size: var(--font-size-xs2);
+    font-weight: 700;
+    font-style: normal;
+}
+
+.blinker-bold-cyprus-20px {
+    color: var(--cyprus2);
+    font-family: var(--font-family-blinker);
+    font-size: var(--font-size-m2);
+    font-weight: 700;
+    font-style: normal;
+}
+
+.border-1px-storm-gray {
+    border-width: 1px;
+    border-style: solid;
+    border-color: var(--storm-gray);
+}
+
+.blinker-semi-bold-white-18px {
+    font-family: var(--font-family-blinker);
+    font-size: var(--font-size-s);
+    font-weight: 600;
+    font-style: normal;
+}
+
+.roboto-bold-pacific-blue-12px {
+    color: var(--pacific-blue-2);
+    font-family: var(--font-family-roboto);
+    font-size: var(--font-size-m3);
+    font-weight: 700;
+    font-style: normal;
+}
+
+.cabin-regular-normal-gun-powder-16px {
+    color: var(--gun-powder);
+    font-family: var(--font-family-cabin-regular);
+    font-size: var(--font-size-xs2);
+    font-weight: 400;
+    font-style: normal;
+}
+
+.blinker-bold-cyprus-11px {
+    color: var(--cyprus);
+    font-family: var(--font-family-blinker);
+    font-size: var(--font-size-l);
+    font-weight: 700;
+    font-style: normal;
+}
+
+.blinker-normal-gunsmoke-20px {
+    color: var(--gunsmoke);
+    font-family: var(--font-family-blinker);
+    font-size: var(--font-size-m2);
+    font-weight: 400;
+    font-style: normal;
+}
+
+.blinker-semi-bold-moonstone-18px {
+    color: var(--moonstone);
+    font-family: var(--font-family-blinker);
+    font-size: var(--font-size-s);
+    font-weight: 600;
+    font-style: normal;
+}
+
+.nunitosans-bold-storm-gray-20px {
+    color: var(--storm-gray);
+    font-family: var(--font-family-nunito_sans);
+    font-size: var(--font-size-m2);
+    font-weight: 700;
+    font-style: normal;
+}
+
+.nunitosans-normal-storm-gray-16px {
+    color: var(--storm-gray);
+    font-family: var(--font-family-nunito_sans);
+    font-size: var(--font-size-xs2);
+    font-weight: 400;
+    font-style: normal;
+}
+
+.blinker-semi-bold-black-20px {
+    color: var(--black);
+    font-family: var(--font-family-blinker);
+    font-size: var(--font-size-m2);
+    font-weight: 600;
+    font-style: normal;
+}
+
+.blinker-normal-black-24px {
+    color: var(--black);
+    font-family: var(--font-family-blinker);
+    font-size: var(--font-size-l2);
+    font-weight: 400;
+    font-style: normal;
+}
+
+.opensans-bold-gun-powder-32px {
+    color: var(--gun-powder);
+    font-family: var(--font-family-open_sans);
+    font-size: var(--font-size-xl2);
+    font-weight: 700;
+    font-style: normal;
+}
+
+.cabin-normal-gun-powder-16px {
+    color: var(--gun-powder);
+    font-family: var(--font-family-cabin);
+    font-size: var(--font-size-xs2);
+    font-weight: 400;
+    font-style: normal;
+}
+
+.border-2px-mystic {
+    border-width: 2px;
+    border-style: solid;
+    border-color: var(--mystic);
+}
