@@ -39,12 +39,12 @@
                                     one click.</div>
                             </div>
                         </div>
-                        <div class="search-bar">
+                        <div class="search-bar">    
                             <div class="search-box">
                                 <div class="search-icon">
                                     <img class="search-icon-1" src="img/search-icon@2x.png" />
                                 </div>
-                                <div class="search">Course name&nbsp;&nbsp;or&nbsp;&nbsp;course number</div>
+                                <input id="searhing-value" type="text" name="searching_value" placeholder="Course name or course number" style="width: 390px; font-size: 20px; border:none; outline: none; padding-left: 20px;" >
                             </div>
                             <div class="widget-wrapper">
                                 <div class="drop-down-filled-disabled-yes-primary">
@@ -89,9 +89,9 @@
                                     </script>
                                 </div>
                             </div>
-                            <div class="button">
+                            <button id="btnSearch" class="button" onclick="doSearching()">
                                 <div class="search-1 blinker-semi-bold-white-20px">Search</div>
-                            </div>
+                            </button>
                         </div>
                     </div>
                     <div class="version-control-bro-1">
@@ -155,6 +155,27 @@
             </div>
         </div>
     </div>
+    <script>
+        /* Once click the botton, route to the searching page */
+        function doSearching() {
+            let searchingScope = document.getElementById("demo-selected-text").innerText;
+            let searchingValue = document.getElementById("searhing-value").value.toLowerCase().split(' ').join('-');
+
+            searchingScope = searchingScope.split(' ').join('_');
+
+            if (searchingScope === 'Degrees') {
+                searchingScope = 'degree-name';
+            }
+            else if (searchingScope === 'Courses') {
+                searchingScope = 'course-name';
+            }
+            else {
+                searchingScope = 'all-categories';
+            }
+
+            window.open(`/search?${searchingScope}=${searchingValue}`, '_self');
+        }
+    </script>
 </body>
 
 </html>

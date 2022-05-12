@@ -54,6 +54,12 @@ app.use('/', homepage);
 app.use('/degree-structure', degreeStructure);
 app.use('/search', courseSearching);
 
+/* Route for testing */
+app.get('/test', (req,res)=>{
+    console.log(req.query);
+    res.send('Congrads!');
+})
+
 /* Set up server */
 app.listen(5000, ()=>{
     console.log('Server is listening on port 5000...');

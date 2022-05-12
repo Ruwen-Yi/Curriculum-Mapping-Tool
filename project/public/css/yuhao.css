@@ -1,9 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Blinker:400,300,700,600|Belleza:400|Nunito+Sans:400");
 
-a {
-    text-decoration: none;
-}
-
 .homepage {
     background-color: var(--rfh85d);
     height: 100vh;
@@ -16,7 +12,6 @@ a {
     position: relative;
     width: 100%;
 }
-
 .hidden,
 .hidden * {
     pointer-events: none;
@@ -227,7 +222,6 @@ a {
     margin-top: 24px;
     white-space: nowrap;
     width: 560px;
-    /* Hide search bar border */
     border: none;
     background-color: white;
     outline: none;
@@ -380,10 +374,6 @@ a {
 .card-row {
     align-items: center;
     display: flex;
-
-    /* add wrap to make cards wrapped */
-    flex-wrap: wrap;
-
     gap: 50px;
     justify-content: center;
     min-height: 387px;
@@ -494,8 +484,6 @@ a {
     letter-spacing: 0;
     width: 332px;
 }
-
-
 
 
 
