@@ -24,6 +24,7 @@
 
     <script>
 
+      /* pass in a stream obj core, elec, ..*/
       function addStream(stream) {
         
         let stream_name = 0; // This is hardcode, should delete later
@@ -57,10 +58,10 @@
         This function will create all courses card under a stream, 
         Parameter:a stream obj that contains mutilple course objs 
       */
-      function addCards(streamCourses) {
+      function addCards(stream) {
         
         let sectionCards = "";
-        let len = 9 || streamCourses.length; // This is hardcode, should use only "streamCourse.length"
+        let len = 9 || stream.length; // This is hardcode, should use only "streamCourse.length"
         for (i=0; i<len; i++) {
           sectionCards += createCard(); // Should pass in a course obj contains info of pre-req, incomp, belongs etc, .
         }

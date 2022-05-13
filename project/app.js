@@ -10,7 +10,7 @@ const database = require('mime-db');
 
 app.set('view engine','ejs');
 app.set('views', `${__dirname}/views`);
-app.use(express.static(`${__dirname}/public`));
+app.use(express.static(`${__dirname}/public/`));
 app.use(bodyParser.urlencoded({
   extended: true
 }));

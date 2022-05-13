@@ -15,6 +15,7 @@ const renderAllCourseName = (req, res) => {
             console.log(err);
         }
     })
+
 };
 
 /* Export the function to be used by routes.js */
