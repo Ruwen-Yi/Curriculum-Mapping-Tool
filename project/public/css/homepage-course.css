@@ -320,9 +320,10 @@
   align-items: center;
   align-self: stretch;
   display: flex;
-  gap: 30px;
+  flex-wrap: wrap;
+  gap: 26px;
   height: 238px;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .homepage-course .taskcourse-card {

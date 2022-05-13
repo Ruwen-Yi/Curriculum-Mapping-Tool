@@ -79,47 +79,48 @@
         let course_subject_and_course_code, course_name, first_belongs_to, second_belongs_to, pre_requisite, incompatible, course_url = 0; 
         
         let card = `
-        <div class="taskcourse-card">
-          <div class="taskcard border-1px-gallery">
-            <div class="main-info">
-              <div class="comp-sci-3001 blinker-normal-fiord-12px">${course_subject_and_course_code || "Course Subject & Code"}</div>
-              <div class="computer-networks-applications blinker-bold-fiord-16px">
-                <a href="${course_url}"> ${course_name || "course name"} </a>
+        <a href="../course-relationships/${course_name || "course name"}">
+          <div class="taskcourse-card">
+            <div class="taskcard border-1px-gallery">
+              <div class="main-info">
+                <div class="comp-sci-3001 blinker-normal-fiord-12px">${course_subject_and_course_code || "Course Subject & Code"}</div>
+                <div class="computer-networks-applications blinker-bold-fiord-16px">
+                    ${course_name || "course name"}
+                </div>
               </div>
-            </div>
-            <div class="divider"></div>
-            <div class="rest-info">
-              <div class="belongs-to">
-                <div class="belongs-to-1 blinker-bold-cyprus-11px">Belongs to:</div>
-                <div class="column">
-                  <div class="first">
-                    <div class="degree">
-                      <p class="low blinker-semi-bold-moonstone-10px">${first_belongs_to||"B - Computer Science - Elective"}</p>
+              <div class="divider"></div>
+              <div class="rest-info">
+                <div class="belongs-to">
+                  <div class="belongs-to-1 blinker-bold-cyprus-11px">Belongs to:</div>
+                  <div class="column">
+                    <div class="first">
+                      <div class="degree">
+                        <p class="low blinker-semi-bold-moonstone-10px">${first_belongs_to||"B - Computer Science - Elective"}</p>
+                      </div>
                     </div>
-                  </div>
-                  <div class="second">
-                    <div class="degree-1">
-                      <p class="low-1 blinker-semi-bold-moonstone-10px">
-                        ${second_belongs_to||"B - Information Technology - Cybersecurity - Core"}
-                      </p>
+                    <div class="second">
+                      <div class="degree-1">
+                        <p class="low-1 blinker-semi-bold-moonstone-10px">
+                          ${second_belongs_to||"B - Information Technology - Cybersecurity - Core"}
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="prerequisites">
-                <div class="prerequisites-1 blinker-bold-cyprus-11px">Prerequisites:</div>
-                <p class="course-name-number blinker-bold-cyprus-10px">
-                  ${pre_requisite||"Plain text"}
-                </p>
-              </div>
-              <div class="incompatible">
-                <div class="incompatible-1 blinker-bold-cyprus-11px">Incompatible:</div>
-                <div class="course-name-num blinker-bold-cyprus-10px">${incompatible||"Plain text"}</div>
+                <div class="prerequisites">
+                  <div class="prerequisites-1 blinker-bold-cyprus-11px">Prerequisites:</div>
+                  <p class="course-name-number blinker-bold-cyprus-10px">
+                    ${pre_requisite||"Plain text"}
+                  </p>
+                </div>
+                <div class="incompatible">
+                  <div class="incompatible-1 blinker-bold-cyprus-11px">Incompatible:</div>
+                  <div class="course-name-num blinker-bold-cyprus-10px">${incompatible||"Plain text"}</div>
+                </div>
               </div>
             </div>
           </div>
-        </div>`;
-
+        </a>`;
         return card;
       }
     
