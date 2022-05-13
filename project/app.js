@@ -52,6 +52,9 @@ const courseSearching = require('./search/search-course-route');
 /* Set up parent routes for degree structure */
 app.use('/', homepage);
 app.use('/degree-structure', degreeStructure);
+app.use('/course-relationships', (req,res)=>{
+    res.send("Course relationship page");
+})
 app.use('/search', courseSearching);
 
 /* Route for testing */
