@@ -8,7 +8,7 @@ const renderDegreeStructure = (req, res) => {
     // Search database[Unfinished]
 
     // Render data, according to your UI desing
-    res.status(200).send(`Find core & elec courses of ${degreeName} <br> <br> Render degree structure of ${degreeName}`);
+    res.render("../views/degree-structure-page.ejs");
 }
 
 module.exports = renderDegreeStructure;
