@@ -6,11 +6,13 @@ const app = express();
 const mysql = require('mysql');
 const bodyParser = require("body-parser");
 const database = require('mime-db');
+const path = require('path')
 
 
 app.set('view engine','ejs');
 app.set('views', `${__dirname}/views`);
 app.use(express.static(`${__dirname}/public/`));
+//app.use('/public', express.static(path.resolve(__dirname+'/public/')))
 app.use(bodyParser.urlencoded({
   extended: true
 }));
@@ -57,11 +59,15 @@ app.use('/course-relationships', (req,res)=>{
 })
 app.use('/search', courseSearching);
 
-/* Route for testing */
-app.get('/test', (req,res)=>{
-    console.log(req.query);
-    res.send('Congrads!');
-})
+
+/* Build for test, checking if expected data can be sent to a blank page */
+const text_course = require('./homepage/test')
+app.get('/test', text_course) /* Route for testing */
+
+const allcourses = require('./homepage/course-name-controller')
+app.get('/test/course-overview', allcourses ) /* Route for testing */
+/* End of test */
+
 
 /* Set up server */
 app.listen(5000, ()=>{

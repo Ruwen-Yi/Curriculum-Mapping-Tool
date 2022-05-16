@@ -2,7 +2,22 @@
 const mysqlConnection = require('../app');
 
 /* Access data and render degree names*/
-const renderAllCourseName = (req, res) => {
+// const renderAllCourseName = (req, res) => {
+//     let qq= 'SELECT * FROM adelaide.degree;'
+//     mysqlConnection.query(qq, (err, info, fields) => {
+//         if (!err){
+//             var data =JSON.stringify(info);
+//             data = JSON.parse(data);
+//             console.log(data[1].degree);
+//             res.render("../views/homepage-course-overview.ejs",{degreeContent:data});
+//         }
+//         else{
+//             console.log(err);
+//         }
+//     })
+// };
+
+const renderAllCourses = (req, res) => {
     let qq= 'SELECT * FROM adelaide.degree;'
     mysqlConnection.query(qq, (err, info, fields) => {
         if (!err){
@@ -15,8 +30,7 @@ const renderAllCourseName = (req, res) => {
             console.log(err);
         }
     })
-
 };
 
 /* Export the function to be used by routes.js */
-module.exports = renderAllCourseName;
+module.exports = renderAllCourses;
