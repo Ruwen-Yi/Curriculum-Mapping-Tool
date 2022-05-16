@@ -12,7 +12,7 @@ const path = require('path')
 app.set('view engine','ejs');
 app.set('views', `${__dirname}/views`);
 app.use(express.static(`${__dirname}/public/`));
-//app.use('/public', express.static(path.resolve(__dirname+'/public/')))
+app.use('/public', express.static(path.resolve(__dirname+'/public/')))
 app.use(bodyParser.urlencoded({
   extended: true
 }));
@@ -64,8 +64,6 @@ app.use('/search', courseSearching);
 const text_course = require('./homepage/test')
 app.get('/test', text_course) /* Route for testing */
 
-const allcourses = require('./homepage/course-name-controller')
-app.get('/test/course-overview', allcourses ) /* Route for testing */
 /* End of test */
 
 

@@ -323,7 +323,7 @@
   flex-wrap: wrap;
   gap: 26px;
   height: 238px;
-  justify-content: flex-start;
+  justify-content: center;
   /* to make card has distance between above/below element */
   height: auto;
   padding-top: 40px;

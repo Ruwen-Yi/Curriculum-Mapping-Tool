@@ -10,17 +10,10 @@ const test_course = (req, res) => {
         data = JSON.parse(data);
 
         tem = setData1(data);
+        
+        console.log(tem[0])
 
-        tem2 = tem;
-        res.send(tem2);
-
-        // mysqlConnection.query(qq, async(err, info, fields) => {
-        //     if (!err){
-        //         tem2 = setData1(data);
-        //         tem.push(tem2);
-        //         res.send(tem);
-        //     }
-        // })
+        res.render('../views/test.ejs', {arr:tem})
     }
     else{
         console.log(err);
