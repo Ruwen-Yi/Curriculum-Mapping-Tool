@@ -63,7 +63,6 @@ app.use('/search', courseSearching);
 /* Build for test, checking if expected data can be sent to a blank page */
 const text_course = require('./homepage/test')
 app.get('/test', text_course) /* Route for testing */
-
 /* End of test */
 
 

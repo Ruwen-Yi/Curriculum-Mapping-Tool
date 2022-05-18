@@ -5,10 +5,10 @@ const mysqlConnection = require('../app');
 const searchCourse = (req, res)=>{
     
     /* all category */
-    if (req.query['all_categories']){
+    if (req.query['all-categories']){
         
         // Find the course name and return it from database[taken by Yuhao]
-        let queryAll = req.query['all_categories'].split('-').join(' ');
+        let queryAll = req.query['all-categories'].split('-').join(' ');
         
         /* ..[taken by Yuhao].. */
 
