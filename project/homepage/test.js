@@ -35,7 +35,9 @@ async function main(req, res) {
         result.push(item);
     }, 
     function(err){
-        if(err) {console.error(err.message);}
+        if(err) {
+            console.error(err.message);
+        }
 
         // result = [ item 1: [ {}, {}, ... ] item 2: [ {}, {}, ... ] item 3: [ {}, {}, ... ] ] as expected !!
         res.send(result)
@@ -91,6 +93,7 @@ async function main(req, res) {
 // };
 
 
+/* 为了方便测试，暂未跑这个 */
 function setData1(data11){
     let courses=[];
     for(i=0;i<data11.length;i++){
