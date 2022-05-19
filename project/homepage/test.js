@@ -23,6 +23,7 @@ async function main(req, res) {
         list[i].belongs_to = b_to;
     }
 
+    list = setData1(list)
     res.send(list)
     
 }
@@ -91,6 +92,7 @@ function setData1(data11){
         course.course_url =  data11[i].courselink_href;
         course.pre_requisite =  data11[i].pre_requisite;
         course.incompatible = data11[i].Incompatibale;
+        course.belongs_to = data11[i].belongs_to;
         courses.push(course);
 
         //console.log(course)
