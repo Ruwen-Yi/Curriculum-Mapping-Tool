@@ -4,45 +4,26 @@ const mysqlConnection = require('../app');
 const async = require('async')
 
 async function main(req, res) {
+
     const mysql2 = require('mysql2/promise');
+
     const connection = await mysql2.createConnection({
     host: 'database-2.cwlp4i7l59rt.ap-southeast-2.rds.amazonaws.com',
     user: 'admin',
     password: '12345678', //请与上一步在数据库设置的密码相同
     database: 'adelaide'
     });
-    var list = await connection.execute('SELECT * FROM adelaide.course');
 
-    // list = [ [ {}, {}, ... ] ] so we need to get the inner array: [ {}, {}, ... ]
-    list = list[0]
+    // list = [ {}, {}, ... ]
+    let [list] = await connection.execute('SELECT * FROM adelaide.course');
 
-    // only use the first three obj as an example
-    list = list.slice(0,3)
+    for (i=0; i<list.length; i++){
 
-    // console.log(list)
+        [b_to] = await connection.execute('SELECT * FROM `degree_course` WHERE `courses` = "'+ list[i].fullname +'";');
+        list[i].belongs_to = b_to;
+    }
 
-    var result = []
-
-    async.forEachOf(list, async function(item, key, callback){
-        item = await connection.execute('SELECT * FROM adelaide.course');
-        
-        // item = [ [ {}, {}, ... ] ] so we need to get the inner array: [ {}, {}, ... ]
-        // only use the first three obj as an example
-        item = item[0].slice(0,3)
-        
-        //console.log(item)
-        
-        result.push(item);
-    }, 
-    function(err){
-        if(err) {
-            console.error(err.message);
-        }
-
-        // result = [ item 1: [ {}, {}, ... ] item 2: [ {}, {}, ... ] item 3: [ {}, {}, ... ] ] as expected !!
-        res.send(result)
-    })
-    
+    res.send(list)
     
 }
 
@@ -101,8 +82,7 @@ function setData1(data11){
             course_subject_code: "COMP SCI 0000",
             course_name: "Computer course name",
             course_url:"http://course-outline/.....",
-            belongs_to: [
-            ],
+            belongs_to: [],
             pre_requisite: "One of COMP SCI 7777, COMPSCI 7777, ...",
             incompatible: "COMP SCI 7777, COMPSCI 7777, and ...",
         };
