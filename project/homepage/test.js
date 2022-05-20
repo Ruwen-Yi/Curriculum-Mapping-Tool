@@ -17,13 +17,19 @@ async function main(req, res) {
     // list = [ {}, {}, ... ]
     let [list] = await connection.execute('SELECT * FROM adelaide.course');
 
+    /* Search data of "belong_to" for each course in the list  */
     for (i=0; i<list.length; i++){
 
-        [b_to] = await connection.execute('SELECT * FROM `degree_course` WHERE `courses` = "'+ list[i].fullname +'";');
+
+        [b_to] = await connection.execute('SELECT degree, stream, supplement FROM `degree_course` WHERE `courses` = "'+ list[i].fullname +'";');
         list[i].belongs_to = b_to;
     }
 
     list = setData1(list)
+
+    // extra function
+
+    
     res.send(list)
     
 }
