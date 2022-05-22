@@ -6,83 +6,62 @@ const async = require('async')
 async function main(req, res) {
 
     const mysql2 = require('mysql2/promise');
-
     const connection = await mysql2.createConnection({
-    host: 'database-2.cwlp4i7l59rt.ap-southeast-2.rds.amazonaws.com',
-    user: 'admin',
-    password: '12345678', //请与上一步在数据库设置的密码相同
-    database: 'adelaide'
+        host: 'database-2.cwlp4i7l59rt.ap-southeast-2.rds.amazonaws.com',
+        user: 'admin',
+        password: '12345678', //请与上一步在数据库设置的密码相同
+        database: 'adelaide'
     });
 
     // list = [ {}, {}, ... ]
     let [list] = await connection.execute('SELECT * FROM adelaide.course');
 
-    /* Search data of "belong_to" for each course in the list  */
     for (i=0; i<list.length; i++){
 
+        [b_to] = await connection.execute('SELECT degree,stream,supplement FROM `degree_course` WHERE `courses` = "'+ list[i].fullname +'";');
+        let bt=[];
+        let info={ 
+                degree:"",
+                courses:"",
+                stream:"",
+                supplement:"",
+                full:""}
+        for(ii=0;ii<b_to.length;ii++){
+            var reg =RegExp(/Master/)
+            var part1,part2,part3;
+            
+            if(b_to[ii].degree.match(reg)){
+                part1=b_to[ii].degree.replace("Master of ","M-");
+            }else if(b_to[ii].degree==""){
+                part1=""
+            }else{
+                part1=b_to[ii].degree.replace("Bachelor of ","B-");
+            }
+            if(b_to[ii].stream==""){
+                part2="";
+            }else{
+                part2="-" +b_to[ii].stream;
+            }
+            if(b_to[ii].supplement==""){
+                part3="";
+            }else{
+                part3="-"+b_to[ii].supplement
+            }
 
-        [b_to] = await connection.execute('SELECT degree, stream, supplement FROM `degree_course` WHERE `courses` = "'+ list[i].fullname +'";');
-        list[i].belongs_to = b_to;
-        
+            bb = part1+part2+part3;
+            info = b_to[ii];
+            info.full=bb;
+            bt.push(info)
+        }
+        list[i].belongs_to = bt;
     }
 
     list = setData1(list)
-
-    // extra function
-
-    
     res.send(list)
     
 }
 
-
-
-/* Access data and render degree names*/
-// const test_course = (req, res) => {
-//     let qq = 'SELECT * FROM adelaide.course;';
-
-//     mysqlConnection.query(qq, async(err, info, fields) => {
-//     if (!err){
-//         var data =JSON.stringify(info);
-//         data = JSON.parse(data);
-
-//         tem = setData1(data);
-        
-//         console.log(tem[0])
-
-//         tem = tem.slice(0,3);
-
-//         /* Use async package to do for loop query */
-//         async.forEachOf(tem, async function(tem_item, key, callback){
-            
-//             //tem[key].belongs_to = "test work!"
-
-//             let q_for_each = 'SELECT * FROM adelaide.course;';
-//             mysqlConnection.query(q_for_each, (err, info, fields) => {
-//                 if (!err){
-//                     var test_data =JSON.stringify(info);
-//                     test_data = JSON.parse(test_data);
-//                     tem[key].belongs_to = test_data;
-//                 }
-//                 else{
-//                     console.log(err);
-//                 }
-//             });
-
-//             } , function(err){
-//                 if(err) {console.error(err.message);}
-//         })
-//         res.send(tem)
-//         //res.render('../views/test.ejs', {arr:tem})
-//     }
-//     else{
-//         console.log(err);
-//     }
-//     });
-// };
-
-
-/* 为了方便测试，暂未跑这个 */
+/* process data */
 function setData1(data11){
     let courses=[];
     for(i=0;i<data11.length;i++){
