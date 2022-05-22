@@ -12,6 +12,7 @@ async function main(req, res) {
 
     // list = [ {}, {}, ... ]
     let [list] = await connection.execute('SELECT * FROM adelaide.course');
+    // list = list.slice(0,50)
 
     for (i=0; i<list.length; i++){
 
