@@ -1,8 +1,8 @@
 /* Access database*/
-
-async function renderAllCourses(req, res) {
+async function main(req, res) {
 
     const mysql2 = require('mysql2/promise');
+
     const connection = await mysql2.createConnection({
         host: 'database-2.cwlp4i7l59rt.ap-southeast-2.rds.amazonaws.com',
         user: 'admin',
@@ -55,10 +55,12 @@ async function renderAllCourses(req, res) {
 
     list = setData1(list)
     res.render("../views/homepage-course-overview.ejs",{course_list:list});
+    //res.send(list)
     
 }
 
-/* process data */
+
+/* 为了方便测试，暂未跑这个 */
 function setData1(data11){
     let courses=[];
     for(i=0;i<data11.length;i++){
@@ -83,6 +85,14 @@ function setData1(data11){
     return courses;
 };
 
+/* Export the function to be used by routes.js */
+module.exports = main;
+
+
+
+
+
+
 
 /* Export the function to be used by routes.js */
-module.exports = renderAllCourses;
+//module.exports = renderAllCourses;

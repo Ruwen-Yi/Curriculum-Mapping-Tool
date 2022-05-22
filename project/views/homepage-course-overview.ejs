@@ -122,11 +122,17 @@
 
                     <%  let course_name = course_list[index].course_name; %>
                     <%  let course_subject_and_course_code = course_list[index].course_subject_code; %>
-                    <%  let first_belongs_to = course_list[index].belongs_to[0].full || "None" %> 
-                    <%  let second_belongs_to = first_belongs_to==="None" ? "" || course_list[index].belongs_to[0].full || "None";%>
+                    <%  let first_belongs_to, second_belongs_to = "";%>
                     <%  let pre_requisite = course_list[index].pre_requisite;%>
                     <%  let incompatible = course_list[index].incompatible; %>
+                    
 
+                    <% if (course_list[index].belongs_to.length > 0) { %>
+                    <%   first_belongs_to = course_list[index].belongs_to[0]['full'] %> 
+                    <% } %>
+                    <% if (course_list[index].belongs_to.length > 1) { %>
+                    <%   second_belongs_to = course_list[index].belongs_to[1]['full'] + ' ...' %> 
+                    <% } %>
                         <a href="../course-relationships/<%= course_name.split(' ').join('-').toLowerCase()%>">
                           <div class="taskcourse-card">
                             <div class="taskcard border-1px-gallery">
@@ -143,16 +149,16 @@
                                   <div class="column">
                                     <div class="first">
                                       <div class="degree">
-                                        <p class="low blinker-semi-bold-moonstone-10px"><%= first_belongs_to %></p>
+                                        <p class="low blinker-semi-bold-moonstone-10px"><%= first_belongs_to || "-"%></p>
                                       </div>
                                     </div>
-                                    <!-- <div class="second">
+                                    <div class="second">
                                       <div class="degree-1">
                                         <p class="low-1 blinker-semi-bold-moonstone-10px">
-                                          <p second_belongs_to || "None" /p>
+                                          <%= second_belongs_to || "-"%>
                                         </p>
                                       </div>
-                                    </div> -->
+                                    </div>
                                   </div>
                                 </div>
                                 <div class="prerequisites">
