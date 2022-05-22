@@ -4,10 +4,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=100%,height=100%, maximum-scale=1.0" />
-  <link rel="shortcut icon" type="image/png" href="../img/icons8-study-64.png" />
-  <link rel="stylesheet" type="text/css" href="../css/degree-structure-page.css" />
-  <link rel="stylesheet" type="text/css" href="../css/styleguide-dsp.css" />
-  <link rel="stylesheet" type="text/css" href="../css/globals-dsp.css" />
+  <link rel="shortcut icon" type="image/png" href="/img/icons8-study-64.png" />
+  <link rel="stylesheet" type="text/css" href="/css/degree-structure-page.css" /> <!-- use absolute path with '/' at first -->
+  <link rel="stylesheet" type="text/css" href="/css/styleguide-dsp.css" />
+  <link rel="stylesheet" type="text/css" href="/css/globals-dsp.css" />
   <title>degree-structure</title>
 </head>
 
@@ -15,7 +15,10 @@
   <input type="hidden" id="anPageName" name="page" value="degree-structure-page" />
   <div class="degree-structure-page screen">
     <div class="app-top">
-      <div class="curriculum-helper valign-text-middle blinker-semi-bold-aqua-squeeze-24px">Curriculum Helper</div>
+      <a href="/">
+        <div class="curriculum-helper valign-text-middle blinker-semi-bold-aqua-squeeze-24px">Curriculum Helper</div>
+      </a>
+      
     </div>
     <div class="degree-name" id="degree-section">
       <h1 class="title"><% DegreeName = "DegreeName" %> <%= DegreeName%></h1>
@@ -153,6 +156,22 @@
 
       /* Pass in degree obj by ejs */
       createStructure();
+
+      /* Use fetch to request data instead of using ejs */
+      fetch(':degree_name/getDegreeData', {method:'GET'}) //why this url?
+      .then(response =>{
+        return response.text()
+      })
+      .then(data=>{
+        data = JSON.parse(data)
+        console.log(data)
+        console.log(data['degree_name'])
+      })
+      .catch(err =>{
+        console.log(err)
+      })
+
+
     </script>
 
     

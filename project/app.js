@@ -67,6 +67,6 @@ app.get('/test', text_course) /* Route for testing */
 
 
 /* Set up server */
-app.listen(5000, ()=>{
+app.listen(6600, ()=>{
     console.log('Server is listening on port 5000...');
 });

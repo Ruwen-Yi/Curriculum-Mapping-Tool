@@ -11,5 +11,23 @@ const renderDegreeStructure = (req, res) => {
     res.render("../views/degree-structure-page.ejs");
 }
 
-module.exports = renderDegreeStructure;
+const getDegreeData = (req, res) => {
+    /* Taken by yuhao */
+    let degree = {
+        degree_name : "MCI",
+        course_list : [
+            {
+                course_name : "CNA",
+                course_code : "000"
+            },
+            {
+                course_name : "CNA",
+                course_code : "000"
+            }
+        ]
+    }
+    res.send(degree)
+}
+
+module.exports = {renderDegreeStructure, getDegreeData};
     
