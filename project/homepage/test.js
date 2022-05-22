@@ -23,6 +23,7 @@ async function main(req, res) {
 
         [b_to] = await connection.execute('SELECT degree, stream, supplement FROM `degree_course` WHERE `courses` = "'+ list[i].fullname +'";');
         list[i].belongs_to = b_to;
+        
     }
 
     list = setData1(list)
