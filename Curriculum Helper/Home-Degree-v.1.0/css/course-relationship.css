@@ -108,6 +108,18 @@ html body {
 }
 
 
+.course-card {
+    padding: 2% 0;
+}
+
+
+.card-content {
+    font-size: 0.8rem;
+    text-align: left;
+    line-height: 1.5;
+}
+
+
 
 
 
