@@ -20,3 +20,8 @@ Update at 22:09 of 11/05, version 1.0.2
   - add degree-structure-page.html
   - add degree-structure-page.css, styleguide-dsp.css,global-dsp.css to css/
   - add vector@2x.png to img/
+
+### version 1.0.3 （update course-relationship page）
+Update at 12:25 of 23/05, version 1.0.3
+  - add course-relationship.html
+  - add course-relationship.css
