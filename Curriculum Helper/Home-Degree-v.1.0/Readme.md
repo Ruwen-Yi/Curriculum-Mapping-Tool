@@ -25,3 +25,7 @@ Update at 22:09 of 11/05, version 1.0.2
 Update at 12:25 of 23/05, version 1.0.3
   - add course-relationship.html
   - add course-relationship.css
+  
+Update at 14:36 of 23/05
+  - modified the spacing between cards
+  - set the situation of showing text
