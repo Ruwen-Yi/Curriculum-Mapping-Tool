@@ -6,8 +6,9 @@
   --gallery: #eeeeee;
   --gunsmoke: #80878f;
   --moonstone: #39a2db;
+  --mystic: #e0e6ed;
   --rfh85d: #e8f0f2;
-  --whisper: #f5f5fa;
+  --storm-gray-2: #6e7491;
   --white: #ffffff;
   --winter-wizard: #a2dbfa40;
  
@@ -62,6 +63,38 @@
   font-weight: 700;
 }
 
+.blinker-bold-storm-gray-22px {
+  color: var(--storm-gray-2);
+  font-family: var(--font-family-blinker);
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.blinker-light-gunsmoke-16px {
+  color: var(--gunsmoke);
+  font-family: var(--font-family-blinker);
+  font-size: var(--font-size-xs2);
+  font-style: normal;
+  font-weight: 300;
+}
+
+.blinker-bold-fiord-20px {
+  color: var(--fiord);
+  font-family: var(--font-family-blinker);
+  font-size: var(--font-size-m2);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.blinker-normal-fiord-16px {
+  color: var(--fiord);
+  font-family: var(--font-family-blinker);
+  font-size: var(--font-size-xs2);
+  font-style: normal;
+  font-weight: 400;
+}
+
 .blinker-semi-bold-aqua-squeeze-24px {
   color: var(--rfh85d);
   font-family: var(--font-family-blinker);
@@ -102,22 +135,6 @@
   font-weight: 600;
 }
 
-.blinker-bold-aqua-squeeze-24px {
-  color: var(--rfh85d);
-  font-family: var(--font-family-blinker);
-  font-size: var(--font-size-l2);
-  font-style: normal;
-  font-weight: 700;
-}
-
-.blinker-bold-cyprus-24px {
-  color: var(--cyprus2);
-  font-family: var(--font-family-blinker);
-  font-size: var(--font-size-l2);
-  font-style: normal;
-  font-weight: 700;
-}
-
 .blinker-light-aqua-squeeze-14px {
   color: var(--rfh85d);
   font-family: var(--font-family-blinker);
@@ -128,4 +145,8 @@
 
 .border-1px-gallery {
   border: 1px solid var(--gallery);
+}
+
+.border-2px-mystic {
+  border: 2px solid var(--mystic);
 }

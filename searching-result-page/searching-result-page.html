@@ -15,181 +15,302 @@
   <link rel="stylesheet" type="text/css" href="css/globals-srp.css" />
 </head>
 
+
 <body style="margin: 0; background: #e8f0f2">
-  <input type="hidden" id="anPageName" name="page" value="homepage-course" />
-  <div class="container-center-horizontal">
-    <div class="homepage-course screen">
-      <div class="app-top">
-        <div class="curriculum-helper valign-text-middle blinker-semi-bold-aqua-squeeze-24px">Curriculum Helper</div>
-      </div>
-      <div class="main-part">
-        <div class="overlap-group">
-          <div class="head">
-            <div class="left">
-              <div class="title-and-slogan">
-                <div class="title">
-                  <div class="title-1 belleza-normal-black-60px">
-                    Make your coordination easier
-                  </div>
-                </div>
-                <div class="slogaan">
-                  <div class="slogaan-1">Browse degree content and course relationships with
-                    just
-                    one click.</div>
-                </div>
+  <input type="hidden" id="anPageName" name="page" value="result-page" />
+  <div class="result-page screen">
+    <div class="app-top">
+      <div class="curriculum-helper valign-text-middle blinker-semi-bold-aqua-squeeze-24px">Curriculum Helper</div>
+    </div>
+    <div class="main-part">
+      <div class="overlap-group-1">
+        <div class="head">
+          <div class="left">
+            <div class="title-and-slogan">
+              <div class="title">
+                <h1 class="title-1 belleza-normal-black-60px">Make your coordination easier</h1>
               </div>
-
-              <div class="search-bar">
-                <div class="search-box">
-                  <div class="search-icon">
-                    <img class="search-icon-1" src="img/search-icon@2x.png" />
-                  </div>
-                  <input id="searhing-value" type="text" name="searching_value" placeholder="Course name or course number" style="width: 390px; font-size: 20px; border:none; outline: none; padding-left: 20px;" >
+              <div class="slogaan">
+                <div class="browse-degree-conten blinker-normal-black-24px">
+                  Browse degree content and course relationships with just one click.
                 </div>
-                <div class="widget-wrapper">
-                  <div class="drop-down-filled-disabled-yes-primary">
-                    <div class="mdc-select mdc-select--outlined demo-width-class" data-id="anima-widget">
-                      <div class="mdc-select__anchor custom-enhanced-select-width" role="button" aria-haspopup="listbox"
-                        aria-expanded="false">
-                        <span id="demo-label" class="mdc-floating-label"></span>
-                        <span class="mdc-select__selected-text-container">
-                          <span id="demo-selected-text" class="mdc-select__selected-text"></span>
-                        </span>
-                        <span class="mdc-select__dropdown-icon">
-                          <span class="mdc-select__dropdown-icon-inactive material-icons">arrow_drop_down</span>
-                          <span class="mdc-select__dropdown-icon-active material-icons">arrow_drop_up</span>
-                        </span>
-                        <span class="mdc-line-ripple"></span>
-                      </div>
-                      <div class="mdc-select__menu mdc-menu mdc-menu-surface mdc-menu-surface--fullwidth">
-                        <ul class="mdc-list" id="select_dropdown" role="listbox" aria-label="listbox">
-                          <li class="mdc-list-item mdc-list-item--selected" data-value="All categories" role="option">
-                            <span class="mdc-list-item__ripple"></span>
-                            <span class="mdc-list-item__text">All categories</span>
-                          </li>
-                          <li class="mdc-list-item" data-value="Degrees" role="option">
-                            <span class="mdc-list-item__ripple"></span>
-                            <span class="mdc-list-item__text">Degrees</span>
-                          </li>
-                          <li class="mdc-list-item" data-value="Courses" role="option">
-                            <span class="mdc-list-item__ripple"></span>
-                            <span class="mdc-list-item__text">Courses</span>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                    <script>
-                      new mdc.select.MDCSelect(document.querySelector(".drop-down-filled-disabled-yes-primary .mdc-select"));
-                    </script>
-                  </div>
-                </div>
-                <button id="btnSearch" class="button" onclick="doSearching()">
-                  <div class="search-1 blinker-semi-bold-white-20px">Search</div>
-              </button>
               </div>
             </div>
-            <div class="version-control-bro-1">
-              <img class="version-control-bro-1-1" src="img/version-control-bro-1@1x.png" />
+
+
+                      <div class="search-bar">    
+                          <div class="search-box">
+                              <div class="search-icon">
+                                  <img class="search-icon-1" src="img/search-icon@2x.png" />
+                              </div>
+                              <input id="searhing-value" type="text" name="searching_value" placeholder="Course name or course number" style="width: 390px; font-size: 20px; border:none; outline: none; padding-left: 20px;" >
+                          </div>
+                          <div class="widget-wrapper">
+                              <div class="drop-down-filled-disabled-yes-primary">
+                                  <div class="mdc-select mdc-select--outlined demo-width-class"
+                                      data-id="anima-widget">
+                                      <div class="mdc-select__anchor custom-enhanced-select-width" role="button"
+                                          aria-haspopup="listbox" aria-expanded="false">
+                                          <span id="demo-label" class="mdc-floating-label"></span>
+                                          <span class="mdc-select__selected-text-container">
+                                              <span id="demo-selected-text" class="mdc-select__selected-text"></span>
+                                          </span>
+                                          <span class="mdc-select__dropdown-icon">
+                                              <span
+                                                  class="mdc-select__dropdown-icon-inactive material-icons">arrow_drop_down</span>
+                                              <span
+                                                  class="mdc-select__dropdown-icon-active material-icons">arrow_drop_up</span>
+                                          </span>
+                                          <span class="mdc-line-ripple"></span>
+                                      </div>
+                                      <div
+                                          class="mdc-select__menu mdc-menu mdc-menu-surface mdc-menu-surface--fullwidth">
+                                          <ul class="mdc-list" id="select_dropdown" role="listbox"
+                                              aria-label="listbox">
+                                              <li class="mdc-list-item mdc-list-item--selected"
+                                                  data-value="All categories" role="option">
+                                                  <span class="mdc-list-item__ripple"></span>
+                                                  <span class="mdc-list-item__text">All categories</span>
+                                              </li>
+                                              <li class="mdc-list-item" data-value="Degrees" role="option">
+                                                  <span class="mdc-list-item__ripple"></span>
+                                                  <span class="mdc-list-item__text">Degrees</span>
+                                              </li>
+                                              <li class="mdc-list-item" data-value="Courses" role="option">
+                                                  <span class="mdc-list-item__ripple"></span>
+                                                  <span class="mdc-list-item__text">Courses</span>
+                                              </li>
+                                          </ul>
+                                      </div>
+                                  </div>
+                                  <script>
+                                      new mdc.select.MDCSelect(document.querySelector(".drop-down-filled-disabled-yes-primary .mdc-select"));
+                                  </script>
+                              </div>
+                          </div>
+                          <button id="btnSearch" class="button" onclick="doSearching()">
+                              <div class="search-1 blinker-semi-bold-white-20px">Search</div>
+                          </button>
+                      </div>
+
+
+
+          </div>
+          <div class="version-control-bro-1">
+            <img
+              class="version-control-bro-1-1"
+              src="https://anima-uploads.s3.amazonaws.com/projects/626ae7916ff5cd6d9202df32/releases/628b36ed539f36875bb80e14/img/version-control-bro-1@1x.png"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="title-row">
+      <div class="degrees blinker-bold-storm-gray-22px">Degrees</div>
+      <div class="address blinker-light-gunsmoke-16px">2 results</div>
+    </div>
+    <div class="card-row">
+      <div class="card border-2px-mystic">
+        <div class="frame-1">
+          <div class="computer-networks-applications-1 blinker-bold-fiord-20px">
+            Bachelor of Information Technology
+          </div>
+        </div>
+        <div class="comp-sci-3001 blinker-normal-fiord-16px">Core</div>
+      </div>
+      <div class="card-1 border-2px-mystic">
+        <div class="frame-1-1">
+          <div class="computer-networks-applications-2 blinker-bold-fiord-20px">Master of Cyber Security</div>
+        </div>
+        <div class="comp-sci-3001 blinker-normal-fiord-16px">Elective</div>
+      </div>
+    </div>
+    <div class="title-row-1">
+      <div class="courses blinker-bold-storm-gray-22px">Courses</div>
+      <div class="address-1 blinker-light-gunsmoke-16px">3 results</div>
+    </div>
+    <div class="frame-235">
+      <div class="taskcard">
+        <div class="taskcard-1 border-1px-gallery">
+          <div class="main-info">
+            <div class="frame-18">
+              <div class="overlap-group">
+                <div class="comp-sci-3001-1 blinker-normal-fiord-12px">COMP SCI 3001</div>
+                <img
+                  class="edit"
+                  src="https://anima-uploads.s3.amazonaws.com/projects/626ae7916ff5cd6d9202df32/releases/628b08db7a87b0da5cf81c73/img/edit@2x.png"
+                />
+              </div>
+            </div>
+            <div class="computer-networks-applications blinker-bold-fiord-16px">
+              Computer Networks &amp; Applications
+            </div>
+          </div>
+          <div class="divider"></div>
+          <div class="rest-info">
+            <div class="belongs-to">
+              <div class="belongs-to-1 blinker-bold-cyprus-11px">Belongs to:</div>
+              <div class="column">
+                <div class="first">
+                  <div class="degree">
+                    <p class="low blinker-semi-bold-moonstone-10px">B - Computer Science - Elective</p>
+                  </div>
+                </div>
+                <div class="second">
+                  <div class="degree-1">
+                    <p class="low-1 blinker-semi-bold-moonstone-10px">
+                      B - Information Technology - Cybersecurity - Core
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="prerequisites">
+              <div class="prerequisites-1 blinker-bold-cyprus-11px">Prerequisites:</div>
+              <p class="course-name-number blinker-bold-cyprus-10px">
+                One of COMP SCI 1103, COMP SCI 1203, COMP SCI 2103, COMP SCI 2009, COMP SCI 2202
+              </p>
+            </div>
+            <div class="incompatible">
+              <div class="incompatible-1 blinker-bold-cyprus-11px">Incompatible:</div>
+              <div class="course-name-num blinker-bold-cyprus-10px">COMP SCI 2104</div>
             </div>
           </div>
         </div>
       </div>
-
-
-      <div class="overlap-group1">
-        <div class="body">
-          <div class="body-1">
-            <div class="elective">
-              <a href="../course-relationships">
-                <div class="taskcourse-card">
-                  <div class="taskcard border-1px-gallery">
-                    <div class="main-info">
-                      <div class="comp-sci-3001 blinker-normal-fiord-12px"> course_subject_and_course_code </div>
-                      <div class="computer-networks-applications blinker-bold-fiord-16px">
-                         course_name 
-                      </div>
-                    </div>
-                    <div class="divider"></div>
-                    <div class="rest-info">
-                      <div class="belongs-to">
-                        <div class="belongs-to-1 blinker-bold-cyprus-11px">Belongs to:</div>
-                        <div class="column">
-                          <div class="first">
-                            <div class="degree">
-                              <p class="low blinker-semi-bold-moonstone-10px">first_belongs_to</p>
-                            </div>
-                          </div>
-                          <div class="second">
-                            <div class="degree-1">
-                              <p class="low-1 blinker-semi-bold-moonstone-10px">
-                                second_belongs_to
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="prerequisites">
-                        <div class="prerequisites-1 blinker-bold-cyprus-11px">Prerequisites:</div>
-                        <p class="course-name-number blinker-bold-cyprus-10px">
-                          pre_requisite || "None"
-                        </p>
-                      </div>
-                      <div class="incompatible">
-                        <div class="incompatible-1 blinker-bold-cyprus-11px">Incompatible:</div>
-                        <div class="course-name-num blinker-bold-cyprus-10px">incompatible || "None"</div>
-                      </div>
-                    </div>
+      <div class="taskcard">
+        <div class="taskcard-1 border-1px-gallery">
+          <div class="main-info">
+            <div class="frame-18">
+              <div class="overlap-group">
+                <div class="comp-sci-3001-1 blinker-normal-fiord-12px">COMP SCI 3001</div>
+                <img
+                  class="edit"
+                  src="https://anima-uploads.s3.amazonaws.com/projects/626ae7916ff5cd6d9202df32/releases/628b08db7a87b0da5cf81c73/img/edit@2x.png"
+                />
+              </div>
+            </div>
+            <div class="computer-networks-applications blinker-bold-fiord-16px">
+              Computer Networks &amp; Applications
+            </div>
+          </div>
+          <div class="divider"></div>
+          <div class="rest-info">
+            <div class="belongs-to">
+              <div class="belongs-to-2 blinker-bold-cyprus-11px">Belongs to:</div>
+              <div class="column">
+                <div class="first">
+                  <div class="degree">
+                    <p class="low-2 blinker-semi-bold-moonstone-10px">B - Computer Science - Elective</p>
                   </div>
                 </div>
-              </a>
+                <div class="second">
+                  <div class="degree-1">
+                    <p class="low-3 blinker-semi-bold-moonstone-10px">
+                      B - Information Technology - Cybersecurity - Core
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="prerequisites">
+              <div class="prerequisites-2 blinker-bold-cyprus-11px">Prerequisites:</div>
+              <p class="course-name-number blinker-bold-cyprus-10px">
+                One of COMP SCI 1103, COMP SCI 1203, COMP SCI 2103, COMP SCI 2009, COMP SCI 2202
+              </p>
+            </div>
+            <div class="incompatible">
+              <div class="incompatible-2 blinker-bold-cyprus-11px">Incompatible:</div>
+              <div class="course-name-num-1 blinker-bold-cyprus-10px">COMP SCI 2104</div>
             </div>
           </div>
         </div>
       </div>
-
-
-      
-      <div class="app-bottom">
-        <div class="copyright">
-          <p class="team_07-2022-all-rights-reserved blinker-light-aqua-squeeze-14px">
-            © Team_07&nbsp;&nbsp; 2022&nbsp;&nbsp; All rights reserved
-          </p>
+      <div class="taskcard">
+        <div class="taskcard-1 border-1px-gallery">
+          <div class="main-info">
+            <div class="frame-18">
+              <div class="overlap-group">
+                <div class="comp-sci-3001-1 blinker-normal-fiord-12px">COMP SCI 3001</div>
+                <img
+                  class="edit"
+                  src="https://anima-uploads.s3.amazonaws.com/projects/626ae7916ff5cd6d9202df32/releases/628b08db7a87b0da5cf81c73/img/edit@2x.png"
+                />
+              </div>
+            </div>
+            <div class="computer-networks-applications blinker-bold-fiord-16px">
+              Computer Networks &amp; Applications
+            </div>
+          </div>
+          <div class="divider"></div>
+          <div class="rest-info">
+            <div class="belongs-to">
+              <div class="belongs-to-3 blinker-bold-cyprus-11px">Belongs to:</div>
+              <div class="column">
+                <div class="first">
+                  <div class="degree">
+                    <p class="low-4 blinker-semi-bold-moonstone-10px">B - Computer Science - Elective</p>
+                  </div>
+                </div>
+                <div class="second">
+                  <div class="degree-1">
+                    <p class="low-5 blinker-semi-bold-moonstone-10px">
+                      B - Information Technology - Cybersecurity - Core
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="prerequisites">
+              <div class="prerequisites-3 blinker-bold-cyprus-11px">Prerequisites:</div>
+              <p class="course-name-number blinker-bold-cyprus-10px">
+                One of COMP SCI 1103, COMP SCI 1203, COMP SCI 2103, COMP SCI 2009, COMP SCI 2202
+              </p>
+            </div>
+            <div class="incompatible">
+              <div class="incompatible-3 blinker-bold-cyprus-11px">Incompatible:</div>
+              <div class="course-name-num-2 blinker-bold-cyprus-10px">COMP SCI 2104</div>
+            </div>
+          </div>
         </div>
+      </div>
+    </div>
+
+
+
+    <div class="app-bottom">
+      <div class="copyright">
+        <p class="team_07-2022-all-rights-reserved blinker-light-aqua-squeeze-14px">
+          © Team_07&nbsp;&nbsp; 2022&nbsp;&nbsp; All rights reserved
+        </p>
       </div>
     </div>
   </div>
 
-  
 
-  <script>
-    /* Once click the botton, route to the searching page */
-    function doSearching() {
-        let searchingScope = document.getElementById("demo-selected-text").innerText;
-        let searchingValue = document.getElementById("searhing-value").value.toLowerCase().split(' ').join('-');
+    <script>
+      /* Once click the botton, route to the searching page */
+      function doSearching() {
+          let searchingScope = document.getElementById("demo-selected-text").innerText;
+          let searchingValue = document.getElementById("searhing-value").value.toLowerCase().split(' ').join('-');
 
-        searchingScope = searchingScope.split(' ').join('_');
+          searchingScope = searchingScope.split(' ').join('_');
 
-        if (searchingScope === 'Degrees') {
-            searchingScope = 'degree-name';
-        }
-        else if (searchingScope === 'Courses') {
-            searchingScope = 'course-name';
-        }
-        else {
-            searchingScope = 'all-categories';
-        }
+          if (searchingScope === 'Degrees') {
+              searchingScope = 'degree-name';
+          }
+          else if (searchingScope === 'Courses') {
+              searchingScope = 'course-name';
+          }
+          else {
+              searchingScope = 'all-categories';
+          }
 
-        window.open(`/search?${searchingScope}=${searchingValue}`, '_self');
-    }        
-</script>
-
-
-  
-
-  
+          window.open(`/search?${searchingScope}=${searchingValue}`, '_self');
+      }
+  </script>
 
 
 
 </body>
-
 </html>
