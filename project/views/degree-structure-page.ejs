@@ -198,7 +198,7 @@
       
 
       /* Use fetch to request data instead of using ejs */
-      fetch(`${document.URL}/getDegreeData`, {method:'GET'}) //why this url?
+      fetch(`${document.URL}/getDegreeData`, {method:'GET'})
       .then(response =>{
         return response.text()
       })

@@ -1,7 +1,7 @@
 /* Access database*/
 const getRelationship = async function(req, res) {
     const course_name = req.params.course_name.split('-').join(' ');
-    // console.log(course_name);
+    console.log(course_name);
 
     const mysql2 = require('mysql2/promise');
 
@@ -13,7 +13,7 @@ const getRelationship = async function(req, res) {
     });
 
     /* Taken by yuhao: find the course*/
-    let a_course = await connection.execute('SELECT * FROM adelaide.course  WHERE `courses` =' + course_name +'";');
+    let a_course = await connection.execute('SELECT * FROM adelaide.course  WHERE `courses` =' + course_name +';');
 
     [b_to] = await connection.execute('SELECT degree,stream,supplement FROM `degree_course` WHERE `courses` = "'+ a_course.fullname +'";');
     
