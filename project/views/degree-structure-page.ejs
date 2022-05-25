@@ -30,7 +30,7 @@
 
       function addStream(a_stream) {
         a_stream = JSON.parse(a_stream);
-        console.log(a_stream);
+        // console.log(a_stream);
 
         let stream_name = a_stream.stream_name; // This is hardcode, should delete later
         
@@ -43,7 +43,8 @@
         </div>`;
 
         /* Create all course cards under this stream */
-        let sectionCards = addCards(); // This is hardcode, should pass in a stream object
+        let course_list = JSON.stringify(a_stream.course_list);
+        let sectionCards = addCards(course_list); // This is hardcode, should pass in a stream object
 
         let section = `
         <div class="core"> 
@@ -65,14 +66,19 @@
         Parameter:a stream obj that contains mutilple course objs 
       */
       function addCards(streamCourses) {
+        let course_list = JSON.parse(streamCourses);
+        console.log(course_list)
         
+
         let sectionCards = "";
-        let len = 9 || streamCourses.length; // This is hardcode, should use only "streamCourse.length"
+        let len = Object.keys(course_list).length; // get the # of courses to be rendered
+
         for (i=0; i<len; i++) {
-          sectionCards += createCard(); // Should pass in a course obj contains info of pre-req, incomp, belongs etc, .
+          let a_course = JSON.stringify(course_list[i]);
+          sectionCards += createCard(a_course); // Should pass in a course obj contains info of pre-req, incomp, belongs etc, .
         }
-        return sectionCards;
         
+        return sectionCards;
       }
 
       /* 
@@ -80,12 +86,23 @@
         Parameter:a course obj that contains information of pre-req, incomp, belongs etc,
       */
       function createCard(course) {
-        
-        // This line is hardcode, should delete later
-        let course_subject_and_course_code, course_name, first_belongs_to, second_belongs_to, pre_requisite, incompatible, course_url = 0; 
+        let a_course = JSON.parse(course);
+      
+        let course_name = a_course.course_name;
+        let course_subject_and_course_code = a_course.course_subject_code;
+        let first_belongs_to, second_belongs_to = "";
+        let pre_requisite = a_course.pre_requisite;
+        let incompatible = a_course.incompatible;
+
+        if (a_course.belongs_to.length > 0) {
+          first_belongs_to = a_course.belongs_to[0]['full'] 
+        }
+        if (a_course.belongs_to.length > 1) {
+          second_belongs_to = a_course.belongs_to[1]['full'] + ' ...' 
+        }
         
         let card = `
-        <a href="../course-relationships/${course_name || "course-name"}">
+        <a href="../course-relationships/${course_name.split(' ').join('-') || "course-name"}">
           <div class="taskcourse-card">
             <div class="taskcard border-1px-gallery">
               <div class="main-info">
@@ -101,13 +118,13 @@
                   <div class="column">
                     <div class="first">
                       <div class="degree">
-                        <p class="low blinker-semi-bold-moonstone-10px">${first_belongs_to||"B - Computer Science - Elective"}</p>
+                        <p class="low blinker-semi-bold-moonstone-10px">${first_belongs_to||"-"}</p>
                       </div>
                     </div>
                     <div class="second">
                       <div class="degree-1">
                         <p class="low-1 blinker-semi-bold-moonstone-10px">
-                          ${second_belongs_to||"B - Information Technology - Cybersecurity - Core"}
+                          ${second_belongs_to||"-"}
                         </p>
                       </div>
                     </div>
@@ -116,12 +133,12 @@
                 <div class="prerequisites">
                   <div class="prerequisites-1 blinker-bold-cyprus-11px">Prerequisites:</div>
                   <p class="course-name-number blinker-bold-cyprus-10px">
-                    ${pre_requisite||"Plain text"}
+                    ${pre_requisite||"None"}
                   </p>
                 </div>
                 <div class="incompatible">
                   <div class="incompatible-1 blinker-bold-cyprus-11px">Incompatible:</div>
-                  <div class="course-name-num blinker-bold-cyprus-10px">${incompatible||"Plain text"}</div>
+                  <div class="course-name-num blinker-bold-cyprus-10px">${incompatible||"None"}</div>
                 </div>
               </div>
             </div>
@@ -142,18 +159,25 @@
         let section = "";
 
         /* Get all the stream one by one */
-        let core = JSON.stringify(degree.stream.core);
-        addStream(core);
 
-        let elective = JSON.stringify(degree.stream.elective);
-        addStream(elective);
+        if (degree.stream.core.course_list.length) {
+          let core = JSON.stringify(degree.stream.core);
+          addStream(core);
+        }
 
-        let project = JSON.stringify(degree.stream.project);
-        addStream(project);
-
+        if (degree.stream.elective.course_list.length) {
+          let elective = JSON.stringify(degree.stream.elective);
+          addStream(elective);
+        }
+        
+        if (degree.stream.project.course_list.length){
+          let project = JSON.stringify(degree.stream.project);
+          addStream(project);
+        }
+        
         /* Check if have major */
-        if (degree.stream.major.length) {
-          let major = JSON.stringify(degree.stream.major);
+        if ( degree.stream.major.length) {
+
           let majorSection = `
               <div class="majors">
                 <div class="majors-1">Majors</div>
@@ -162,7 +186,12 @@
           /* Append the whole section to html at a right place */
           const degreeSection = document.querySelector("#after-degree-structure");
           degreeSection.insertAdjacentHTML("beforebegin", majorSection);
-          addStream(major);
+          
+          for (k=0; k<degree.stream.major.length; k++) {
+            let a_major = JSON.stringify(degree.stream.major[k]);
+            addStream(a_major);
+          }
+
         }
       }
 

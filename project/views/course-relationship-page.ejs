@@ -7,13 +7,13 @@
 
 
     <!--Icon-->
-    <link rel="shortcut icon" type="image/png" href="/img/icons8-study-64.png" />
+    <link rel="shortcut icon" type="image/png" href="img/icons8-study-64.png" />
 
     <!--Font awesome-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- CSS Stylesheets -->
-    <link rel="stylesheet" href="course-relationship-page.css">
+    <link rel="stylesheet" href="css/course-relationship.css">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
@@ -112,7 +112,8 @@
                     <div class="card" id="prerequisite">
                         <div class="card-body">
                             <div class="row row-cols-1 row-cols-md-2 ">
-                                <div class="col-sm-6">
+                                <!-- every card take half space of parent card, use col-sm-6 -->
+                                <div class="col-sm-6 course-card">
                                     <div class="card">
                                         <div class="card-header">
                                             COMP SCI 3001
@@ -124,7 +125,25 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-sm-6">
+                                <div class="col-sm-6 course-card">
+                                    <div class="card">
+                                        <div class="card-header">COMP SCI 3001<a class="btn-edit" href="#"><i
+                                                    class="fa fa-pencil" aria-hidden="true"></i></a></div>
+                                        <div class="card-body">
+                                            <h5 class="card-title">Course name</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 course-card">
+                                    <div class="card">
+                                        <div class="card-header">COMP SCI 3001<a class="btn-edit" href="#"><i
+                                                    class="fa fa-pencil" aria-hidden="true"></i></a></div>
+                                        <div class="card-body">
+                                            <h5 class="card-title">Course name</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 course-card">
                                     <div class="card">
                                         <div class="card-header">COMP SCI 3001<a class="btn-edit" href="#"><i
                                                     class="fa fa-pencil" aria-hidden="true"></i></a></div>
@@ -142,24 +161,16 @@
                     <div class="card" id="incompatible">
                         <div class="card-body">
                             <div class="row">
-                                <div class="col-sm-6">
-                                    <div class="card">
-                                        <div class="card-header">COMP SCI 3001<a class="btn-edit" href="#"><i
-                                                    class="fa fa-pencil" aria-hidden="true"></i></a></div>
+                                <!-- if take space of whole column, use col-sm-12 -->
+                                <div class="col-sm-12  course-card">
+                                    <div class="card border-light">
                                         <div class="card-body">
-                                            <h5 class="card-title">Course name</h5>
+                                            <h5 class="card-content">One of COMP SCI 1103, COMP SCI 1203, COMP SCI 2103,
+                                                COMP SCI 2202, COMP SCI 2009 or COMP SCI 2202B </h5>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-sm-6">
-                                    <div class="card">
-                                        <div class="card-header">COMP SCI 3001<a class="btn-edit" href="#"><i
-                                                    class="fa fa-pencil" aria-hidden="true"></i></a></div>
-                                        <div class="card-body">
-                                            <h5 class="card-title">Course name</h5>
-                                        </div>
-                                    </div>
-                                </div>
+
                             </div>
                         </div>
                     </div>
