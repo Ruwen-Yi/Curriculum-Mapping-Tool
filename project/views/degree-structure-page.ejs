@@ -21,22 +21,24 @@
       
     </div>
     <div class="degree-name" id="degree-section">
-      <h1 class="title"><% DegreeName = "DegreeName" %> <%= DegreeName%></h1>
+      <h1 class="title" id="academic-degree-name">DegreeName</h1>
     </div>
     
     
 
     <script>
 
-      function addStream(stream) {
+      function addStream(a_stream) {
+        console.log(a_stream);
+        a_stream = JSON.parse(a_stream);
+        let stream_name = a_stream.stream_name; // This is hardcode, should delete later
         
-        let stream_name = 0; // This is hardcode, should delete later
 
         /* Create a section title, e.g., core, elective, project, major */
         let sectionTitle = `
         <div class="title-row">
           <img class="vector" src="../img/vector@2x.png" />
-          <div class="core-courses blinker-semi-bold-storm-gray-20px">${stream_name || "stream name"}</div>
+          <div class="core-courses blinker-semi-bold-storm-gray-20px"> ${stream_name}  </div>
         </div>`;
 
         /* Create all course cards under this stream */
@@ -132,40 +134,56 @@
         Parameter: a degree obj contains multiple streams
       */
       function createStructure(degree) {
-
+        degree = JSON.parse(degree);
+        console.log(degree);
+      
         let flag = true;
         let section = "";
 
-        for (k=0; k < (5||degree.length); k++){ //This is hardcode, i<degree.length
-          
-          if (k == 3 && (1 || degree.stream.stream_name.includes("major")) && flag) {
-            let majorSection = `
-              <div class="majors">
-                <div class="majors-1">Majors</div>
-              </div>`;
-              /* Append the whole section to html at a right place */
-              const degreeSection = document.querySelector("#degree-section");
-              degreeSection.insertAdjacentHTML("afterend", majorSection);
-              
-              flag = false;
-          }
-          
-          addStream(); // Should pass in a stream object
+        for (k=0; k < Object.keys(degree.stream).length; k++){
+          console.log(degree.stream);
+          console.log(degree.stream[0]);
+          // a_stream = JSON.stringify(degree.stream);
+          // console.log(a_stream);
+
+          //addStream(a_stream);
         }
+
+
+        // for (k=0; k < 4; k++){ //This is hardcode, i<degree.length
+          
+        //   if (k == 3 && (1 || degree.stream.stream_name.includes("major")) && flag) {
+        //     let majorSection = `
+        //       <div class="majors">
+        //         <div class="majors-1">Majors</div>
+        //       </div>`;
+        //       /* Append the whole section to html at a right place */
+        //       const degreeSection = document.querySelector("#degree-section");
+        //       degreeSection.insertAdjacentHTML("afterend", majorSection);
+              
+        //       flag = false;
+        //   }
+          
+        //   addStream(); // Should pass in a stream object
+        // }
       }
 
-      /* Pass in degree obj by ejs */
-      createStructure();
+      
 
       /* Use fetch to request data instead of using ejs */
-      fetch(':degree_name/getDegreeData', {method:'GET'}) //why this url?
+      fetch(`${document.URL}/getDegreeData`, {method:'GET'}) //why this url?
       .then(response =>{
         return response.text()
       })
       .then(data=>{
-        data = JSON.parse(data)
-        console.log(data)
-        console.log(data['degree_name'])
+        degree_structure = JSON.parse(data)
+        console.log(degree_structure)
+        console.log(degree_structure['degree_name'])
+        document.getElementById('academic-degree-name').innerHTML = degree_structure['degree_name'];
+
+        /* Pass in degree obj by ejs */
+        let degree = JSON.stringify(degree_structure)
+        createStructure(degree);
       })
       .catch(err =>{
         console.log(err)
