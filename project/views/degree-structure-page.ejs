@@ -29,8 +29,9 @@
     <script>
 
       function addStream(a_stream) {
-        console.log(a_stream);
         a_stream = JSON.parse(a_stream);
+        console.log(a_stream);
+
         let stream_name = a_stream.stream_name; // This is hardcode, should delete later
         
 
@@ -53,8 +54,8 @@
         </div>`;
         
         /* Append the whole section to html at a right place */
-        const degreeSection = document.querySelector("#degree-section");
-        degreeSection.insertAdjacentHTML("afterend", section);
+        const degreeSection = document.querySelector("#after-degree-structure");
+        degreeSection.insertAdjacentHTML("beforebegin", section);
 
         // document.getElementById("screen").append(...section) ;
       }
@@ -140,32 +141,29 @@
         let flag = true;
         let section = "";
 
-        for (k=0; k < Object.keys(degree.stream).length; k++){
-          console.log(degree.stream);
-          console.log(degree.stream[0]);
-          // a_stream = JSON.stringify(degree.stream);
-          // console.log(a_stream);
+        /* Get all the stream one by one */
+        let core = JSON.stringify(degree.stream.core);
+        addStream(core);
 
-          //addStream(a_stream);
+        let elective = JSON.stringify(degree.stream.elective);
+        addStream(elective);
+
+        let project = JSON.stringify(degree.stream.project);
+        addStream(project);
+
+        /* Check if have major */
+        if (degree.stream.major.length) {
+          let major = JSON.stringify(degree.stream.major);
+          let majorSection = `
+              <div class="majors">
+                <div class="majors-1">Majors</div>
+              </div>`;
+
+          /* Append the whole section to html at a right place */
+          const degreeSection = document.querySelector("#after-degree-structure");
+          degreeSection.insertAdjacentHTML("beforebegin", majorSection);
+          addStream(major);
         }
-
-
-        // for (k=0; k < 4; k++){ //This is hardcode, i<degree.length
-          
-        //   if (k == 3 && (1 || degree.stream.stream_name.includes("major")) && flag) {
-        //     let majorSection = `
-        //       <div class="majors">
-        //         <div class="majors-1">Majors</div>
-        //       </div>`;
-        //       /* Append the whole section to html at a right place */
-        //       const degreeSection = document.querySelector("#degree-section");
-        //       degreeSection.insertAdjacentHTML("afterend", majorSection);
-              
-        //       flag = false;
-        //   }
-          
-        //   addStream(); // Should pass in a stream object
-        // }
       }
 
       
@@ -194,7 +192,7 @@
 
     
 
-    <div class="app-bottom">
+    <div class="app-bottom" id="after-degree-structure">
       <div class="copyright">
         <p class="team_07-2022-all-rights-reserved blinker-light-aqua-squeeze-14px">
           © Team_07&nbsp;&nbsp; 2022&nbsp;&nbsp; All rights reserved
