@@ -1,7 +1,11 @@
+const renderCourseRelationship = (req, res) => {
+    res.render("../views/course-relationship-page.ejs");
+}
+
 /* Access database*/
 const getRelationship = async function(req, res) {
-    const course_name = req.params.course_name.split('-').join(' ');
-    console.log(course_name);
+    const course_code = req.params.course_name.split('-')[0];
+    console.log(course_code); // actually it is course_code
 
     const mysql2 = require('mysql2/promise');
 
@@ -13,9 +17,11 @@ const getRelationship = async function(req, res) {
     });
 
     /* Taken by yuhao: find the course*/
-    let a_course = await connection.execute('SELECT * FROM adelaide.course  WHERE `courses` =' + course_name +';');
+    let [a_course] = await connection.execute('SELECT * FROM adelaide.course WHERE `course_code` = "COMP SCI ' + course_code +'";');
+    //console.log(a_course)
 
-    [b_to] = await connection.execute('SELECT degree,stream,supplement FROM `degree_course` WHERE `courses` = "'+ a_course.fullname +'";');
+    let [b_to] = await connection.execute('SELECT degree,stream,supplement FROM `degree_course` WHERE `courses` = "'+ a_course[0].fullname +'";');
+    //console.log(b_to)
     
     let bt=[];
     let info={ 
@@ -51,11 +57,13 @@ const getRelationship = async function(req, res) {
         info.full=bb;
         bt.push(info)
     }
-    a_course.belongs_to = bt;
+    a_course[0].belongs_to = bt;
+    
     a_course = setData1(a_course);
 
-    //res.render("../views/homepage-course-overview.ejs",{course_list:list});
-    res.send(a_course);
+    //res.render("..\views\course-relationship-page.html",{course_list:list});
+    //console.log(bt)
+    res.send(a_course[0]);
 }
 
 function setData1(data11){
@@ -86,4 +94,4 @@ function setData1(data11){
 
 
 /* Export the function to be used by routes.js */
-module.exports = getRelationship;
+module.exports = {getRelationship, renderCourseRelationship};

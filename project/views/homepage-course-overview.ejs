@@ -122,6 +122,7 @@
 
                     <%  let course_name = course_list[index].course_name; %>
                     <%  let course_subject_and_course_code = course_list[index].course_subject_code; %>
+                    <%  let course_code = course_subject_and_course_code.split(' ').filter(function(i){return i})[2] %> 
                     <%  let first_belongs_to, second_belongs_to = "";%>
                     <%  let pre_requisite = course_list[index].pre_requisite;%>
                     <%  let incompatible = course_list[index].incompatible; %>
@@ -133,7 +134,7 @@
                     <% if (course_list[index].belongs_to.length > 1) { %>
                     <%   second_belongs_to = course_list[index].belongs_to[1]['full'] + ' ...' %> 
                     <% } %>
-                        <a href="../course-relationships/<%= course_name.split(' ').join('-').toLowerCase()%>">
+                        <a href="../course-relationships/<%= course_code%>-<%= course_name.split(' ').join('-').toLowerCase()%>">
                           <div class="taskcourse-card">
                             <div class="taskcard border-1px-gallery">
                               <div class="main-info">

@@ -145,8 +145,8 @@
         
         let name_html = `
         <span h1 class="course-number">
-            ${"COMP SCI 0000" || course_sub_code}
-        </span> ${"CCCCCCCCCCCCCCCCC" || course_name }`;
+            ${course_sub_code}
+        </span> ${course_name }`;
 
         let section = document.getElementById('name-section');
         section.insertAdjacentHTML('afterbegin', name_html);
@@ -155,15 +155,20 @@
     /* This function add data to belongs_to section */
     function put_belongs_to(belongs_to) {
         
+        belongs_to = JSON.parse(belongs_to);
 
-        if (belongs_to.length) return;
+        if (belongs_to[0] == null){
+            console.log("length of belongs to zero");
+            return;
+        }
         
-        for (term in belongs_to) {
+        belongs_to.forEach(term=>{
+            console.log(term)
             let level = "";
             let title = "";
             let stream = "";
 
-            term = term.split('-');
+            term = term.full.split('-');
             level = term[0] == 'B' ? "Bachelor of " : "Master of ";
             title = term[1];
             stream = term[2];
@@ -171,21 +176,18 @@
                 <div class="col">
                     <div class="card h-100">
                         <div class="card-body">
-                            <h5 class="card-title"><span h5 class="degree-type">${"Bachelor of" || level} </span> ${"Computer Science"||title}
+                            <h5 class="card-title"><span h5 class="degree-type">${level} </span> ${title}
                             </h5>
                         </div>
                         <div class="card-footer">
-                            ${"Core" || stream}
+                            ${stream}
                         </div>
                     </div>
                 </div>`
             
             let section = document.getElementById('belongs-to-section');
             section.insertAdjacentHTML('afterbegin', inner_html);
-        }
-        
-    
-        
+        })                
     }
 
     /* This function add data pre-requisite section */
