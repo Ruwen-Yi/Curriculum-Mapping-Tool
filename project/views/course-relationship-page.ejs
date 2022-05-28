@@ -25,7 +25,7 @@
 
     <nav class="navbar navbar-dark " style="background-color: #053742;margin-bottom: 0px;">
         <div class="container-fluid">
-            <a class="navbar-brand">Curriculum Helper</a>
+            <a class="navbar-brand" href="/">Curriculum Helper</a>
             <form class="d-flex" role="search">
                 <input class="form-control me-2" type="search" placeholder="degree or course" aria-label="Search">
                 <button class="btn btn-outline-light" type="submit">Search</button>
@@ -86,10 +86,10 @@
                     <h5 class="big-title">Prerequisite</h5>
                     <div class="card" id="prerequisite">
                         <div class="card-body">
-                            <div class="row row-cols-1 row-cols-md-2 " id="pre-requisite-section">
+                            <div class="row" id="pre-requisite-section"> <!-- class="row row-cols-1 row-cols-md-2 " -->
                                 
                                 <!-- every card take half space of parent card, use col-sm-6 -->
-                                <div class="col-sm-6 course-card">
+                                <!-- <div class="col-sm-6 course-card">
                                     <div class="card">
                                         <div class="card-header">
                                             COMP SCI 3001
@@ -100,7 +100,7 @@
                                             <h5 class="card-title">Course name</h5>
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
 
                             </div>
                         </div>
@@ -113,14 +113,14 @@
                             <div class="row" id="incompatible-section">
                                 
                                 <!-- if take space of whole column, use col-sm-12 -->
-                                <div class="col-sm-12  course-card">
+                                <!-- <div class="col-sm-12  course-card">
                                     <div class="card border-light">
                                         <div class="card-body">
                                             <h5 class="card-content">One of COMP SCI 1103, COMP SCI 1203, COMP SCI 2103, COMP SCI 2202, COMP SCI 2009 or COMP SCI 2202B 
                                             </h5>
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
                                 
                             </div>
                         </div>
@@ -159,6 +159,20 @@
 
         if (belongs_to[0] == null){
             console.log("length of belongs to zero");
+            let inner_html = `
+                <div class="col">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title"><span h5 class="degree-type">None </span>
+                            </h5>
+                        </div>
+                        <div class="card-footer">
+                        </div>
+                    </div>
+                </div>`
+            
+            let section = document.getElementById('belongs-to-section');
+            section.insertAdjacentHTML('afterbegin', inner_html);
             return;
         }
         
@@ -196,7 +210,7 @@
         <div class="col-sm-12  course-card">
             <div class="card border-light">
                 <div class="card-body">
-                    <h5 class="card-content">${pre_requisite}</h5>
+                    <h5 class="card-content">${pre_requisite || "None"}</h5>
                 </div>
             </div>
         </div>`
@@ -221,11 +235,12 @@
 
     /* This function add data incompatible section */
     function put_incompatible(incompatible) {
+
         let inner_text_html = `
         <div class="col-sm-12  course-card">
             <div class="card border-light">
                 <div class="card-body">
-                    <h5 class="card-content">${incompatible}</h5>
+                    <h5 class="card-content">${incompatible || "None"}</h5>
                 </div>
             </div>
         </div>`
@@ -245,11 +260,11 @@
         let belongs_to = JSON.stringify(a_course.belongs_to);
         put_belongs_to(belongs_to);
 
-        let pre_requisite = a_course.pre_requisite;
+        let pre_requisite = a_course.pre_requisite
         put_prerequisite(pre_requisite);
 
         let incompatible = a_course.incompatible;
-        put_prerequisite(incompatible);
+        put_incompatible(incompatible);
     })
     .catch(err=>{
         console.log(err);

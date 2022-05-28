@@ -37,7 +37,7 @@ async function getStructure(degreeName) {
     // list = [ {}, {}, ... ]
     const name1 = degreeName;
     //let [list] = await connection.execute('SELECT * FROM adelaide.course');
-    let [list] = await connection.execute('SELECT degree_course.degree, degree_course.courses,degree_course.stream,degree_course.supplement,course.course_code, course.course_name, course.courselink_href, course.pre_requisite,course.belongs_to, course.Incompatibale FROM `degree_course` left JOIN course ON course.fullname=degree_course.courses WHERE `degree` = "'+name1+'";');
+    let [list] = await connection.execute('SELECT degree_course.name,degree_course.degree, degree_course.courses,degree_course.stream,degree_course.supplement,course.course_code, course.course_name, course.courselink_href, course.pre_requisite,course.belongs_to, course.Incompatibale FROM `degree_course` left JOIN course ON course.fullname=degree_course.courses WHERE `degree` = "'+name1+'";');
 
     for (i=0; i<list.length; i++){
 
@@ -134,7 +134,7 @@ function setData1(data11){
         course.course_subject_code = data11[i].course_code;
 
         if(data11[i].course_name==null){
-            course.course_name =  data11[i].courses;
+            course.course_name =  data11[i].name;
             
         }
         else{
