@@ -195,9 +195,7 @@ function setData1(data11){
                 }                
             }
 
-
-
-                }
+        }
     }
     return degree;
 };
