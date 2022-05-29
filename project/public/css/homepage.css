@@ -175,6 +175,12 @@ a {
     min-width: 792px;
 }
 
+::placeholder{
+    font-family: var(--font-family-blinker);
+    font-size: var(--font-size-m2);
+
+}
+
 .widget-wrapper {
     align-items: flex-start;
     display: flex;
@@ -185,6 +191,7 @@ a {
 }
 
 .drop-down-filled-disabled-yes-primary {
+    
     height: 56px;
     width: 200px;
 }
@@ -466,7 +473,7 @@ a {
     width: 380px;
 }
 
-.data-2 {
+.data-2 { 
     align-items: flex-start;
     background-color: var(--white);
     display: flex;
@@ -496,9 +503,6 @@ a {
 }
 
 
-
-
-
 .data-1 {
     align-items: flex-start;
     background-color: var(--white);
@@ -515,6 +519,9 @@ a {
 
 
 .mdc-list-item {
+    font-family: var(--font-family-blinker);
+    font-size: var(--font-size-l3);
+ 
     align-items: center;
     display: flex;
     height: 48px;

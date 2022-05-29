@@ -1388,6 +1388,12 @@
   width: 447px;
 }
 
+::placeholder {
+  font-family: var(--font-family-blinker);
+  font-size: var(--font-size-m2);
+}
+
+
 .homepage-second .search-icon-zmdjPu {
   background-color: transparent;
   height: 25px;
@@ -1421,6 +1427,8 @@
   white-space: nowrap;
   width: 560px;
 }
+
+
 
 .homepage-second .drop-down-y9pSiT {
   background-color: transparent;

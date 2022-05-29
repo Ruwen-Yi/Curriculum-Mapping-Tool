@@ -121,6 +121,7 @@
 }
 
 .homepage-course .search-bar {
+
   align-items: center;
   display: flex;
   gap: 20px;
@@ -129,6 +130,7 @@
 }
 
 .homepage-course .search-box {
+
   background-color: var(--white);
   border-radius: 12px;
   box-shadow: 0px 4px 10px #00000040;
@@ -136,6 +138,10 @@
   height: 74px;
   overflow: hidden;
   width: 447px;
+}
+::placeholder {
+  font-family: var(--font-family-blinker);
+  font-size: var(--font-size-m2);
 }
 
 .homepage-course .search-icon {
@@ -295,6 +301,7 @@
   left: 0;
   position: absolute;
   top: 50px;
+  
 }
 
 .homepage-course .body-1 {
@@ -618,6 +625,7 @@
   align-items: center;
   background-color: var(--cyprus2);
   display: flex;
+  flex: 1;
   gap: 10px;
   height: 44px;
   justify-content: center;
@@ -626,7 +634,7 @@
   padding-right: 125px;
   padding-top: 19px;
   width: 100%;
-  position: fixed;
+  position: absolute;
   bottom: 0px;
 }
 
