@@ -38,9 +38,9 @@ Update at 14:36 of 23/05
     
   Advance function can be add later:
 For all modals:
-- [ ] hide scrollbar when there is none
+  - [ ] hide scrollbar when there is none
 For edit modal:
-- [ ] after click edit icon button, the cursor should move to the end of text
-- [ ] add confirm second-modal for delete behavior
-  For add modal:
-- [ ]  link add new course button and add new course modal
+  - [ ] after click edit icon button, the cursor should move to the end of text
+  - [ ] add confirm second-modal for delete behavior
+For add modal:
+  - [ ]  link add new course button and add new course modal
