@@ -29,3 +29,18 @@ Update at 12:25 of 23/05, version 1.0.3
 Update at 14:36 of 23/05
   - modified the spacing between cards
   - set the situation of showing text
+  
+### version 1.0.4 (update modal folder)
+  Update at 18:26 of 29/05, version 1.0.4
+    - add course modal
+    - edit course modal
+    - add new course modal
+    
+  Advance function can be add later:
+  For all modals:
+- [ ] hide scrollbar when there is none
+  For edit modal:
+- [ ] after click edit icon button, the cursor should move to the end of text
+- [ ] add confirm second-modal for delete behavior
+  For add modal:
+- [ ]  link add new course button and add new course modal
