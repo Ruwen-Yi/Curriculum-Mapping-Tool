@@ -9,6 +9,12 @@
   <link rel="stylesheet" type="text/css" href="/css/styleguide-dsp.css" />
   <link rel="stylesheet" type="text/css" href="/css/globals-dsp.css" />
   <link rel="stylesheet" href="/css/edit-icon.css">
+
+  <!-- for edit course --> <!-- Taken by Yingyu: need to integrate with the exsiting css -->
+  <!-- <link rel="stylesheet" href="/css/edit-course/style.css"> -->
+    <!--Font awesome-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
   <script src="/js/edit-course.js"></script>
   
   <title>degree-structure</title>
@@ -127,7 +133,7 @@
       let card = `
       
         <div class="taskcourse-card" style="position:relative;">
-          <img src="https://anima-uploads.s3.amazonaws.com/projects/626ae7916ff5cd6d9202df32/releases/628b08db7a87b0da5cf81c73/img/edit@2x.png" class="edit" data-fullname="${course_subject_and_course_code} ${course_name}" onclick="edit_course("${course_subject_and_course_code} ${course_name}")">
+          <img src="https://anima-uploads.s3.amazonaws.com/projects/626ae7916ff5cd6d9202df32/releases/628b08db7a87b0da5cf81c73/img/edit@2x.png" class="edit" onclick="edit_course('${course_code} ${course_name}')" >
           <a href="/course-relationships/${course_code}-${course_name.split(' ').join('-')}">
             <div class="taskcard border-1px-gallery">
               <div class="main-info">
