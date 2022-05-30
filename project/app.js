@@ -61,12 +61,12 @@ app.use('/course-relationships', courseRelationship)
 
 
 /* Build for test, checking if expected data can be sent to a blank page */
-const text_course = require('./homepage/test')
-app.get('/test', text_course) /* Route for testing */
+const text = require('./homepage/test')
+app.get('/test', text) /* Route for testing */
 /* End of test */
 
 
 /* Set up server */
 app.listen(9000, ()=>{
-    console.log('Server is listening on port 5000...');
+    console.log('Server is listening on port 9000...');
 });

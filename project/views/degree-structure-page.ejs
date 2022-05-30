@@ -8,6 +8,8 @@
   <link rel="stylesheet" type="text/css" href="/css/degree-structure-page.css" /> <!-- use absolute path with '/' at first -->
   <link rel="stylesheet" type="text/css" href="/css/styleguide-dsp.css" />
   <link rel="stylesheet" type="text/css" href="/css/globals-dsp.css" />
+  <link rel="stylesheet" href="/css/edit-icon.css">
+  <script src="/js/edit-course.js"></script>
   
   <title>degree-structure</title>
 </head>
@@ -28,11 +30,6 @@
     <div class="degree-name" id="degree-section">
       <h1 class="title" id="academic-degree-name"></h1>
     </div>
-
-    
-
-    
-
     
 
     <div class="app-bottom" id="after-degree-structure">
@@ -128,48 +125,50 @@
       }
       
       let card = `
-      <a href="/course-relationships/${course_code}-${course_name.split(' ').join('-')}">
-        <div class="taskcourse-card">
-          <div class="taskcard border-1px-gallery">
-            <div class="main-info">
-              <div class="comp-sci-3001 blinker-normal-fiord-12px">${course_subject_and_course_code || "Course Subject & Code"}</div>
-              <div class="computer-networks-applications blinker-bold-fiord-16px">
-                  ${course_name || "course name"}
+      
+        <div class="taskcourse-card" style="position:relative;">
+          <img src="https://anima-uploads.s3.amazonaws.com/projects/626ae7916ff5cd6d9202df32/releases/628b08db7a87b0da5cf81c73/img/edit@2x.png" class="edit" data-fullname="${course_subject_and_course_code} ${course_name}" onclick="edit_course("${course_subject_and_course_code} ${course_name}")">
+          <a href="/course-relationships/${course_code}-${course_name.split(' ').join('-')}">
+            <div class="taskcard border-1px-gallery">
+              <div class="main-info">
+                <div class="comp-sci-3001 blinker-normal-fiord-12px">${course_subject_and_course_code || "Course Subject & Code"}</div>
+                <div class="computer-networks-applications blinker-bold-fiord-16px">
+                    ${course_name || "course name"}
+                </div>
               </div>
-            </div>
-            <div class="divider"></div>
-            <div class="rest-info">
-              <div class="belongs-to">
-                <div class="belongs-to-1 blinker-bold-cyprus-11px">Belongs to:</div>
-                <div class="column">
-                  <div class="first">
-                    <div class="degree">
-                      <p class="low blinker-semi-bold-moonstone-10px">${first_belongs_to||"-"}</p>
+              <div class="divider"></div>
+              <div class="rest-info">
+                <div class="belongs-to">
+                  <div class="belongs-to-1 blinker-bold-cyprus-11px">Belongs to:</div>
+                  <div class="column">
+                    <div class="first">
+                      <div class="degree">
+                        <p class="low blinker-semi-bold-moonstone-10px">${first_belongs_to||"-"}</p>
+                      </div>
                     </div>
-                  </div>
-                  <div class="second">
-                    <div class="degree-1">
-                      <p class="low-1 blinker-semi-bold-moonstone-10px">
-                        ${second_belongs_to||"-"}
-                      </p>
+                    <div class="second">
+                      <div class="degree-1">
+                        <p class="low-1 blinker-semi-bold-moonstone-10px">
+                          ${second_belongs_to||"-"}
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="prerequisites">
-                <div class="prerequisites-1 blinker-bold-cyprus-11px">Prerequisites:</div>
-                <p class="course-name-number blinker-bold-cyprus-10px">
-                  ${pre_requisite||"None"}
-                </p>
-              </div>
-              <div class="incompatible">
-                <div class="incompatible-1 blinker-bold-cyprus-11px">Incompatible:</div>
-                <div class="course-name-num blinker-bold-cyprus-10px">${incompatible||"None"}</div>
+                <div class="prerequisites">
+                  <div class="prerequisites-1 blinker-bold-cyprus-11px">Prerequisites:</div>
+                  <p class="course-name-number blinker-bold-cyprus-10px">
+                    ${pre_requisite||"None"}
+                  </p>
+                </div>
+                <div class="incompatible">
+                  <div class="incompatible-1 blinker-bold-cyprus-11px">Incompatible:</div>
+                  <div class="course-name-num blinker-bold-cyprus-10px">${incompatible||"None"}</div>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
-      </a>`;
+          </a>
+        </div>`;
       return card;
     }
   
@@ -248,7 +247,6 @@
     .catch(err =>{
       console.log(err)
     })
-
 
   </script>
 
