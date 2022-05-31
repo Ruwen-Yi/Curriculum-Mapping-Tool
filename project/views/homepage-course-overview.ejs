@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=1441, maximum-scale=1.0" />
+  <link rel="shortcut icon" type="image/png" href="img/icons8-study-64.png" />
+  <meta name="og:type" content="website" />
+  <meta name="twitter:card" content="photo" />
+  <link rel="stylesheet" type="text/css" href="css/homepage-course.css" />
+  <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+  <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="css/styleguide-hpcs.css" />
+  <link rel="stylesheet" type="text/css" href="css/globals-hpcs.css" />
+</head>
+
+<body style="margin: 0; background: #e8f0f2">
+  <input type="hidden" id="anPageName" name="page" value="homepage-course" />
+  <div class="container-center-horizontal">
+    <div class="homepage-course screen">
+      <div class="app-top">
+        <div class="curriculum-helper valign-text-middle blinker-semi-bold-aqua-squeeze-24px">Curriculum Helper</div>
+      </div>
+      <div class="main-part">
+        <div class="overlap-group">
+          <div class="head">
+            <div class="left">
+              <div class="title-and-slogan">
+                <div class="title">
+                  <div class="title-1 belleza-normal-black-60px">
+                    Make your coordination easier
+                  </div>
+                </div>
+                <div class="slogaan">
+                  <div class="slogaan-1">Browse degree content and course relationships with
+                    just
+                    one click.</div>
+                </div>
+              </div>
+
+              <div class="search-bar">
+                <div class="search-box">
+                  <div class="search-icon">
+                    <img class="search-icon-1" src="img/search-icon@2x.png" />
+                  </div>
+                  <input id="searhing-value" type="text" name="searching_value" placeholder="Course name or course number" style="width: 390px; font-size: 20px; border:none; outline: none; padding-left: 20px;" >
+                </div>
+                <div class="widget-wrapper">
+                  <div class="drop-down-filled-disabled-yes-primary">
+                    <div class="mdc-select mdc-select--outlined demo-width-class" data-id="anima-widget">
+                      <div class="mdc-select__anchor custom-enhanced-select-width" role="button" aria-haspopup="listbox"
+                        aria-expanded="false">
+                        <span id="demo-label" class="mdc-floating-label"></span>
+                        <span class="mdc-select__selected-text-container">
+                          <span id="demo-selected-text" class="mdc-select__selected-text"></span>
+                        </span>
+                        <span class="mdc-select__dropdown-icon">
+                          <span class="mdc-select__dropdown-icon-inactive material-icons">arrow_drop_down</span>
+                          <span class="mdc-select__dropdown-icon-active material-icons">arrow_drop_up</span>
+                        </span>
+                        <span class="mdc-line-ripple"></span>
+                      </div>
+                      <div class="mdc-select__menu mdc-menu mdc-menu-surface mdc-menu-surface--fullwidth">
+                        <ul class="mdc-list" id="select_dropdown" role="listbox" aria-label="listbox">
+                          <li class="mdc-list-item mdc-list-item--selected" data-value="All categories" role="option">
+                            <span class="mdc-list-item__ripple"></span>
+                            <span class="mdc-list-item__text">All categories</span>
+                          </li>
+                          <li class="mdc-list-item" data-value="Degrees" role="option">
+                            <span class="mdc-list-item__ripple"></span>
+                            <span class="mdc-list-item__text">Degrees</span>
+                          </li>
+                          <li class="mdc-list-item" data-value="Courses" role="option">
+                            <span class="mdc-list-item__ripple"></span>
+                            <span class="mdc-list-item__text">Courses</span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <script>
+                      new mdc.select.MDCSelect(document.querySelector(".drop-down-filled-disabled-yes-primary .mdc-select"));
+                    </script>
+                  </div>
+                </div>
+                <button id="btnSearch" class="button" onclick="doSearching()">
+                  <div class="search-1 blinker-semi-bold-white-20px">Search</div>
+              </button>
+              </div>
+            </div>
+            <div class="version-control-bro-1">
+              <img class="version-control-bro-1-1" src="img/version-control-bro-1@1x.png" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="overlap-group1">
+        <div class="tab-button">
+          <a href="/">
+            <div class="button-2">
+              <div class="degree-off valign-text-middle blinker-bold-aqua-squeeze-24px">Degree</div>
+            </div>
+          </a>
+          <a href="/course-overview">
+              <div class="button-1">
+                <div class="course-on valign-text-middle blinker-bold-cyprus-24px">Course</div>
+            </div>
+          </a>
+        </div>
+
+        
+
+
+
+        <div class="body">
+          <div class="body-1">
+            <div class="elective">
+              <div class="course-card-row" id ="card-board">
+                  <!-- create all courses card -->
+                  <% let len = course_list.length; %>
+                  <% for( let index = 0; index < len; index++ ) { %>
+
+                    <%  let course_name = course_list[index].course_name; %>
+                    <%  let course_subject_and_course_code = course_list[index].course_subject_code; %>
+                    <%  let course_code = course_subject_and_course_code.split(' ').filter(function(i){return i})[2] %> 
+                    <%  let first_belongs_to, second_belongs_to = "";%>
+                    <%  let pre_requisite = course_list[index].pre_requisite;%>
+                    <%  let incompatible = course_list[index].incompatible; %>
+                    
+
+                    <% if (course_list[index].belongs_to.length > 0) { %>
+                    <%   first_belongs_to = course_list[index].belongs_to[0]['full'] %> 
+                    <% } %>
+                    <% if (course_list[index].belongs_to.length > 1) { %>
+                    <%   second_belongs_to = course_list[index].belongs_to[1]['full'] + ' ...' %> 
+                    <% } %>
+                        <a href="../course-relationships/<%= course_code%>-<%= course_name.split(' ').join('-').toLowerCase()%>">
+                          <div class="taskcourse-card">
+                            <div class="taskcard border-1px-gallery">
+                              <div class="main-info">
+                                <div class="comp-sci-3001 blinker-normal-fiord-12px"><%= course_subject_and_course_code %></div>
+                                <div class="computer-networks-applications blinker-bold-fiord-16px">
+                                  <%= course_name %>
+                                </div>
+                              </div>
+                              <div class="divider"></div>
+                              <div class="rest-info">
+                                <div class="belongs-to">
+                                  <div class="belongs-to-1 blinker-bold-cyprus-11px">Belongs to:</div>
+                                  <div class="column">
+                                    <div class="first">
+                                      <div class="degree">
+                                        <p class="low blinker-semi-bold-moonstone-10px"><%= first_belongs_to || "-"%></p>
+                                      </div>
+                                    </div>
+                                    <div class="second">
+                                      <div class="degree-1">
+                                        <p class="low-1 blinker-semi-bold-moonstone-10px">
+                                          <%= second_belongs_to || "-"%>
+                                        </p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="prerequisites">
+                                  <div class="prerequisites-1 blinker-bold-cyprus-11px">Prerequisites:</div>
+                                  <p class="course-name-number blinker-bold-cyprus-10px">
+                                    <%= pre_requisite || "None"%>
+                                  </p>
+                                </div>
+                                <div class="incompatible">
+                                  <div class="incompatible-1 blinker-bold-cyprus-11px">Incompatible:</div>
+                                  <div class="course-name-num blinker-bold-cyprus-10px"><%= incompatible || "None"%></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </a>
+
+                  <% } %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
+    
+      <!-- temporarily footer solution:
+      
+        <div class="app-bottom">
+        <div class="copyright">
+          <p class="team_07-2022-all-rights-reserved blinker-light-aqua-squeeze-14px">
+            © Team_07&nbsp;&nbsp; 2022&nbsp;&nbsp; All rights reserved
+          </p>
+        </div>
+      </div>
+      
+      
+      -->
+      
+
+    </div>
+  </div>
+
+  
+
+  <script>
+    /* Once click the botton, route to the searching page */
+    function doSearching() {
+        let searchingScope = document.getElementById("demo-selected-text").innerText;
+        let searchingValue = document.getElementById("searhing-value").value.toLowerCase().split(' ').join('-');
+
+        searchingScope = searchingScope.split(' ').join('_');
+
+        if (searchingScope === 'Degrees') {
+            searchingScope = 'degree-name';
+        }
+        else if (searchingScope === 'Courses') {
+            searchingScope = 'course-name';
+        }
+        else {
+            searchingScope = 'all-categories';
+        }
+
+        window.open(`/search?${searchingScope}=${searchingValue}`, '_self');
+    }        
+</script>
+
+
+  
+
+  
+
+
+
+</body>
+
+</html>
