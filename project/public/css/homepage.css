@@ -408,7 +408,7 @@ a {
     flex-direction: column;
     gap: 5px;
     min-height: 387px;
-    min-width: 380px;
+    max-width: 380px;
     overflow: hidden;
 }
 
