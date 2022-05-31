@@ -107,7 +107,7 @@
                     <div class="degree valign-text-middle">Degree</div>
                 </div>
             </a>
-            <a href="/course-overview">
+            <a href="/course-overview" onclick="loading()">
                 <div class="button-2">
                     <div class="course valign-text-middle">Course</div>
                 </div>
@@ -147,6 +147,11 @@
                 </div>
             </div>
         </div>
+
+
+        
+
+
         <div class="app-bottom">
             <div class="copyright">
                 <p class="team_07-2022-all-rights-reserved">
@@ -155,6 +160,16 @@
             </div>
         </div>
     </div>
+    <script>
+        /* This function create a loading icon */
+        function loading(){
+          document.getElementsByClassName("card-row")[0].remove();
+          document.getElementsByClassName("body-1")[0].insertAdjacentHTML('afterbegin', 
+                `<link rel="stylesheet" type="text/css" href="/css/loading-page.css" />
+                <div class="loading" id="loading-icon" style="position:absolute ; margin-top: 700px">Loading...</div>`)
+        }
+    </script>
+
     <script>
         /* Once click the botton, route to the searching page */
         function doSearching() {

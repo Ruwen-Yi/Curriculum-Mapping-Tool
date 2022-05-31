@@ -1,0 +1,376 @@
+@import url("https://fonts.googleapis.com/css?family=Blinker:400,300,700,600");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+html body {
+    /* background-color: #E8f0f2; */
+    text-align: center;
+    font-family: "Blinker";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+
+}
+
+hr {
+    margin: 1rem 0;
+    opacity: 60%;
+}
+
+/* --------------------------------modal-------------------------------- */
+
+.modal-container {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.3);
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    opacity: 0;
+    pointer-events: none;
+
+}
+
+.modal-container-show {
+    pointer-events: auto;
+    opacity: 1;
+}
+
+.modal {
+    background-color: #fff;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    padding: 0.5rem 2rem;
+    width: 700px;
+    height: 400px;
+
+    max-width: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+
+/* ---------------------------------------modal-header---------------------------- */
+
+.section {
+    display: inline;
+}
+
+.modal-header {
+    text-align: left;
+    vertical-align: middle;
+}
+
+.header-content {
+    display: inline;
+    color: #053742;
+}
+
+.header-close {
+    display: inline;
+    line-height: 2.7rem;
+    float: right;
+}
+
+.close {
+    border-style: none;
+    background-color: transparent;
+    color: #808080;
+    cursor: pointer;
+}
+
+/* ---------------------------------------modal-body---------------------------- */
+
+h2 {
+    text-align: left;
+    color: #053742;
+}
+
+.title-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.title-left {
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 0px;
+
+}
+
+.button-to-add-new {
+    display: inline-block;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    font-family: "Blinker";
+    border-style: none;
+    background-color: #fff;
+    vertical-align: top;
+    margin-top: 0;
+    padding-top: 0;
+    cursor: pointer;
+}
+
+
+/* search bar */
+.search {
+    width: 100%;
+    position: relative;
+    display: flex;
+}
+
+.searchTerm {
+    width: 100%;
+    border: 0.1rem solid #053742;
+    border-right: none;
+    padding: 5px;
+    height: 36px;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    color: #9DBFAF;
+}
+
+.searchTerm:focus {
+    color: #39A2Db;
+}
+
+.searchButton {
+    width: 40px;
+    height: 36px;
+    border: 0.1rem solid #053742;
+    background: #053742;
+    text-align: center;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+
+.wrap {
+    width: 95%;
+    position: relative;
+    margin: auto;
+    margin-top: 16px;
+
+}
+
+#myInput {
+    color: #053742;
+    font-family: Montserrat;
+}
+
+
+
+/* cards */
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin: 1rem auto 0 auto;
+}
+
+.card {
+    flex: 1 0 33.33%;
+    position: relative;
+    margin: 0.75em;
+    padding: 0 0.6rem;
+    height: 5em;
+    background: white;
+    border: 0.05rem solid lightgrey;
+    border-radius: 5px;
+    font-family: Montserrat;
+
+}
+
+.active {
+    box-shadow: 0px 12px 30px #00000016, 0px 2px 4px #1b044c1a;
+}
+
+/* This is where the magic happens */
+input[type="checkbox"] {
+    position: absolute;
+    top: .5em;
+    left: .5em;
+    display: inline-block;
+    cursor: pointer;
+}
+
+@media (pointer: coarse) {
+    input[type="checkbox"] {
+        height: 1rem;
+        width: 1rem;
+    }
+}
+
+/* Use z-index to make it accessible to keyboard navigation */
+@media (hover: hover) {
+    input[type="checkbox"] {
+        z-index: -1
+    }
+
+    .card:hover input[type="checkbox"],
+    input[type="checkbox"]:focus,
+    input[type="checkbox"]:checked {
+        z-index: auto
+    }
+}
+
+.course-number {
+    margin: 0.75rem 0;
+    font-size: 0.7rem;
+}
+
+.course-name {
+    margin: 0.75rem 0;
+    font-size: 0.8rem;
+}
+
+
+
+/* modal - footer */
+.modal-footer {
+    text-align: right;
+}
+
+/* footer button */
+.btn {
+    border: none;
+    /* Remove borders */
+    color: white;
+    /* Add a text color */
+    width: 6rem;
+    height: 2.5rem;
+    padding: auto;
+    /* Add some padding */
+    cursor: pointer;
+    /* Add a pointer cursor on mouse-over */
+    font-family: "Blinker";
+    margin: 0 0 0 1rem;
+    border-radius: 5px;
+}
+
+.add {
+    background-color: #053742;
+}
+
+.save {
+    background-color: #053742;
+}
+
+.delete {
+    float: left;
+    background-color: red;
+}
+
+/* Green */
+.add:hover {
+    background-color: #03232a;
+}
+
+
+
+.cancel {
+    background-color: #e7e7e7;
+    color: black;
+}
+
+/* Gray */
+.cancel:hover {
+    background: #ddd;
+}
+
+
+/* ---------------------------------edit modal------------------------------ */
+
+
+.module {
+    text-align: left;
+    font-family: Montserrat;
+
+}
+
+.c-attribute {
+    display: inline-block;
+    margin: 0 0 1.5rem;
+    font-size: 1rem;
+    color: #053742;
+}
+
+.c-info {
+    display: inline-block;
+    font-size: 0.9rem;
+    margin: 0 0 1.5rem;
+}
+
+.c-attribute-2 {
+    display: inline-block;
+    margin: 0 0 0.5rem;
+    font-size: 1rem;
+    color: #053742;
+}
+
+.c-info-2 {
+    padding: 0 5%;
+    font-size: 0.9rem;
+    margin: 0 0 1rem;
+    line-height: 1.5;
+}
+
+.edit-btn {
+    border-style: none;
+    background-color: #fff;
+    margin-top: 3px;
+    float: right;
+    cursor: pointer;
+    color: #053742;
+}
+
+[contenteditable]:focus {
+    outline: 2px solid darkgrey;
+}
+
+#add-new-modal .modal-body {
+    text-align: left;
+    font-family: Montserrat;
+
+}
+
+.form {
+    margin: 1rem 0;
+}
+
+label {
+    width: 30%;
+    text-align: left;
+    vertical-align: top;
+    display: inline-block;
+}
+
+.box1 {
+    width: 69%;
+
+    border-radius: 3px;
+    border: 1px solid darkgrey;
+    font-family: Montserrat;
+}
+
+.box2 {
+    width: 69%;
+    height: 4rem;
+    font-family: Montserrat;
+    border-radius: 3px;
+    border: 1px solid darkgrey;
+}

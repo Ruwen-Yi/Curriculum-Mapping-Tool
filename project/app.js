@@ -50,23 +50,23 @@ const homepage = require('./homepage/homepage-routes');
 const degreeStructure = require('./degree-structure/degree-structure-routes');
 /* Import routes for searching functionality */
 const courseSearching = require('./search/search-course-route');
+/* Import routes for course relationship */
+const courseRelationship = require('./course-relationship/course-relationship-route');
 
 /* Set up parent routes for degree structure */
 app.use('/', homepage);
 app.use('/degree-structure', degreeStructure);
-app.use('/course-relationships', (req,res)=>{
-    res.send("Course relationship page");
-})
 app.use('/search', courseSearching);
+app.use('/course-relationships', courseRelationship)
 
 
 /* Build for test, checking if expected data can be sent to a blank page */
-const text_course = require('./homepage/test')
-app.get('/test', text_course) /* Route for testing */
+const text = require('./homepage/test')
+app.get('/test', text) /* Route for testing */
 /* End of test */
 
 
 /* Set up server */
-app.listen(5000, ()=>{
-    console.log('Server is listening on port 5000...');
+app.listen(9000, ()=>{
+    console.log('Server is listening on port 9000...');
 });

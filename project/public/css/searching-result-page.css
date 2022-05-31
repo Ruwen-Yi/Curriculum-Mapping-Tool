@@ -323,9 +323,10 @@
   align-items: center;
   display: flex;
   gap: 20px;
-  justify-content: center;
+  justify-content: flex-start;
   margin-left: 247px;
   margin-top: 22px;
+  flex-wrap: wrap;
 }
 
 .result-page .taskcard {

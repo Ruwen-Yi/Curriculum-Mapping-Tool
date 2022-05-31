@@ -1,0 +1,13 @@
+.edit {
+    height: 25px;
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    width: 25px;
+    z-index:9;
+}
+
+.edit:hover {
+    cursor: pointer;
+    background-color: aqua;
+}

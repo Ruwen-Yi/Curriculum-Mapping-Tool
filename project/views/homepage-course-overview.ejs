@@ -110,6 +110,10 @@
           </a>
         </div>
 
+        
+
+
+
         <div class="body">
           <div class="body-1">
             <div class="elective">
@@ -120,6 +124,7 @@
 
                     <%  let course_name = course_list[index].course_name; %>
                     <%  let course_subject_and_course_code = course_list[index].course_subject_code; %>
+                    <%  let course_code = course_subject_and_course_code.split(' ').filter(function(i){return i})[2] %> 
                     <%  let first_belongs_to, second_belongs_to = "";%>
                     <%  let pre_requisite = course_list[index].pre_requisite;%>
                     <%  let incompatible = course_list[index].incompatible; %>
@@ -131,7 +136,7 @@
                     <% if (course_list[index].belongs_to.length > 1) { %>
                     <%   second_belongs_to = course_list[index].belongs_to[1]['full'] + ' ...' %> 
                     <% } %>
-                        <a href="../course-relationships/<%= course_name.split(' ').join('-').toLowerCase()%>">
+                        <a href="../course-relationships/<%= course_code%>-<%= course_name.split(' ').join('-').toLowerCase()%>">
                           <div class="taskcourse-card">
                             <div class="taskcard border-1px-gallery">
                               <div class="main-info">
@@ -181,21 +186,16 @@
         </div>
       </div>
 
-
-
-      <!-- Temporaily invisble
       
-        <div class="app-bottom">
+
+      
+      <div class="app-bottom">
         <div class="copyright">
           <p class="team_07-2022-all-rights-reserved blinker-light-aqua-squeeze-14px">
             © Team_07&nbsp;&nbsp; 2022&nbsp;&nbsp; All rights reserved
           </p>
         </div>
       </div>
-      
-      -->
-      
-
     </div>
   </div>
 
