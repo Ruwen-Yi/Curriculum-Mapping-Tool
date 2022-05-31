@@ -1,8 +1,7 @@
 /* Once a edit-icon is clicked, a edit board will show up */
 function edit_course(fullname){
     
-    let edit_board = document.getElementById('edit_board');
-    if (edit_board) edit_board.remove();
+    close_edit_board();
 
     fetch(`/course-relationships/${fullname.split(' ').join('-')}/getRelationship`)
     .then(response=>{
@@ -41,7 +40,7 @@ function show_edit_board(a_course){
             -----Incompatible:  </br>
             ${JSON.stringify(a_course.incompatible)}  </br>
             <button onclick="close_edit_board()">
-                Close
+                Cancel
             </button>
         </div>
     </div>`
