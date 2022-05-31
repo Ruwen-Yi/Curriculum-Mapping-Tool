@@ -86,6 +86,24 @@
                 <button id="btnSearch" class="button" onclick="doSearching()">
                   <div class="search-1 blinker-semi-bold-white-20px">Search</div>
               </button>
+
+              <!-- trgger search by keyboard events -->
+              <script>
+                var input = document.getElementById("searhing-value");
+
+                input.addEventListener("keypress", function(event){
+                  if(event.key == "Enter"){
+                    event.preventDefault();
+                    document.getElementById("btnSearch").click();
+                  }
+
+                });
+
+
+
+              </script>
+
+
               </div>
             </div>
             <div class="version-control-bro-1">
