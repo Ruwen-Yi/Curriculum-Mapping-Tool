@@ -19,11 +19,14 @@
 <body style="margin: 0; background: #e8f0f2">
   <input type="hidden" id="anPageName" name="page" value="result-page" />
   <div class="result-page screen">
-    <a href="/">
+  
         <div class="app-top">
+          <a href="/">
             <div class="curriculum-helper valign-text-middle blinker-semi-bold-aqua-squeeze-24px">Curriculum Helper</div>
+          </a>
         </div>
-    </a>
+  
+
     
     <div class="main-part">
       <div class="overlap-group-1">
@@ -316,6 +319,17 @@
     </div>
   </div>
 
+      <!-- trgger search by keyboard events -->
+      <script>
+        var input = document.getElementById("searhing-value");
+    
+            input.addEventListener("keypress", function(event){
+                if(event.key == "Enter"){
+                    event.preventDefault();
+                    document.getElementById("btnSearch").click();
+                      }
+                });
+        </script>
 
     <script>
       /* Once click the botton, route to the searching page */
