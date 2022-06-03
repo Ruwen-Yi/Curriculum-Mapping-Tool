@@ -16,6 +16,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
   <script src="/js/edit-course.js"></script>
+  <script src="/js/add-course.js"></script>
   
   <title>degree-structure</title>
 </head>
@@ -73,6 +74,9 @@
         ${sectionTitle} 
         <div class="course-card-row"> 
           ${sectionCards} 
+          <div onclick="add_course()" style="cursor:pointer;">
+            Add Course  
+          </div>
         </div> 
       </div>`;
       
