@@ -10,9 +10,31 @@ html body {
 
 /* Navigation Bar */
 .navbar-brand {
-    font-weight: bold;
+    align-items: center;
+    background-color: var(--cyprus2);
+    display: flex;
+    flex: 1;
+    gap: 10px;
+    left: 0px;
+    height: 55px;
+    max-height: 70px;
+    min-width:70px;
+    padding-left: 37px;
+    padding-right: 37px;
+    width: 100%;
 }
+/*the curriculum helper text*/
+.nav-text{
+    color: var(--rfh85d);
+    font-family: var(--font-family-blinker);
+    font-size: var(--font-size-xxl2);
+    font-weight: 600;
+    font-style: normal;
 
+    height: 29px;
+    letter-spacing: 0;
+    text-align: center;
+}
 /* Course Name */
 .title {
     padding: 3% 10%;

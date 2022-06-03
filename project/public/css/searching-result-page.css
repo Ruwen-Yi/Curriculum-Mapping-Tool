@@ -16,12 +16,15 @@
   display: flex;
   flex: 1;
   gap: 10px;
-  height: 70px;
+  left: 0px;
+  min-height: 70px;
   max-height: 70px;
   padding-left: 37px;
   padding-right: 37px;
-  width: 1441px;
+  width: 100%;
 }
+
+
 
 .result-page .curriculum-helper {
   height: 29px;
@@ -115,6 +118,12 @@
   gap: 20px;
   margin-bottom: -20px;
   min-width: 854px;
+}
+
+::placeholder{
+  font-family: var(--font-family-blinker);
+  font-size: var(--font-size-m2);
+
 }
 
 .result-page .search-box {
@@ -613,6 +622,10 @@
 }
 
 .mdc-list-item {
+  font-family: var(--font-family-blinker);
+  font-size: var(--font-size-l3);
+
+
   align-items: center;
   display: flex;
   height: 48px;

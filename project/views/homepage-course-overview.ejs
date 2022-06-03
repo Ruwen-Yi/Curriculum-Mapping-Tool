@@ -19,11 +19,15 @@
   <input type="hidden" id="anPageName" name="page" value="homepage-course" />
   <div class="container-center-horizontal">
     <div class="homepage-course screen">
-      <a href="/">
-        <div class="app-top">
+
+      <div class="app-top">
+      
+        <a href="/">
           <div class="curriculum-helper valign-text-middle blinker-semi-bold-aqua-squeeze-24px">Curriculum Helper</div>
-        </div>
-      </a>
+        </a>
+
+      </div>
+
       <div class="main-part">
         <div class="overlap-group">
           <div class="head">
@@ -88,6 +92,21 @@
                 <button id="btnSearch" class="button" onclick="doSearching()">
                   <div class="search-1 blinker-semi-bold-white-20px">Search</div>
               </button>
+
+              <!-- trgger search by keyboard events -->
+              <script>
+                var input = document.getElementById("searhing-value");
+
+                input.addEventListener("keypress", function(event){
+                  if(event.key == "Enter"){
+                    event.preventDefault();
+                    document.getElementById("btnSearch").click();
+                  }
+
+                });
+              </script>
+
+
               </div>
             </div>
             <div class="version-control-bro-1">
@@ -190,8 +209,7 @@
 
       
     
-      <!-- temporarily footer solution:
-      
+<!--
         <div class="app-bottom">
         <div class="copyright">
           <p class="team_07-2022-all-rights-reserved blinker-light-aqua-squeeze-14px">
@@ -199,9 +217,13 @@
           </p>
         </div>
       </div>
+
+
+-->
+      
+
       
       
-      -->
       
 
     </div>
