@@ -78,7 +78,6 @@ Project-Management/
 │   └── Sprint-05
 │   └── Sprint-06
 │   └── Sprint-07  
-│
 ├── Requirement-Documentation
 └── Timesheets
     ├── Ruwen-YI
@@ -93,12 +92,13 @@ Project-Management/
 Overview: (For details, [check here](https://uao365-my.sharepoint.com/:w:/g/personal/a1812504_adelaide_edu_au/ETe1OxF8f-BGgkDxHUQxRGMBsODAfC_TF3_ALao0pbYzhg?e=lrIoTV))
 ```
     Requirement 1: Focus on six computer science degrees [Finished] 
-    Requirement 2: Required course information 
-    Requirement 3: Degree structure 
-    Requirement 4: Course relationships  
-    Requirement 5: A search functionality  
+    Requirement 2: Required course information [Finished]
+    Requirement 3: Degree structure [Finished]
+    Requirement 4: Course relationships [Finished]  
+    Requirement 5: A search functionality [Finished]  
     Requirement 6: Add, delete, and edit a course 
-    Requirement 7: A list of all courses 
+    Requirement 7: A list of all courses [Finished] 
+    Requirement 8: Separate the degree of Bachelor of Computer Science
 ```
 
 
