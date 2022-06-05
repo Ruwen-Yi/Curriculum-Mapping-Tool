@@ -1,3 +1,4 @@
+
 We take two weeks as one sprint. In each sprint we will have one client meeting and at least one group meeting.
 
 #### Sprint 1 (week 1-2)
@@ -50,6 +51,28 @@ We take two weeks as one sprint. In each sprint we will have one client meeting 
  	- 02/05
  	- 04/05
  	- 06/05
- 	…
+ 	- 09/05
+ 	- 11/05
+ 	- 13/05
+ 
+#### Sprint 6(week10-11)
+- **Date** : 16/05 - 29/05
+- **Scrum master** : Ruwen Yi
+- **Client meeting date** : None
+- **Group meeting date** : 
+ 	- 16/05
+ 	- 17/05
+ 	- 20/05
+ 	- 23/05
+ 	- 25/05
+ 	- 27/05
 
-
+#### Sprint 7(week12-13)
+- **Date** : 30/05 - 12/06
+- **Scrum master** : Yuhao Wang
+- **Client meeting date** : 02/06
+- **Group meeting date** : 
+	- 31/05
+	- 02/05
+	-......
+	
