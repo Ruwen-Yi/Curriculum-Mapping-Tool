@@ -1,1 +1,0 @@
-[Check this link](https://docs.google.com/document/d/1Wy358nh-yb4_7Qb8f76d9W2b-j7IRS8gcjxU4Gr9Oiw/edit#)
