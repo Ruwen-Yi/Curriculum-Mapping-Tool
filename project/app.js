@@ -63,11 +63,7 @@ app.use('/course-relationships', courseRelationship)
 
 
 /* Build for test, checking if expected data can be sent to a blank page */
-<<<<<<< HEAD
 const text = require('./homepage/test');
-=======
-const text = require('./homepage/test')
->>>>>>> mci/Yingyu-Wei
 app.get('/test', text) /* Route for testing */
 /* End of test */
 

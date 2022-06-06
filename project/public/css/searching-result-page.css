@@ -134,11 +134,7 @@ html body {
   min-width: 854px;
 }
 
-<<<<<<< HEAD
-::placeholder{
-=======
 ::placeholder {
->>>>>>> mci/Yingyu-Wei
   font-family: var(--font-family-blinker);
   font-size: var(--font-size-m2);
 
@@ -656,9 +652,4 @@ html body {
 
 .drop-down-filled-disabled-yes-primary .custom-enhanced-select-width {
   width: 180px;
-<<<<<<< HEAD
 }
-
-=======
-}
->>>>>>> mci/Yingyu-Wei
