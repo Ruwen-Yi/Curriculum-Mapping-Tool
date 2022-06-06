@@ -434,6 +434,7 @@ function get_form_data() {
 }
 
 function send_form(form_data){
+    //fetch with post method
     console.log(form_data);
 }
 
