@@ -1,6 +1,7 @@
 function add_course() {
     close_add_board();
     show_add_board();
+    render_course(); //delete later
 }
 
 function close_add_board() {
@@ -310,25 +311,11 @@ function show_add_board() {
             </div>
             <!-- return cards -->
             <div class="cards">
-                <div class="card">
-                    <input type="checkbox" />
-                    <h6 class="course-number">COMP SCI 3001</h6>
-                    <h6 class="course-name">Artificial Intelligence and Machine Learning Research Project Part A
-                    </h6>
-                </div>
-
-                <div class="card">
-                    <input type="checkbox" />
-                    <h6 class="course-number">COMP SCI 3001</h6>
-                    <h6 class="course-name">CNA</h6>
-                </div>
 
                 <!-- <div class="card">
                     <input type="checkbox" />
-                </div>
-
-                <div class="card">
-                    <input type="checkbox" />
+                    <h6 class="course-number">COMP SCI 3001</h6>
+                    <h6 class="course-name">CNA</h6>
                 </div> -->
 
             </div>
@@ -380,7 +367,7 @@ function show_add_board() {
         <!-- footer : two buttons -->
         <div class="modal-footer">
             <button class="btn cancel" id="button-cancel" onclick="close_add_board()">Cancel</button>
-            <button class="btn add" id="button-add">Add</button>
+            <button class="btn add" id="button-add" onclick="get_form_data()">Add</button>
         </div>
     </div>
     </div>
@@ -391,6 +378,7 @@ function show_add_board() {
 
 }
 
+/* search course, create course card and then render */
 function search_course() {
     let searchingValue = document.getElementById("myInput").value.toLowerCase().split(' ').join('-');
     alert(searchingValue);
@@ -407,5 +395,51 @@ function search_course() {
 }
 
 function render_course(courses_list){
-    courses_list = JSON.parse(courses_list);
+    //courses_list = JSON.parse(courses_list);
+    //let course = course_list[0];
+
+    let course_card = "";
+    for(let i = 0; i < 4; i++){
+        course_card += create_course_card(); //pass in course_subject_code, course_name
+    }
+
+    document.getElementsByClassName('cards')[0].insertAdjacentHTML('beforeend', course_card);
 }
+
+function create_course_card(course_subject_code, course_name) {
+    course_subject_code = "COMP SCI 0000";
+    course_name = "CCCCCC";
+    let innerHTML = `
+    <div class="card">
+        <input type="checkbox" class="card-box" value="${course_subject_code} ${course_name}" />
+        <h6 class="course-number">${course_subject_code}</h6>
+        <h6 class="course-name">${course_name}</h6>
+    </div>`;
+    
+    return innerHTML;
+}
+
+
+/* The get* method are for getting the user selected data */
+
+function get_form_data() {
+    let selected_course = get_checkbox_data();
+    let selected_degree_stream = get_option_data();
+}
+
+function get_checkbox_data() {
+    let boxes = document.getElementsByClassName('card-box');
+    let selected_course = [];
+    
+    for (let i = 0; i<boxes.length; i++) {
+        if(boxes[i].checked)
+            selected_course.push(boxes[i].value);
+    }
+    console.log(selected_course)
+    return selected_course;
+}
+
+function get_option_data() {
+    
+}
+
