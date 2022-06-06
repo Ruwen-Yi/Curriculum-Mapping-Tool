@@ -63,5 +63,6 @@ let course_list = [
 
 ]
 
-function search_courses(course_name) {
+const search_courses = (req, res)=> {
+    /* ... */
 }

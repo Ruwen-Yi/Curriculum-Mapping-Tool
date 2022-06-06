@@ -300,7 +300,7 @@ function show_add_board() {
                 <!-- wraped searchbar -->
                 <div class="wrap">
                     <div class="search">
-                        <input type="text" id="myInput" onkeyup="mySearchFunction()" class="searchTerm"
+                        <input type="text" id="myInput" class="searchTerm"
                             placeholder="Enter course name">
                         <button type="submit" class="searchButton" onclick="search_course()">
                             <i class="fa fa-search"></i>
@@ -391,17 +391,21 @@ function show_add_board() {
 
 }
 
-async function search_course() {
+function search_course() {
     let searchingValue = document.getElementById("myInput").value.toLowerCase().split(' ').join('-');
     alert(searchingValue);
+    fetch(`/search/search-course?course=${searchingValue}`)
+    .then(res=>{
+        return res.json();
+    })
+    .then(data=>{
+        console.log(JSON.stringify(data))
 
-    let response = await fetch(`/search-course?course=${searchingValue}`);
-    let courses_list = await response.json();
-
-    return render_course(JSON.stringify(courses_list));
+        //return render_course(JSON.stringify(courses_list));
+    })
+    
 }
 
 function render_course(courses_list){
     courses_list = JSON.parse(courses_list);
-    
 }

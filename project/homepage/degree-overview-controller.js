@@ -19,8 +19,9 @@ const renderAllDegreeName = (req, res) => {
 };
 
 const addNewDegree = (req, res)=>{
+    console.log("req.body");
     console.log(req.body);
-    res.send({good:"good"})
+    res.send(req.body)
 }
 
 /* Export the function to be used by routes.js */
