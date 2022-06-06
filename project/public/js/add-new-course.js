@@ -1,4 +1,4 @@
-function add_course() {
+function add_new_course() {
     close_add_board();
     show_add_board();
 }
@@ -27,6 +27,6 @@ function show_add_board(){
         </div>
     </div>`
 
-    document.getElementById('degree-section').insertAdjacentHTML('afterend',innerHTML);
+    document.getElementsByClassName('main-part')[0].insertAdjacentHTML('afterend',innerHTML);
 
 }

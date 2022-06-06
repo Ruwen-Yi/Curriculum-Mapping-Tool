@@ -1,0 +1,8 @@
+#add-new-course {
+    position: absolute;
+    right: 0;
+}
+
+#add-new-course:hover {
+    cursor: pointer;
+}
