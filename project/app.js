@@ -69,6 +69,6 @@ app.get('/test', text) /* Route for testing */
 
 
 /* Set up server */
-app.listen(8000, ()=>{
+app.listen(9000, ()=>{
     console.log('Server is listening on port 9000...');
 });
