@@ -1,0 +1,91 @@
+:root { 
+  --black: #000000;
+  --cyprus: #053742b2;
+  --cyprus2: #053742;
+  --fiord: #455266;
+  --gallery: #eeeeee;
+  --masala: #3d3d3d;
+  --moonstone: #39a2db;
+  --rfh85d: #e8f0f2;
+  --storm-gray-2: #6e7491;
+  --white: #ffffff;
+  --winter-wizard: #a2dbfa40;
+ 
+  --font-size-l: 11px;
+  --font-size-l3: 14px;
+  --font-size-m: 10px;
+  --font-size-m2: 20px;
+  --font-size-m3: 12px;
+  --font-size-xs2: 16px;
+  --font-size-xxxxl2: 36px;
+ 
+  --font-family-belleza: "Belleza", Helvetica;
+  --font-family-blinker: "Blinker", Helvetica;
+}
+.blinker-bold-cyprus-11px {
+  color: var(--cyprus);
+  font-family: var(--font-family-blinker);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.blinker-semi-bold-moonstone-10px {
+  color: var(--moonstone);
+  font-family: var(--font-family-blinker);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 600;
+}
+
+.blinker-bold-cyprus-10px {
+  color: var(--cyprus);
+  font-family: var(--font-family-blinker);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.blinker-normal-fiord-12px {
+  color: var(--fiord);
+  font-family: var(--font-family-blinker);
+  font-size: var(--font-size-m3);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.blinker-bold-fiord-16px {
+  color: var(--fiord);
+  font-family: var(--font-family-blinker);
+  font-size: var(--font-size-xs2);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.blinker-semi-bold-storm-gray-20px {
+  color: var(--storm-gray-2);
+  font-family: var(--font-family-blinker);
+  font-size: var(--font-size-m2);
+  font-style: normal;
+  font-weight: 600;
+}
+
+.blinker-semi-bold-aqua-squeeze-24px {
+  color: var(--rfh85d);
+  font-family: var(--font-family-blinker);
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+}
+
+.blinker-light-aqua-squeeze-14px {
+  color: var(--rfh85d);
+  font-family: var(--font-family-blinker);
+  font-size: var(--font-size-l3);
+  font-style: normal;
+  font-weight: 300;
+}
+
+.border-1px-gallery {
+  border: 1px solid var(--gallery);
+}
