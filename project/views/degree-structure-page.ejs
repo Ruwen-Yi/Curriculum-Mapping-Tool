@@ -230,8 +230,11 @@
       }
     }
 
+    /* make these element transparent when loading content */
     var footer = document.getElementById('after-degree-structure');
     footer.style.opacity = "0";
+    var add_course_button = document.getElementsByClassName('add-course')[0];
+    add_course_button.style.opacity = "0";
 
     /* Use fetch to request data instead of using ejs */
     fetch(`${document.URL}/getDegreeData`, { method: 'GET' })
@@ -248,10 +251,11 @@
         let degree = JSON.stringify(degree_structure)
         createStructure(degree);
 
-        /* remove loading */
+        /* remove loading and make these element visible*/
         let loading = document.getElementById('loading-icon');
         loading.remove();
         footer.style.opacity = "1";
+        add_course_button.style.opacity = "1";
 
       })
       .catch(err => {
