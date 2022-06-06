@@ -195,7 +195,7 @@ function show_edit_board(a_course) {
                     <h1 class="section" id="edit-course">Edit course</h1>
                 </div>
                 <div class="header-close" id="button-close">
-                    <button class="close"><i class="fa fa-times fa-lg" aria-hidden="true"></i></button>
+                    <button class="close"><i class="fa fa-times fa-lg" aria-hidden="true" onclick="close_edit_board()"></i></button>
                 </div>
             </div>
             <hr>

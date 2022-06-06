@@ -282,7 +282,7 @@ function show_add_board() {
                 <h1 class="section" id="add-course">Add course</h1>
             </div>
             <div class="header-close" id="button-close">
-                <button class="close"><i class="fa fa-times fa-lg" aria-hidden="true"></i></button>
+                <button class="close"><i class="fa fa-times fa-lg" aria-hidden="true" onclick="close_add_board()"></i></button>
             </div>
         </div>
         <hr>
