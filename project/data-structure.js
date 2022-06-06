@@ -45,3 +45,23 @@ let degree = {
     }
 }
 /* 注：property为空则null*/
+
+
+/* Search course in "add course" card in the degree structure page */
+// Input: course name (string) (eg, Computer) (eg, System)
+// Output: similar courses
+// Output:
+let course_list = [
+    {
+        course_subject_code: "COMP SCI 0000",
+        course_name: "Computer course name",
+    },
+    {
+        course_subject_code: "COMP SCI 7777",
+        course_name: "Artificial Intelligence and Machine Learning Research Project Part A",
+    },
+
+]
+
+function search_courses(course_name) {
+}
