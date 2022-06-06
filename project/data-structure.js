@@ -66,3 +66,18 @@ let course_list = [
 const search_courses = (req, res)=> {
     /* ... */
 }
+
+/* The data structure of add course form in degree structure page */
+let add_course_form = {
+    selected_course:["COMP SCI 0000 Computer of XXX", "COMP SCI 7777 Computer of XXX"], //could be blank
+    selected_degree_stream:[
+        {
+            degree_name:"Master of Computer Science",
+            stream:["core", "elective"] //could be blank
+        },
+        {
+            degree_name:"Master of XXX",
+            stream:["core", "elective","project"]
+        }
+    ]
+}

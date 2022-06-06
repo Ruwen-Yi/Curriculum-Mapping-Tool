@@ -330,7 +330,7 @@ function show_add_board() {
                 <form action="#">
 
                     <select name="Stream" id="stream" multiple size="6">
-                        <optgroup label="Bachelor of Computer Science">
+                        <optgroup label="Bachelor of Computer Science" id="BCS">
                             <option value="BCS-core">Core</option>
                             <option value="BCS-elective">Elective</option>
                             <option value="BCS-Project">Project</option>
@@ -425,6 +425,12 @@ function create_course_card(course_subject_code, course_name) {
 function get_form_data() {
     let selected_course = get_checkbox_data();
     let selected_degree_stream = get_option_data();
+
+    let form_data = {}
+    form_data.selected_course = search_course;
+    form_data.selected_degree_stream = selected_degree_stream;
+
+    console.log(form_data);
 }
 
 function get_checkbox_data() {
@@ -435,11 +441,25 @@ function get_checkbox_data() {
         if(boxes[i].checked)
             selected_course.push(boxes[i].value);
     }
-    console.log(selected_course)
+    //console.log(selected_course)
     return selected_course;
 }
 
 function get_option_data() {
-    
+    let optgroups = document.getElementsByTagName('optgroup');
+    let selected_degree_stream = [];
+    for (let i = 0; i < optgroups.length; i++) {
+        let temp = {};
+        temp.degree_name = optgroups[i].label;
+        temp.streams = [];
+        
+        for (let j = 0; j < optgroups[i].children.length; j++) {
+            if (optgroups[i].children[j].selected)
+                temp.streams.push(optgroups[i].children[j].value);
+        }
+
+        selected_degree_stream.push(temp);
+    }
+    return selected_degree_stream;
 }
 
