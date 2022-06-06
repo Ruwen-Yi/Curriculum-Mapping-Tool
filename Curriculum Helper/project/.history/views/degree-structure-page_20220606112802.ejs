@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=100%,height=100%, maximum-scale=1.0" />
+  <link rel="shortcut icon" type="image/png" href="/img/icons8-study-64.png" />
+
+
+
+
+  <link rel="stylesheet" type="text/css" href="/css/degree-structure-page.css" />
+  <!-- use absolute path with '/' at first -->
+  <link rel="stylesheet" type="text/css" href="/css/styleguide-dsp.css" />
+  <link rel="stylesheet" type="text/css" href="/css/globals-dsp.css" />
+  <link rel="stylesheet" href="/css/edit-icon.css">
+
+  <!-- bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <link href="https://formden.com/static/assets/demos/bootstrap-iso/bootstrap-iso/bootstrap-iso.css" rel="stylesheet" />
+
+  <!-- <link rel="stylesheet" href="/css/edit-course/style.css"> -->
+  <!--Font awesome-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <script src="/js/edit-course.js"></script>
+  <script src="/js/add-course.js"></script>
+
+  <title>degree-structure</title>
+</head>
+
+<body style="margin: 0; background: #e8f0f2">
+
+  <input type="hidden" id="anPageName" name="page" value="degree-structure-page" />
+  <div class="degree-structure-page screen">
+    <div class="bootstrap-iso">
+      <%- include('header'); -%>
+    </div>
+
+
+    <%- include('./loading-page.ejs') %>
+
+
+      <div class="degree-name" id="degree-section">
+        <h1 class="title" id="academic-degree-name"></h1>
+      </div>
+
+
+      <div class="app-bottom" id="after-degree-structure">
+        <div class="copyright">
+          <p class="team_07-2022-all-rights-reserved blinker-light-aqua-squeeze-14px">
+            © Team_07&nbsp;&nbsp; 2022&nbsp;&nbsp; All rights reserved
+          </p>
+        </div>
+      </div>
+  </div>
+
+
+  <script>
+
+    function addStream(a_stream) {
+      a_stream = JSON.parse(a_stream);
+      // console.log(a_stream);
+
+      let stream_name = a_stream.stream_name; // This is hardcode, should delete later
+
+
+      /* Create a section title, e.g., core, elective, project, major */
+      let sectionTitle = `
+      <div class="title-row">
+        <img class="vector" src="../img/vector@2x.png" />
+        <div class="core-courses blinker-semi-bold-storm-gray-20px"> ${stream_name}  </div>
+      </div>`;
+
+      /* Create all course cards under this stream */
+      let course_list = JSON.stringify(a_stream.course_list);
+      let sectionCards = addCards(course_list); // This is hardcode, should pass in a stream object
+
+      let section = `
+      <div class="core"> 
+        ${sectionTitle} 
+        <div class="course-card-row"> 
+          ${sectionCards} 
+          <div onclick="add_course()" style="cursor:pointer;">
+            Add Course  
+          </div>
+        </div> 
+      </div>`;
+
+      /* Append the whole section to html at a right place */
+      const degreeSection = document.querySelector("#after-degree-structure");
+      degreeSection.insertAdjacentHTML("beforebegin", section);
+
+      // document.getElementById("screen").append(...section) ;
+    }
+
+    /* 
+      This function will create all courses card under a stream, 
+      Parameter:a stream obj that contains mutilple course objs 
+    */
+    function addCards(streamCourses) {
+      let course_list = JSON.parse(streamCourses);
+      console.log(course_list)
+
+
+      let sectionCards = "";
+      let len = Object.keys(course_list).length; // get the # of courses to be rendered
+
+      for (i = 0; i < len; i++) {
+        let a_course = JSON.stringify(course_list[i]);
+
+        let course_card = createCard(a_course);
+        if (course_card) sectionCards += course_card;
+        // sectionCards += createCard(a_course); // Should pass in a course obj contains info of pre-req, incomp, belongs etc, .
+      }
+
+      return sectionCards;
+    }
+
+    /* 
+      This function will create a single course card, 
+      Parameter:a course obj that contains information of pre-req, incomp, belongs etc,
+    */
+    function createCard(course) {
+      let a_course = JSON.parse(course);
+
+      let course_name = a_course.course_name;
+      let course_subject_and_course_code = a_course.course_subject_code;
+
+      if (!course_subject_and_course_code) return;
+
+      let course_code = course_subject_and_course_code.split(' ').filter(function (i) { return i })[2];
+      let first_belongs_to, second_belongs_to = "";
+      let pre_requisite = a_course.pre_requisite;
+      let incompatible = a_course.incompatible;
+
+      if (a_course.belongs_to.length > 0) {
+        first_belongs_to = a_course.belongs_to[0]['full']
+      }
+      if (a_course.belongs_to.length > 1) {
+        second_belongs_to = a_course.belongs_to[1]['full'] + ' ...'
+      }
+
+      let card = `
+      
+        <div class="taskcourse-card" style="position:relative;">
+          <img src="https://anima-uploads.s3.amazonaws.com/projects/626ae7916ff5cd6d9202df32/releases/628b08db7a87b0da5cf81c73/img/edit@2x.png" class="edit" onclick="edit_course('${course_code} ${course_name}')" >
+          <a href="/course-relationships/${course_code}-${course_name.split(' ').join('-')}">
+            <div class="taskcard border-1px-gallery">
+              <div class="main-info">
+                <div class="comp-sci-3001 blinker-normal-fiord-12px">${course_subject_and_course_code || "Course Subject & Code"}</div>
+                <div class="computer-networks-applications blinker-bold-fiord-16px">
+                    ${course_name || "course name"}
+                </div>
+              </div>
+              <div class="divider"></div>
+              <div class="rest-info">
+                <div class="belongs-to">
+                  <div class="belongs-to-1 blinker-bold-cyprus-11px">Belongs to:</div>
+                  <div class="column">
+                    <div class="first">
+                      <div class="degree">
+                        <p class="low blinker-semi-bold-moonstone-10px">${first_belongs_to || "-"}</p>
+                      </div>
+                    </div>
+                    <div class="second">
+                      <div class="degree-1">
+                        <p class="low-1 blinker-semi-bold-moonstone-10px">
+                          ${second_belongs_to || "-"}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="prerequisites">
+                  <div class="prerequisites-1 blinker-bold-cyprus-11px">Prerequisites:</div>
+                  <p class="course-name-number blinker-bold-cyprus-10px">
+                    ${pre_requisite || "None"}
+                  </p>
+                </div>
+                <div class="incompatible">
+                  <div class="incompatible-1 blinker-bold-cyprus-11px">Incompatible:</div>
+                  <div class="course-name-num blinker-bold-cyprus-10px">${incompatible || "None"}</div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>`;
+      return card;
+    }
+
+    /* 
+      This function will create the whole degree structure
+      Parameter: a degree obj contains multiple streams
+    */
+    function createStructure(degree) {
+      degree = JSON.parse(degree);
+      console.log(degree);
+
+      let flag = true;
+      let section = "";
+
+      /* Get all the stream one by one */
+
+      if (degree.stream.core.course_list.length) {
+        let core = JSON.stringify(degree.stream.core);
+        addStream(core);
+      }
+
+      if (degree.stream.elective.course_list.length) {
+        let elective = JSON.stringify(degree.stream.elective);
+        addStream(elective);
+      }
+
+      if (degree.stream.project.course_list.length) {
+        let project = JSON.stringify(degree.stream.project);
+        addStream(project);
+      }
+
+      /* Check if have major */
+      if (degree.stream.major.length) {
+
+        let majorSection = `
+            <div class="majors">
+              <div class="majors-1">Majors</div>
+            </div>`;
+
+        /* Append the whole section to html at a right place */
+        const degreeSection = document.querySelector("#after-degree-structure");
+        degreeSection.insertAdjacentHTML("beforebegin", majorSection);
+
+        for (k = 0; k < degree.stream.major.length; k++) {
+          let a_major = JSON.stringify(degree.stream.major[k]);
+          addStream(a_major);
+        }
+
+      }
+    }
+
+    var footer = document.getElementById('after-degree-structure');
+    footer.style.opacity = "0";
+
+    /* Use fetch to request data instead of using ejs */
+    fetch(`${document.URL}/getDegreeData`, { method: 'GET' })
+      .then(response => {
+        return response.text()
+      })
+      .then(data => {
+        degree_structure = JSON.parse(data)
+        console.log(degree_structure)
+        console.log(degree_structure['degree_name'])
+        document.getElementById('academic-degree-name').innerHTML = degree_structure['degree_name'];
+
+        /* Pass in degree obj by ejs */
+        let degree = JSON.stringify(degree_structure)
+        createStructure(degree);
+
+        /* remove loading */
+        let loading = document.getElementById('loading-icon');
+        loading.remove();
+        footer.style.opacity = "1";
+
+      })
+      .catch(err => {
+        console.log(err)
+      })
+
+  </script>
+
+</body>
+
+</html>

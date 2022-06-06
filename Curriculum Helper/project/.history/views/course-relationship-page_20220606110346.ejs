@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Curriculum Helper</title>
+
+
+    <!--Icon-->
+    <link rel="shortcut icon" type="image/png" href="../public/img/icons8-study-64.png" />
+
+    <!--Font awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- CSS Stylesheets -->
+    <link rel="stylesheet" href="../public/css/course-relationship.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <div class="content"></div>
+
+    <!-- Title -->
+
+    <div class="title">
+        <div class="container-fluid">
+            <div class="col-lg-12">
+                <h1 class="course-name" id="name-section">
+                    <!-- <span h1 class="course-number">COMP SCI 3001</span> Computer Networks &
+                    Application -->
+                </h1>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Edit button
+    <div class="edit">
+        <a class="btn-edit" href="#"><i class="fa fa-edit" style="font-size:20px"></i> Edit</a>
+    </div> -->
+
+    <!-- Belongs to section -->
+    <section class="card-section" id="degree-cards">
+        <div class="container-fluid">
+            <div class="big-title">
+                <p>Belongs to</p>
+
+            </div>
+            <div class="row row-cols-1 row-cols-md-3 g-3" id="belongs-to-section">
+
+                <!-- <div class="col">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title"><span h5 class="degree-type">Bachelor of </span> Computer Science
+                            </h5>
+
+                        </div>
+                        <div class="card-footer">
+                            Core
+                        </div>
+                    </div>
+                </div> -->
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Prerequisite and incompatible section  -->
+    <section class="card-section" id="pre-in">
+        <div class="container-fluid">
+            <div class="row row-cols-1 row-cols-md-2 g-2">
+                <div class="col">
+                    <h5 class="big-title">Prerequisite</h5>
+                    <div class="card" id="prerequisite">
+                        <div class="card-body">
+                            <div class="row" id="pre-requisite-section"> <!-- class="row row-cols-1 row-cols-md-2 " -->
+                                
+                                <!-- every card take half space of parent card, use col-sm-6 -->
+                                <!-- <div class="col-sm-6 course-card">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            COMP SCI 3001
+                                            <a class="btn-edit" href="#"><i class="fa fa-pencil"
+                                                    aria-hidden="true"></i></a>
+                                        </div>
+                                        <div class="card-body">
+                                            <h5 class="card-title">Course name</h5>
+                                        </div>
+                                    </div>
+                                </div> -->
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <h5 class="big-title incom">Incompatible</h5>
+                    <div class="card" id="incompatible">
+                        <div class="card-body">
+                            <div class="row" id="incompatible-section">
+                                
+                                <!-- if take space of whole column, use col-sm-12 -->
+                                <!-- <div class="col-sm-12  course-card">
+                                    <div class="card border-light">
+                                        <div class="card-body">
+                                            <h5 class="card-content">One of COMP SCI 1103, COMP SCI 1203, COMP SCI 2103, COMP SCI 2202, COMP SCI 2009 or COMP SCI 2202B 
+                                            </h5>
+                                        </div>
+                                    </div>
+                                </div> -->
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container-fluid">
+            <p style="margin-bottom: 0px;">© Team_07 2022 All rights reserved</p>
+        </div>
+    </footer>
+</body>
+
+<script>
+    /* This function add course name */
+    function put_course_name(course_sub_code, course_name) {
+        
+        let name_html = `
+        <span h1 class="course-number">
+            ${course_sub_code}
+        </span> ${course_name }`;
+
+        let section = document.getElementById('name-section');
+        section.insertAdjacentHTML('afterbegin', name_html);
+    }
+
+    /* This function add data to belongs_to section */
+    function put_belongs_to(belongs_to) {
+        
+        belongs_to = JSON.parse(belongs_to);
+
+        if (belongs_to[0] == null){
+            console.log("length of belongs to zero");
+            let inner_html = `
+                <div class="col">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title"><span h5 class="degree-type">None </span>
+                            </h5>
+                        </div>
+                        <div class="card-footer">
+                        </div>
+                    </div>
+                </div>`
+            
+            let section = document.getElementById('belongs-to-section');
+            section.insertAdjacentHTML('afterbegin', inner_html);
+            return;
+        }
+        
+        belongs_to.forEach(term=>{
+            console.log(term)
+            let level = "";
+            let title = "";
+            let stream = "";
+
+            term = term.full.split('-');
+            level = term[0] == 'B' ? "Bachelor of " : "Master of ";
+            title = term[1];
+            stream = term[2];
+            let inner_html = `
+                <div class="col">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title"><span h5 class="degree-type">${level} </span> ${title}
+                            </h5>
+                        </div>
+                        <div class="card-footer">
+                            ${stream}
+                        </div>
+                    </div>
+                </div>`
+            
+            let section = document.getElementById('belongs-to-section');
+            section.insertAdjacentHTML('afterbegin', inner_html);
+        })                
+    }
+
+    /* This function add data pre-requisite section */
+    function put_prerequisite(pre_requisite) {
+        let inner_text_html = `
+        <div class="col-sm-12  course-card">
+            <div class="card border-light">
+                <div class="card-body">
+                    <h5 class="card-content">${pre_requisite || "None"}</h5>
+                </div>
+            </div>
+        </div>`
+
+        let section = document.getElementById('pre-requisite-section');
+        section.insertAdjacentHTML('afterbegin', inner_text_html);
+        // let inner_card_html = `
+        // <div class="col-sm-6 course-card">
+        //     <div class="card">
+        //         <div class="card-header">
+        //             ${"CCCCCCCCCOMP SCI 3001" || course_sub_code}
+        //             <a class="btn-edit" href="#">
+        //                 <i class="fa fa-pencil" aria-hidden="true"></i>
+        //             </a>
+        //         </div>
+        //         <div class="card-body">
+        //             <h5 class="card-title">${"courssssse nmae" || course_name}</h5>
+        //         </div>
+        //     </div>
+        // </div>`;
+    }
+
+    /* This function add data incompatible section */
+    function put_incompatible(incompatible) {
+
+        let inner_text_html = `
+        <div class="col-sm-12  course-card">
+            <div class="card border-light">
+                <div class="card-body">
+                    <h5 class="card-content">${incompatible || "None"}</h5>
+                </div>
+            </div>
+        </div>`
+
+        let section = document.getElementById('incompatible-section');
+        section.insertAdjacentHTML('afterbegin', inner_text_html);
+    }
+
+    fetch(`${document.URL}/getRelationship`)
+    .then(response=>{
+        return response.text();
+    })
+    .then(data=>{
+        let a_course = JSON.parse(data);
+        put_course_name(a_course.course_subject_code,a_course.course_name);
+
+        let belongs_to = JSON.stringify(a_course.belongs_to);
+        put_belongs_to(belongs_to);
+
+        let pre_requisite = a_course.pre_requisite
+        put_prerequisite(pre_requisite);
+
+        let incompatible = a_course.incompatible;
+        put_incompatible(incompatible);
+    })
+    .catch(err=>{
+        console.log(err);
+    })
+
+</script>
+
+</html>
