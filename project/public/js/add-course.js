@@ -331,34 +331,34 @@ function show_add_board() {
 
                     <select name="Stream" id="stream" multiple size="6">
                         <optgroup label="Bachelor of Computer Science" id="BCS">
-                            <option value="BCS-core">Core</option>
-                            <option value="BCS-elective">Elective</option>
-                            <option value="BCS-Project">Project</option>
+                            <option value="core">Core</option>
+                            <option value="elective">Elective</option>
+                            <option value="project">Project</option>
                         </optgroup>
                         <optgroup label="Bachelor of Computer Science (Advanced)">
-                            <option value="BCSA-core">Core</option>
-                            <option value="BCSA-elective">Elective</option>
-                            <option value="BCSA-Project">Project</option>
+                            <option value="core">Core</option>
+                            <option value="elective">Elective</option>
+                            <option value="project">Project</option>
                         </optgroup>
                         <optgroup label="Bachelor of Information Technology">
-                            <option value="BIT-core">Core</option>
-                            <option value="BIT-cs-major">Cybersecurity Major</option>
-                            <option value="BIT-AIML-major">AI and ML Major</option>
+                            <option value="core">Core</option>
+                            <option value="major-cybersecurity">Cybersecurity Major</option>
+                            <option value="major-ai-ml">AI and ML Major</option>
                         </optgroup>
                         <optgroup label="Master of Cyber Security">
-                            <option value="MCyS-core">Core</option>
-                            <option value="MCyS-elective">Elective</option>
-                            <option value="MCyS-Project">Project</option>
+                            <option value="core">Core</option>
+                            <option value="elective">Elective</option>
+                            <option value="project">Project</option>
                         </optgroup>
                         <optgroup label="Master of Computing and Innovation">
-                            <option value="MCI-core">Core</option>
-                            <option value="MCI-elective">Elective</option>
-                            <option value="MCI-Project">Project</option>
+                            <option value="core">Core</option>
+                            <option value="elective">Elective</option>
+                            <option value="project">Project</option>
                         </optgroup>
                         <optgroup label="Master of Artificial Intelligence and Machine Learning">
-                            <option value="MAIML-core">Core</option>
-                            <option value="MAIML-elective">Elective</option>
-                            <option value="MAIML-Project">Project</option>
+                            <option value="core">Core</option>
+                            <option value="elective">Elective</option>
+                            <option value="project">Project</option>
                         </optgroup>
                     </select>
                 </form>
@@ -430,6 +430,10 @@ function get_form_data() {
     form_data.selected_course = search_course;
     form_data.selected_degree_stream = selected_degree_stream;
 
+    send_form(form_data);
+}
+
+function send_form(form_data){
     console.log(form_data);
 }
 

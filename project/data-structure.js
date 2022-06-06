@@ -77,7 +77,7 @@ let add_course_form = {
         },
         {
             degree_name:"Master of XXX",
-            stream:["core", "elective","project"]
+            stream:["core", "elective","project", "major-ai-ml", "major-cybersecurity"]
         }
     ]
 }
