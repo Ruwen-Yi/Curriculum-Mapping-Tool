@@ -263,8 +263,36 @@ function close_edit_board() {
 }
 
 
+//add border shadow after card selection
+$(":checkbox").on("click", function () {
+    if ($(this).parent().hasClass("active")) {
+        $(this).parent().removeClass("active");
+    }
+    else { $(this).parent().addClass("active"); }
+});
 
 //click edit button to make contenteditable, will combine into one function later
+$("#btn-c-num").on("click", function () {
+    if ($("#c-number").attr("contenteditable") == "false") {
+        $("#c-number").attr("contenteditable", "true");
+        $("#c-number").focus();
+        $("#btn-c-num").html("<i class='fa fa-floppy-o fa-lg' aria-hidden='true'></i>");
+    } else {
+        $("#c-number").attr("contenteditable", "false");
+        $("#btn-c-num").html("<i class='fa fa-pencil-square-o fa-lg' aria-hidden='true'></i>");
+    }
+});
+
+$("#btn-c-name").on("click", function () {
+    if ($("#c-name").attr("contenteditable") == "false") {
+        $("#c-name").attr("contenteditable", "true");
+        $("#c-name").focus();
+        $("#btn-c-name").html("<i class='fa fa-floppy-o fa-lg' aria-hidden='true'></i>");
+    } else {
+        $("#c-name").attr("contenteditable", "false");
+        $("#btn-c-name").html("<i class='fa fa-pencil-square-o fa-lg' aria-hidden='true'></i>");
+    }
+});
 
 $("#btn-c-pre").on("click", function () {
     if ($("#c-pre").attr("contenteditable") == "false") {

@@ -263,28 +263,35 @@ function close_edit_board() {
 }
 
 
+// //add border shadow after card selection
+// $(":checkbox").on("click", function () {
+//     if ($(this).parent().hasClass("active")) {
+//         $(this).parent().removeClass("active");
+//     }
+//     else { $(this).parent().addClass("active"); }
+// });
 
-//click edit button to make contenteditable, will combine into one function later
+// //click edit button to make contenteditable, will combine into one function later
 
-$("#btn-c-pre").on("click", function () {
-    if ($("#c-pre").attr("contenteditable") == "false") {
-        $("#c-pre").attr("contenteditable", "true");
-        $("#c-pre").focus();
-        $("#btn-c-pre").html("<i class='fa fa-floppy-o fa-lg' aria-hidden='true'></i>");
-    } else {
-        $("#c-pre").attr("contenteditable", "false");
-        $("#btn-c-pre").html("<i class='fa fa-pencil-square-o fa-lg' aria-hidden='true'></i>");
-    }
-});
+// $("#btn-c-pre").on("click", function () {
+//     if ($("#c-pre").attr("contenteditable") == "false") {
+//         $("#c-pre").attr("contenteditable", "true");
+//         $("#c-pre").focus();
+//         $("#btn-c-pre").html("<i class='fa fa-floppy-o fa-lg' aria-hidden='true'></i>");
+//     } else {
+//         $("#c-pre").attr("contenteditable", "false");
+//         $("#btn-c-pre").html("<i class='fa fa-pencil-square-o fa-lg' aria-hidden='true'></i>");
+//     }
+// });
 
-$("#btn-c-incom").on("click", function () {
-    if ($("#c-incom").attr("contenteditable") == "false") {
-        $("#c-incom").attr("contenteditable", "true");
-        $("#c-incom").focus();
-        $("#btn-c-incom").html("<i class='fa fa-floppy-o fa-lg' aria-hidden='true'></i>");
-    } else {
-        $("#c-incom").attr("contenteditable", "false");
-        $("#btn-c-incom").html("<i class='fa fa-pencil-square-o fa-lg' aria-hidden='true'></i>");
-    }
-});
+// $("#btn-c-incom").on("click", function () {
+//     if ($("#c-incom").attr("contenteditable") == "false") {
+//         $("#c-incom").attr("contenteditable", "true");
+//         $("#c-incom").focus();
+//         $("#btn-c-incom").html("<i class='fa fa-floppy-o fa-lg' aria-hidden='true'></i>");
+//     } else {
+//         $("#c-incom").attr("contenteditable", "false");
+//         $("#btn-c-incom").html("<i class='fa fa-pencil-square-o fa-lg' aria-hidden='true'></i>");
+//     }
+// });
 

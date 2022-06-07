@@ -251,7 +251,8 @@ function show_edit_board(a_course) {
             </div>
            
         </div>
-    </div>`
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>`
 
     document.getElementById('degree-section').insertAdjacentHTML('afterend', innerHTML);
 
@@ -263,6 +264,13 @@ function close_edit_board() {
 }
 
 
+//add border shadow after card selection
+$(":checkbox").on("click", function () {
+    if ($(this).parent().hasClass("active")) {
+        $(this).parent().removeClass("active");
+    }
+    else { $(this).parent().addClass("active"); }
+});
 
 //click edit button to make contenteditable, will combine into one function later
 
