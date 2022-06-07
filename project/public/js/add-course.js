@@ -412,7 +412,7 @@ function create_course_card(course_subject_code, course_name) {
     course_name = "CCCCCC";
     let innerHTML = `
     <div class="card">
-        <input type="checkbox" class="card-box" value="${course_subject_code} ${course_name}" />
+        <input type="checkbox" class="card-box" value="${course_name}" />
         <h6 class="course-number">${course_subject_code}</h6>
         <h6 class="course-name">${course_name}</h6>
     </div>`;
