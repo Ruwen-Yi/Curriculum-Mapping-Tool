@@ -393,7 +393,7 @@ function search_course() {
     })
     
 }
-
+/* render the searched result */
 function render_course(courses_list){
     //courses_list = JSON.parse(courses_list);
     //let course = course_list[0];
@@ -406,6 +406,7 @@ function render_course(courses_list){
     document.getElementsByClassName('cards')[0].insertAdjacentHTML('beforeend', course_card);
 }
 
+/* create course cards to be rendered */
 function create_course_card(course_subject_code, course_name) {
     course_subject_code = "COMP SCI 0000";
     course_name = "CCCCCC";
@@ -421,23 +422,27 @@ function create_course_card(course_subject_code, course_name) {
 
 
 /* The get* method are for getting the user selected data */
-
 function get_form_data() {
     let selected_course = get_checkbox_data();
     let selected_degree_stream = get_option_data();
 
     let form_data = {}
-    form_data.selected_course = search_course;
+    form_data.selected_course = selected_course;
     form_data.selected_degree_stream = selected_degree_stream;
 
     send_form(form_data);
+    close_add_board();
+    //location.reload(); //reload the page
 }
 
+/* send data to backend */
 function send_form(form_data){
-    //fetch with post method
-    console.log(form_data);
+    let response = request('/add-course', 'POST', form_data);
+    response.then(res=>{console.log('response :>> ', res)});
+    return;
 }
 
+/* get courses that are selected */
 function get_checkbox_data() {
     let boxes = document.getElementsByClassName('card-box');
     let selected_course = [];
@@ -450,6 +455,7 @@ function get_checkbox_data() {
     return selected_course;
 }
 
+/* get degree - stream that are selected */
 function get_option_data() {
     let optgroups = document.getElementsByTagName('optgroup');
     let selected_degree_stream = [];

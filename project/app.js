@@ -54,12 +54,15 @@ const degreeStructure = require('./degree-structure/degree-structure-routes');
 const courseSearching = require('./search/search-course-route');
 /* Import routes for course relationship */
 const courseRelationship = require('./course-relationship/course-relationship-route');
+/* Import routes for form control */
+const formControl = require('./form/form-router');
 
 /* Set up parent routes for degree structure */
 app.use('/', homepage);
 app.use('/degree-structure', degreeStructure);
 app.use('/search', courseSearching);
 app.use('/course-relationships', courseRelationship)
+app.use('/form', formControl);
 
 
 /* Build for test, checking if expected data can be sent to a blank page */
