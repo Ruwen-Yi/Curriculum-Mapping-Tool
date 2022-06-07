@@ -3,7 +3,15 @@ const mysqlConnection = require('../app');
 
 /* This function add one or more course to multiple degrees' streams  */
 const edit_course = (req,res)=>{
-    console.log(req.body);
+
+    let edit_form_data = req.body
+
+    if (edit_form_data.delete)
+        edit_form_data = "data successfully deleted";
+    else
+        edit_form_data = "data successfully edited";
+
+    res.send({msg:edit_form_data}) // must do res.send
     // let qq= 'SELECT * FROM adelaide.degree;'
     // mysqlConnection.query(qq, (err, info, fields) => {
     //     if (!err){

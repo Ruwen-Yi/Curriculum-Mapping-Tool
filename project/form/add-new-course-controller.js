@@ -4,6 +4,7 @@ const mysqlConnection = require('../app');
 /* This function add one or more course to multiple degrees' streams  */
 const add_new_course = (req,res)=>{
     console.log(req.body);
+    res.send({msg:"POST succeed!"}) // must do res.send
     // let qq= 'SELECT * FROM adelaide.degree;'
     // mysqlConnection.query(qq, (err, info, fields) => {
     //     if (!err){

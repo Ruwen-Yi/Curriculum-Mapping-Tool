@@ -3,8 +3,8 @@ const mysqlConnection = require('../app');
 
 const search_add_courses = (req, res)=> {
     
-    let course_name = req.query['course'].split('-').join(' ');
-    console.log(course_name);
+    // let course_name = req.query['course'].split('-').join(' ');
+    // console.log(course_name);
     // let qq= '';
     // mysqlConnection.query(qq, (err, info, fields) => {
     //     if (!err){

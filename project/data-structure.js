@@ -81,3 +81,20 @@ let add_course_form = {
         }
     ]
 }
+
+/* two examples of data sent from edit form */
+let edit_form_data = {
+    delete: false,
+    course_subject_code: "COMP SCI 7102",
+    course_name: "Computer System",
+    incompatible: "COMP SCI 1102, COMP SCI 1202, COMP SCI 2009, COMP SCI 2202, or (COMP SCI 1013 and COMP SCI 1015)",
+    pre_requisite: "COMP SCI 1102, COMP SCI 1202, COMP SCI 2009, COMP SCI 2202, or (COMP SCI 1013 and COMP SCI 1015)"
+}
+
+edit_form_data = {
+    delete: true,
+    course_subject_code: "COMP SCI 7102",
+    course_name: "Computer System",
+    incompatible: "COMP SCI 1102, COMP SCI 1202, COMP SCI 2009, COMP SCI 2202, or (COMP SCI 1013 and COMP SCI 1015)",
+    pre_requisite: "COMP SCI 1102, COMP SCI 1202, COMP SCI 2009, COMP SCI 2202, or (COMP SCI 1013 and COMP SCI 1015)"
+}
