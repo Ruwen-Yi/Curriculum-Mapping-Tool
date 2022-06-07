@@ -13,12 +13,14 @@ app.set('view engine','ejs');
 app.set('views', `${__dirname}/views`);
 app.use(express.static(`${__dirname}/public/`));
 app.use('/public', express.static(path.resolve(__dirname+'/public/')))
-app.use(bodyParser.urlencoded({
-  extended: true
-}));
+// app.use(bodyParser.urlencoded({
+//   extended: true
+// }));
+
 
 /* Used for sending the Json Data to Node API   */
 app.use(express.json());
+app.use(express.urlencoded({extended: true}))
 
 /* Connection String to Database */
 var mysqlConnection = mysql.createConnection({
@@ -61,7 +63,7 @@ app.use('/course-relationships', courseRelationship)
 
 
 /* Build for test, checking if expected data can be sent to a blank page */
-const text = require('./homepage/test')
+const text = require('./homepage/test');
 app.get('/test', text) /* Route for testing */
 /* End of test */
 

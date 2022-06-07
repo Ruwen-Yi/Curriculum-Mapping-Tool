@@ -1,6 +1,17 @@
+@import url("https://fonts.googleapis.com/css?family=Blinker:400,300,700,600");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
 /* screen - degree-structure-page */
 a {
   text-decoration: none;
+}
+
+.add-course {
+  border: none;
+  background-color: var(--rfh85d);
+  float: right;
+  size: 2rem;
+  margin-right: 7%;
 }
 
 .degree-structure-page {

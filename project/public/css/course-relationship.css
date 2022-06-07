@@ -5,7 +5,17 @@ html body {
     /* background-color: #E8f0f2; */
     text-align: center;
     font-family: "Blinker";
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
+
+/* for footer to stick at bottom */
+.content {
+    flex: 1;
+}
+
+
 
 
 /* Navigation Bar */
@@ -18,13 +28,14 @@ html body {
     left: 0px;
     height: 55px;
     max-height: 70px;
-    min-width:70px;
+    min-width: 70px;
     padding-left: 37px;
     padding-right: 37px;
     width: 100%;
 }
+
 /*the curriculum helper text*/
-.nav-text{
+.nav-text {
     color: var(--rfh85d);
     font-family: var(--font-family-blinker);
     font-size: var(--font-size-xxl2);

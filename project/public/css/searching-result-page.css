@@ -1,4 +1,18 @@
 /* screen - result-page */
+html body {
+  /* background-color: #E8f0f2; */
+  text-align: center;
+  font-family: "Blinker";
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* for footer to stick at bottom */
+.content {
+  flex: 1;
+}
+
 
 .result-page {
   background-color: var(--rfh85d);
@@ -120,7 +134,7 @@
   min-width: 854px;
 }
 
-::placeholder{
+::placeholder {
   font-family: var(--font-family-blinker);
   font-size: var(--font-size-m2);
 
@@ -639,4 +653,3 @@
 .drop-down-filled-disabled-yes-primary .custom-enhanced-select-width {
   width: 180px;
 }
-

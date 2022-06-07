@@ -13,6 +13,8 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
   <link rel="stylesheet" type="text/css" href="css/styleguide-hpcs.css" />
   <link rel="stylesheet" type="text/css" href="css/globals-hpcs.css" />
+  <link rel="stylesheet" type="text/css" href="css/add-new-course.css">
+  <script src="js/add-new-course.js"></script>
 </head>
 
 <body style="margin: 0; background: #e8f0f2">
@@ -118,6 +120,9 @@
 
 
       <div class="overlap-group1">
+        <div id="add-new-course" onclick="add_new_course()">
+          Add new course
+        </div>
         <div class="tab-button">
           <a href="/">
             <div class="button-2">
@@ -230,7 +235,7 @@
   </div>
 
   
-
+  
   <script>
     /* Once click the botton, route to the searching page */
     function doSearching() {

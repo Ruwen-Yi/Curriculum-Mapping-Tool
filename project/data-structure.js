@@ -45,3 +45,39 @@ let degree = {
     }
 }
 /* 注：property为空则null*/
+
+
+/* Search course in "add course" card in the degree structure page */
+// Input: course name (string) (eg, Computer) (eg, System)
+// Output: similar courses
+// Output:
+let course_list = [
+    {
+        course_subject_code: "COMP SCI 0000",
+        course_name: "Computer course name",
+    },
+    {
+        course_subject_code: "COMP SCI 7777",
+        course_name: "Artificial Intelligence and Machine Learning Research Project Part A",
+    },
+
+]
+
+const search_courses = (req, res)=> {
+    /* ... */
+}
+
+/* The data structure of add course form in degree structure page */
+let add_course_form = {
+    selected_course:["COMP SCI 0000 Computer of XXX", "COMP SCI 7777 Computer of XXX"], //could be blank
+    selected_degree_stream:[
+        {
+            degree_name:"Master of Computer Science",
+            stream:["core", "elective"] //could be blank
+        },
+        {
+            degree_name:"Master of XXX",
+            stream:["core", "elective","project", "major-ai-ml", "major-cybersecurity"]
+        }
+    ]
+}
