@@ -264,6 +264,7 @@ function close_edit_board() {
 
 
 
+
 //click edit button to make contenteditable, will combine into one function later
 
 $("#btn-c-pre").on("click", function () {

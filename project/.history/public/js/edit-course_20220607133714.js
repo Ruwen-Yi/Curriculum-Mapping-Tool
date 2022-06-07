@@ -262,29 +262,19 @@ function close_edit_board() {
     if (edit_board) edit_board.remove();
 }
 
+// Edit Board: </br>
+// -----Code & Name: </br>
+// ${JSON.stringify(a_course.course_subject_code)} </br>
+// ${JSON.stringify(a_course.course_name)}  </br>
 
+// -----Belongs to:  </br>
+// ${JSON.stringify(a_course.belongs_to)}  </br>
 
-//click edit button to make contenteditable, will combine into one function later
+// -----Pre_requisite:  </br>
+// ${JSON.stringify(a_course.pre_requisite)}  </br>
 
-$("#btn-c-pre").on("click", function () {
-    if ($("#c-pre").attr("contenteditable") == "false") {
-        $("#c-pre").attr("contenteditable", "true");
-        $("#c-pre").focus();
-        $("#btn-c-pre").html("<i class='fa fa-floppy-o fa-lg' aria-hidden='true'></i>");
-    } else {
-        $("#c-pre").attr("contenteditable", "false");
-        $("#btn-c-pre").html("<i class='fa fa-pencil-square-o fa-lg' aria-hidden='true'></i>");
-    }
-});
-
-$("#btn-c-incom").on("click", function () {
-    if ($("#c-incom").attr("contenteditable") == "false") {
-        $("#c-incom").attr("contenteditable", "true");
-        $("#c-incom").focus();
-        $("#btn-c-incom").html("<i class='fa fa-floppy-o fa-lg' aria-hidden='true'></i>");
-    } else {
-        $("#c-incom").attr("contenteditable", "false");
-        $("#btn-c-incom").html("<i class='fa fa-pencil-square-o fa-lg' aria-hidden='true'></i>");
-    }
-});
-
+// -----Incompatible:  </br>
+// ${JSON.stringify(a_course.incompatible)}  </br>
+// <button onclick="close_edit_board()">
+//     Cancel
+// </button>

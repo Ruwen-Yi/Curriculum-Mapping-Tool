@@ -263,6 +263,13 @@ function close_edit_board() {
 }
 
 
+//add border shadow after card selection
+$(":checkbox").on("click", function () {
+    if ($(this).parent().hasClass("active")) {
+        $(this).parent().removeClass("active");
+    }
+    else { $(this).parent().addClass("active"); }
+});
 
 //click edit button to make contenteditable, will combine into one function later
 
