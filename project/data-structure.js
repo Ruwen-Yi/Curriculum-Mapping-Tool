@@ -107,3 +107,11 @@ edit_form_data = {
     incompatible: "COMP SCI 1102, COMP SCI 1202, COMP SCI 2009, COMP SCI 2202, or (COMP SCI 1013 and COMP SCI 1015)",
     pre_requisite: "COMP SCI 1102, COMP SCI 1202, COMP SCI 2009, COMP SCI 2202, or (COMP SCI 1013 and COMP SCI 1015)"
 }
+
+/* from course overview page to add-new-course-controller.js */
+let add_new_course_form_data = { 
+    course_subject_code: 'COMP SCI c444',
+    course_name: 'cna',
+    pre_requisite: 'afWEW',
+    incompatible: 'DSFWEFE' 
+}
