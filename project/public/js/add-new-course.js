@@ -143,7 +143,7 @@ function show_add_board() {
             <div class="header-content">
                 <h1 class="section" >Add new course</h1>
             </div>
-            <div class="header-close" id="button-close">
+            <div class="header-close" id="button-close" onclick="close_add_board()">
                 <button class="close"><i class="fa fa-times fa-lg" aria-hidden="true"></i></button>
             </div>
         </div>
@@ -178,11 +178,30 @@ function show_add_board() {
         <!-- footer : two buttons -->
         <div class="modal-footer">
             <button class="btn cancel" id="button-cancel" onclick="close_add_board()">Cancel</button>
-            <button class="btn save" id="button-add-new">Add</button>
+            <button class="btn save" id="button-add-new" onclick="get_add_form_data()">Add</button>
         </div>
     </div>
     </div>`
 
     document.getElementsByClassName('main-part')[0].insertAdjacentHTML('afterend', innerHTML);
 
+}
+
+function get_add_form_data() {
+    let new_course = {};
+    let course_code = document.getElementById('course-num').value;
+    new_course.course_subject_code = `COMP SCI ${course_code}`;
+    new_course.course_name = document.getElementById('course-name').value;
+    new_course.pre_requisite = document.getElementById('course-pre').value;
+    new_course.incompatible = document.getElementById('course-incom').value;
+    
+    send_form_data(new_course);
+}
+
+function send_form_data(new_course) {
+    let response = request('/add-new-course', 'POST', new_course);
+    response.then(res=>{console.log('response :>> add_new', res)});
+        
+    //location.reload();
+    return;
 }
