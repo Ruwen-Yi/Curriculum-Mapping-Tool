@@ -381,26 +381,26 @@ function show_add_board() {
 /* search course, create course card and then render */
 function search_course() {
     let searchingValue = document.getElementById("myInput").value.toLowerCase().split(' ').join('-');
-    alert(searchingValue);
     fetch(`/search/search-course?course=${searchingValue}`)
     .then(res=>{
         return res.json();
     })
     .then(data=>{
-        console.log(JSON.stringify(data))
-
+        //console.log(data);
+        return render_course(data);
         //return render_course(JSON.stringify(courses_list));
     })
     
 }
 /* render the searched result */
-function render_course(courses_list){
-    //courses_list = JSON.parse(courses_list);
-    //let course = course_list[0];
-
+function render_course(data){
+    console.log(data);
+    courses_list = data;
     let course_card = "";
-    for(let i = 0; i < 4; i++){
-        course_card += create_course_card(); //pass in course_subject_code, course_name
+    for (let i=0; i<courses_list.length;i++) {
+        let course_subject_code = courses_list[i].course_subject_code;
+        let course_name = courses_list[i].course_name;
+        course_card += create_course_card(course_subject_code, course_name);
     }
 
     document.getElementsByClassName('cards')[0].insertAdjacentHTML('beforeend', course_card);
@@ -408,8 +408,8 @@ function render_course(courses_list){
 
 /* create course cards to be rendered */
 function create_course_card(course_subject_code, course_name) {
-    course_subject_code = "COMP SCI 0000";
-    course_name = "CCCCCC";
+    // course_subject_code = "COMP SCI 0000";
+    // course_name = "CCCCCC";
     let innerHTML = `
     <div class="card">
         <input type="checkbox" class="card-box" data-subj-code="${course_subject_code} " data-name="${course_name}" />
