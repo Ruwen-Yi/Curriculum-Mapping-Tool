@@ -412,7 +412,7 @@ function create_course_card(course_subject_code, course_name) {
     course_name = "CCCCCC";
     let innerHTML = `
     <div class="card">
-        <input type="checkbox" class="card-box" value="${course_subject_code} ${course_name}" />
+        <input type="checkbox" class="card-box" data-subj-code="${course_subject_code} " data-name="${course_name}" />
         <h6 class="course-number">${course_subject_code}</h6>
         <h6 class="course-name">${course_name}</h6>
     </div>`;
@@ -425,6 +425,7 @@ function create_course_card(course_subject_code, course_name) {
 function get_form_data() {
     let selected_course = get_checkbox_data();
     let selected_degree_stream = get_option_data();
+    console.log(selected_course);
 
     let form_data = {}
     form_data.selected_course = selected_course;
@@ -448,8 +449,12 @@ function get_checkbox_data() {
     let selected_course = [];
     
     for (let i = 0; i<boxes.length; i++) {
-        if(boxes[i].checked)
-            selected_course.push(boxes[i].value);
+        if(boxes[i].checked){
+            selected_course.push({
+                course_subject_code:`${boxes[i].getAttribute('data-subj-code')}`,
+                course_name:`${boxes[i].getAttribute('data-name')}`
+            });
+        }
     }
     //console.log(selected_course)
     return selected_course;
