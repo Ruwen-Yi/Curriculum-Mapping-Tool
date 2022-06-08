@@ -13,7 +13,7 @@ window.onload = ()=>{
 function show_add_degree_board() {
     let innerHTML=`
     <div id="add_degree_board" style="position: fixed; display: flex; width: 100%; height: 100%; justify-content: center; align-items:center; z-index:10;">
-        <div style="width: 700px; height: 400px; background-color: white;">
+        <div style="position: relative; left: -9%; width: 700px; height: 400px; background-color: white;">
             Add new degree Board: </br>
             </br>
             <button onclick="close_add_degree_board()">
