@@ -380,6 +380,8 @@ function show_add_board() {
 
 /* search course, create course card and then render */
 function search_course() {
+    document.getElementsByClassName('cards')[0].innerHTML = ""; // clear previous searching result
+
     let searchingValue = document.getElementById("myInput").value.toLowerCase().split(' ').join('-');
     fetch(`/search/search-course?course=${searchingValue}`)
     .then(res=>{
