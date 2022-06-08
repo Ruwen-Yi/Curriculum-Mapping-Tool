@@ -16,7 +16,6 @@ function edit_course(fullname) {
         .catch(err => {
             console.log(err);
         })
-    
 }
 
 function show_edit_board(a_course) {

@@ -390,7 +390,6 @@ function search_course() {
     .then(data=>{
         //console.log(data);
         return render_course(data);
-        //return render_course(JSON.stringify(courses_list));
     })
     
 }
@@ -435,7 +434,7 @@ function get_form_data() {
 
     send_form(form_data);
     close_add_board();
-    //location.reload(); //reload the page
+    location.reload(); //reload the page
 }
 
 /* send data to backend */
