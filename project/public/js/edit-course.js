@@ -312,7 +312,7 @@ function get_edit_form_data(if_delete) {
     edit_form_data.course_subject_code = document.getElementById("c-number").innerText;
     edit_form_data.course_name = document.getElementById("c-name").innerText;
     edit_form_data.pre_requisite = document.getElementById("c-pre").innerText;
-    edit_form_data.incompatible = document.getElementById("c-pre").innerText;
+    edit_form_data.incompatible = document.getElementById("c-incom").innerText;
     
     return edit_form_data;
 }
