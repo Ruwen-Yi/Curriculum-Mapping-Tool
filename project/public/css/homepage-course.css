@@ -672,3 +672,7 @@
 .drop-down-filled-disabled-yes-primary .custom-enhanced-select-width {
   width: 180px;
 }
+
+#add-new-course{
+  font-family: var(--font-family-blinker);
+}
