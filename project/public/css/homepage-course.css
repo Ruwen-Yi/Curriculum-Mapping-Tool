@@ -139,6 +139,7 @@
   overflow: hidden;
   width: 447px;
 }
+
 ::placeholder {
   font-family: var(--font-family-blinker);
   font-size: var(--font-size-m2);
@@ -301,7 +302,7 @@
   left: 0;
   position: absolute;
   top: 50px;
-  
+
 }
 
 .homepage-course .body-1 {
@@ -671,4 +672,8 @@
 
 .drop-down-filled-disabled-yes-primary .custom-enhanced-select-width {
   width: 180px;
+}
+
+#add-new-course {
+  font-family: var(--font-family-blinker);
 }

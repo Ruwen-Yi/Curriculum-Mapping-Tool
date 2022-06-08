@@ -1,10 +1,26 @@
 @import url("https://fonts.googleapis.com/css?family=Blinker:400,300,700,600|Belleza:400|Nunito+Sans:400");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+html body {
+    /* background-color: #E8f0f2; */
+    text-align: center;
+    font-family: "Blinker";
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+/* for footer to stick at bottom */
+.content {
+    flex: 1;
+}
 
 a {
     text-decoration: none;
 }
 
-.homepage {
+/* .homepage {
     background-color: var(--rfh85d);
     height: 100vh;
     margin: 0px;
@@ -15,7 +31,7 @@ a {
     overflow-x: hidden;
     position: relative;
     width: 100%;
-}
+} */
 
 .hidden,
 .hidden * {
@@ -37,9 +53,10 @@ a {
     padding-right: 125px;
     padding-top: 19px;
     width: 100%;
+    margin-bottom: 0%;
 }
 
-.copyright {
+/* .copyright {
     align-items: center;
     display: flex;
     gap: 10px;
@@ -50,7 +67,7 @@ a {
     padding-left: 10px;
     padding-right: 10px;
     padding-top: 10px;
-}
+} */
 
 .team_07-2022-all-rights-reserved {
     color: var(--rfh85d);
@@ -175,7 +192,7 @@ a {
     min-width: 792px;
 }
 
-::placeholder{
+::placeholder {
     font-family: var(--font-family-blinker);
     font-size: var(--font-size-m2);
 
@@ -191,7 +208,7 @@ a {
 }
 
 .drop-down-filled-disabled-yes-primary {
-    
+
     height: 56px;
     width: 200px;
 }
@@ -303,6 +320,7 @@ a {
     display: flex;
     gap: 40px;
     justify-content: center;
+    margin: 3rem 0;
 }
 
 .button-1 {
@@ -366,12 +384,11 @@ a {
     flex: 1;
     flex-direction: column;
     gap: 0;
-    height: 907px;
     justify-content: center;
     margin-left: 22.5px;
     margin-right: 22.5px;
-    max-height: 907px;
     width: 1396px;
+    margin: 3rem 0;
 }
 
 .body-1 {
@@ -473,7 +490,7 @@ a {
     width: 380px;
 }
 
-.data-2 { 
+.data-2 {
     align-items: flex-start;
     background-color: var(--white);
     display: flex;
@@ -521,7 +538,7 @@ a {
 .mdc-list-item {
     font-family: var(--font-family-blinker);
     font-size: var(--font-size-l3);
- 
+
     align-items: center;
     display: flex;
     height: 48px;
