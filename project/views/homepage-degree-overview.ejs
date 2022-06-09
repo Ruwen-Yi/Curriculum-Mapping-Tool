@@ -190,6 +190,7 @@
     <script>
         /* This function create a loading icon */
         function loading() {
+            document.getElementById('add-new-degree-btn').remove();
             document.getElementsByClassName("card-row")[0].remove();
             document.getElementsByClassName("body-1")[0].insertAdjacentHTML('afterbegin',
                 `<link rel="stylesheet" type="text/css" href="/css/loading-page.css" />
