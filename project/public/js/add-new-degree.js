@@ -13,7 +13,7 @@ window.onload = () => {
 function show_add_degree_board() {
     let innerHTML = `
     <div id="add_degree_board" style="position: fixed; display: flex; width: 100%; height: 100%; justify-content: center; align-items:center; z-index:10;">
-        <div style="position: relative; left: -9%; width: 700px; height: 400px; background-color: white;padding: 0.5rem 2rem; border-radius: 0.5rem;box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); max-width: 100%;overflow-y: hidden;overflow-x: hidden;font-family: "Blinker";"">
+        <div style="position: relative; left: -13%; width: 700px; height: auto; background-color: white;padding: 0.5rem 2rem; border-radius: 0.5rem;box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); max-width: 100%;overflow-y: hidden;overflow-x: hidden;font-family: "Blinker";"">
             
         <style>
         @import url("https://fonts.googleapis.com/css?family=Blinker:400,300,700,600");
@@ -72,7 +72,7 @@ function show_add_degree_board() {
         }
         
         label {
-            width: 30%;
+            width: 23%;
             text-align: left;
             vertical-align: top;
             display: inline-block;
@@ -149,18 +149,39 @@ function show_add_degree_board() {
                 <label for="course-num">Degree name: </label>
                 <input type="text" id="degree-name" name="" class="box1">
             </div>
+            
+            <div>
+            Add streams:
+                <label class="selected_stream">
+                    <input type="checkbox" name="core" id="">Core
+                </label>
+                <label class="selected_stream">
+                    <input type="checkbox" name="elective" id="">Elective
+                </label>
+                <label class="selected_stream">
+                    <input type="checkbox" name="project" id="">Project
+                </label>
+                <label class="selected_stream">
+                    <input type="checkbox" name="major" id="">Major
+                </label>
+            </div>
             </form>
             </div>
             <hr>
         <!-- footer : two buttons -->
         <div class="modal-footer">
             <button class="btn cancel" id="button-cancel" onclick="close_add_degree_board()">Cancel</button>
-            <button class="btn save" id="button-add-new">Add</button>
+            <button class="btn save" id="button-add-new" onclick="get_add_new_degree_form()">Add</button>
         </div>
         </div>
     </div>`
 
     document.getElementsByClassName('overlap-group')[0].insertAdjacentHTML('afterbegin', innerHTML);
+}
+
+function get_add_new_degree_form() {
+    let new_degree_name = document.getElementById('degree-name').value;
+    console.log(new_degree_name);
 }
 
 function close_add_degree_board() {
