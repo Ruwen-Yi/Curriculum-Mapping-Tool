@@ -137,41 +137,86 @@ function show_add_degree_board() {
                 <div class="header-content">
                     <h1 class="section">Add new degree</h1>
                 </div>
-                <div class="header-close" id="button-close" onclick="close_add_board()">
+                <div class="header-close" id="button-close" onclick="close_add_degree_board()">
                     <button class="close"><i class="fa fa-times fa-lg" aria-hidden="true"></i></button>
                 </div>
             </div>
             <hr>
             <!-- editable content -->
             <div class="modal-body">
-            <form>
-            <div class="form">
-                <label for="course-num">Degree name: </label>
-                <input type="text" id="degree-name" name="" class="box1">
-            </div>
-            
-            <div>
-            Add streams:
-                <label class="selected_stream">
-                    <input type="checkbox" name="core" id="">Core
-                </label>
-                <label class="selected_stream">
-                    <input type="checkbox" name="elective" id="">Elective
-                </label>
-                <label class="selected_stream">
-                    <input type="checkbox" name="project" id="">Project
-                </label>
-                <label class="selected_stream">
-                    <input type="checkbox" name="major" id="">Major
-                </label>
-            </div>
-            </form>
+                <style>
+                    .add_degree_level {
+                        display: flex;
+                        margin-top: 1rem;
+                        margin-right: 0px;
+                        margin-bottom: 1rem;
+                        margin-left: 21px;
+                    }
+                    .selected-level {
+                        width: auto;
+                    }
+                    .level_options {
+                        margin-left: 46px;
+                    }
+                </style>
+                <div class="add_degree_level">
+                    <span>Degree level:</span>
+                    <div class="level_options">
+                        <label class="selected-level">
+                            <input type="radio" class="selected-level" name="degree-level" value="Bachelor" checked>Bachelor
+                        </label>
+                        <label class="selected-level">
+                            <input type="radio" class="selected-level" name="degree-level" value="Master">Master
+                        </label>
+                    </div>
+                </div>
+
+                <form>
+                    <div class="form">
+                        <label for="course-num">Degree name: </label>
+                        <input type="text" id="degree-name" name="" class="box1">
+                    </div>
+                </form>
+
+                <style>
+                    .add_streams {
+                        display: flex;
+                        margin-top: 1rem;
+                        margin-right: 0px;
+                        margin-bottom: 1rem;
+                        margin-left: 21px;
+                    }
+                    .selected_stream {
+                        width: auto;
+                    }
+                    .stream_options {
+                        margin-left: 44px;
+                    }
+                </style>
+                <div class="add_streams">
+                    <span>Add streams:</span>
+                    <div class="stream_options">
+                        <label class="selected_stream">
+                            <input type="checkbox" class="selected_stream" name="stream" value="core" checked>Core
+                        </label>
+                        <label class="selected_stream">
+                            <input type="checkbox" class="selected_stream" name="stream" value="elective">Elective
+                        </label>
+                        <label class="selected_stream">
+                            <input type="checkbox" class="selected_stream" name="stream" value="project">Project
+                        </label>
+                        <!-- <label class="selected_stream">
+                            <input type="checkbox" class="selected_stream" name="stream" value="major">Major
+                        </label> -->
+                    </div>
+                </div>
             </div>
             <hr>
+            
         <!-- footer : two buttons -->
         <div class="modal-footer">
             <button class="btn cancel" id="button-cancel" onclick="close_add_degree_board()">Cancel</button>
-            <button class="btn save" id="button-add-new" onclick="get_add_new_degree_form()">Add</button>
+            <button class="btn save" id="button-add-new" onclick="send_add_new_degree_form()">Add</button>
         </div>
         </div>
     </div>`
@@ -179,9 +224,38 @@ function show_add_degree_board() {
     document.getElementsByClassName('overlap-group')[0].insertAdjacentHTML('afterbegin', innerHTML);
 }
 
+function send_add_new_degree_form() {
+    let new_degree = get_add_new_degree_form();
+    console.log(new_degree);
+    
+    let response = request('/add-new-degree', 'POST', new_degree);
+    response.then(res=>{console.log('response :>> ', res)});
+    close_add_degree_board();
+    //location.reload(); //reload the page
+    return;
+}
+
 function get_add_new_degree_form() {
-    let new_degree_name = document.getElementById('degree-name').value;
-    console.log(new_degree_name);
+    let new_degree = {};
+    
+    let level_options = document.getElementsByClassName('selected-level');
+    let degree_level = "";
+    for(i=0; i<level_options.length; i++) {
+        if (level_options[i].checked)
+            degree_level =level_options[i].value;
+    }
+
+    new_degree.new_degree_name = `${degree_level} of ${document.getElementById('degree-name').value}`;
+
+    let stream_options = document.getElementsByClassName('selected_stream');
+    let stream = [];
+    for(i=0; i<stream_options.length; i++) {
+        if (stream_options[i].checked)
+            stream.push(stream_options[i].value);
+    }
+    new_degree.stream = stream;
+
+    return new_degree;
 }
 
 function close_add_degree_board() {

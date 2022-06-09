@@ -115,3 +115,13 @@ let add_new_course_form_data = {
     pre_requisite: 'afWEW',
     incompatible: 'DSFWEFE' 
 }
+
+let add_new_degree_form_data = {
+    new_degree_name: 'Master of XXXXX',
+    stream: [ 'core', 'project', 'elective' ]
+}
+
+add_new_degree_form_data = {
+    new_degree_name: 'Master of XXXXX',
+    stream: []
+}
