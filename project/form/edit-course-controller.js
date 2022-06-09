@@ -5,25 +5,29 @@ const mysqlConnection = require('../app');
 const edit_course = (req,res)=>{
     console.log(req.body);
     let edit_form_data = req.body
+    let result ="";
+    let qq="";
+    let stream="";
+    if (edit_form_data.stream=="Core"){
+        stream="core";
+    }else if(edit_form_data.stream=="Elective"){
+        stream="elec";
+    }else if(edit_form_data.stream=="Project"){
+        stream="project";
+    }
+    if (edit_form_data.delete){
+        result = "data successfully deleted";
+        qq= 'DELETE FROM adelaide.degree_course WHERE courses LIKE "'+edit_form_data.course_subject_code+'%"'+' AND stream="'+stream+'";'
+        console.log(qq);
+    }
+    else{
+        result = "data successfully edited";
+        qq= 'UPDATE adelaide.course SET Incompatibale="'+req.body.incompatible+'", pre_requisite="'+req.body.pre_requisite+'" WHERE course_code="'+req.body.course_subject_code+'";'
+        console.log(qq);
+    }   
+    mysqlConnection.query(qq);
+    res.send({msg:result}) // must do res.send
 
-    if (edit_form_data.delete)
-        edit_form_data = "data successfully deleted";
-    else
-        edit_form_data = "data successfully edited";
-
-    res.send({msg:edit_form_data}) // must do res.send
-    // let qq= 'SELECT * FROM adelaide.degree;'
-    // mysqlConnection.query(qq, (err, info, fields) => {
-    //     if (!err){
-    //         var data =JSON.stringify(info);
-    //         data = JSON.parse(data);
-    //         console.log(data[1].degree);
-    //         res.render("../views/homepage-degree-overview.ejs",{degreeContent:data});
-    //     }
-    //     else{
-    //         console.log(err);
-    //     }
-    // })
 }
 
 /* Export the function to be used by routes.js */
