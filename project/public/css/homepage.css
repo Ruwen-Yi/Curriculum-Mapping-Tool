@@ -276,6 +276,10 @@ a {
     position: relative;
 }
 
+.button:hover {
+    background-color: #085566;
+}
+
 .search-1 {
     color: var(--white);
     font-family: var(--font-family-blinker);
@@ -336,6 +340,14 @@ a {
     width: 160px;
 }
 
+.button-1:hover {
+    background-color: #085566;
+}
+
+.button-1:focus {
+    background-color: #085566;
+}
+
 .degree {
     color: var(--rfh85d);
     flex: 1;
@@ -352,6 +364,7 @@ a {
 }
 
 .button-2 {
+    color: var(--cyprus2);
     align-items: center;
     background-color:
         #f5f5fa;
@@ -364,8 +377,20 @@ a {
     width: 160px;
 }
 
+.button-2:hover {
+    color: #f5f5fa;
+    background-color: #053742;
+
+}
+
+.button-2:focus {
+    background-color: #053742;
+    color: #f5f5fa;
+}
+
+
 .course {
-    color: var(--cyprus2);
+
     flex: 1;
     font-family: var(--font-family-blinker);
     font-size: var(--font-size-l2);
@@ -430,18 +455,11 @@ a {
     overflow: hidden;
 }
 
-.card-full-card-2 {
-    align-items: flex-start;
-    background-color: var(--white);
-    border-radius: 12px;
-    box-shadow: 0px 12px 32px #0000000d, 0px 2px 4px #1b044c1a;
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    min-height: 387px;
-    min-width: 380px;
-    overflow: hidden;
+.card-full-card:hover {
+    box-shadow: 0px 4px 10px #00000040;
 }
+
+
 
 .image {
     align-self: stretch;
