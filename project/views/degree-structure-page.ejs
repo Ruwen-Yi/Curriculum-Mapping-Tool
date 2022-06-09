@@ -71,7 +71,7 @@
       
       <div class="title-row">
         <img class="vector" src="../img/vector@2x.png" />
-        <div class="core-courses blinker-semi-bold-storm-gray-20px"> ${stream_name}  </div>
+        <div class="core-courses blinker-semi-bold-storm-gray-20px stream_name"> ${stream_name}  </div>
       </div>`;
 
       /* Create all course cards under this stream */
@@ -140,7 +140,7 @@
       let card = `
       
         <div class="taskcourse-card" style="position:relative;">
-          <img src="https://anima-uploads.s3.amazonaws.com/projects/626ae7916ff5cd6d9202df32/releases/628b08db7a87b0da5cf81c73/img/edit@2x.png" class="edit" onclick="edit_course('${course_code} ${course_name}')" >
+          <img src="https://anima-uploads.s3.amazonaws.com/projects/626ae7916ff5cd6d9202df32/releases/628b08db7a87b0da5cf81c73/img/edit@2x.png" class="edit" onclick="edit_course('${course_code} ${course_name}', this)" >
           <a href="/course-relationships/${course_code}-${course_name.split(' ').join('-')}">
             <div class="taskcard border-1px-gallery">
               <div class="main-info">

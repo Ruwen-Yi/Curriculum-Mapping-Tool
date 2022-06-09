@@ -1,6 +1,6 @@
 /* Once a edit-icon is clicked, a edit board will show up */
-function edit_course(fullname) {
-
+var stream_name;
+function edit_course(fullname, clicked_element) {
     close_edit_board();
 
     fetch(`/course-relationships/${fullname.split(' ').join('-')}/getRelationship`)
@@ -12,10 +12,17 @@ function edit_course(fullname) {
             a_course = JSON.stringify(a_course);
 
             show_edit_board(a_course);
+            get_stream_name(clicked_element);
+            add_click_listener();
         })
         .catch(err => {
             console.log(err);
         })
+}
+
+/* get the stream name where a course is edited */
+function get_stream_name(element) {
+    stream_name = element.parentNode.parentNode.parentNode.children[0].textContent.replace(/\s/g, '')
 }
 
 function show_edit_board(a_course) {
@@ -252,7 +259,6 @@ function show_edit_board(a_course) {
     </div>`
 
     document.getElementById('degree-section').insertAdjacentHTML('afterend', innerHTML);
-    add_click_listener();
 }
 
 function close_edit_board() {
@@ -310,6 +316,7 @@ function get_edit_form_data(if_delete) {
     edit_form_data.delete = if_delete;
     edit_form_data.course_subject_code = document.getElementById("c-number").innerText;
     edit_form_data.course_name = document.getElementById("c-name").innerText;
+    edit_form_data.stream = stream_name;
     edit_form_data.pre_requisite = document.getElementById("c-pre").innerText;
     edit_form_data.incompatible = document.getElementById("c-incom").innerText;
     
