@@ -152,8 +152,8 @@ function show_add_degree_board() {
                         margin-bottom: 1rem;
                         margin-left: 21px;
                     }
-                    .selected-level {
-                        width: auto;
+                    .level-option {
+                        width: 7em;
                     }
                     .level_options {
                         margin-left: 46px;
@@ -162,10 +162,10 @@ function show_add_degree_board() {
                 <div class="add_degree_level">
                     <span>Degree level:</span>
                     <div class="level_options">
-                        <label class="selected-level">
+                        <label class="level-option">
                             <input type="radio" class="selected-level" name="degree-level" value="Bachelor" checked>Bachelor
                         </label>
-                        <label class="selected-level">
+                        <label class="level-option">
                             <input type="radio" class="selected-level" name="degree-level" value="Master">Master
                         </label>
                     </div>
@@ -174,7 +174,7 @@ function show_add_degree_board() {
                 <form>
                     <div class="form">
                         <label for="course-num">Degree name: </label>
-                        <input type="text" id="degree-name" name="" class="box1">
+                        <input type="text" id="degree-name" name="" class="box1" autocomplete="off">
                     </div>
                 </form>
 
@@ -186,8 +186,8 @@ function show_add_degree_board() {
                         margin-bottom: 1rem;
                         margin-left: 21px;
                     }
-                    .selected_stream {
-                        width: auto;
+                    .stream_option {
+                        width: 6em;
                     }
                     .stream_options {
                         margin-left: 44px;
@@ -196,16 +196,16 @@ function show_add_degree_board() {
                 <div class="add_streams">
                     <span>Add streams:</span>
                     <div class="stream_options">
-                        <label class="selected_stream">
-                            <input type="checkbox" class="selected_stream" name="stream" value="core" checked>Core
+                        <label class="stream_option" style="pointer-events: none;">
+                            <input type="checkbox" class="selected_stream" name="stream" value="core" checked style="pointer-events: none;">Core
                         </label>
-                        <label class="selected_stream">
+                        <label class="stream_option">
                             <input type="checkbox" class="selected_stream" name="stream" value="elective">Elective
                         </label>
-                        <label class="selected_stream">
+                        <label class="stream_option">
                             <input type="checkbox" class="selected_stream" name="stream" value="project">Project
                         </label>
-                        <!-- <label class="selected_stream">
+                        <!-- <label class="stream_option">
                             <input type="checkbox" class="selected_stream" name="stream" value="major">Major
                         </label> -->
                     </div>

@@ -136,10 +136,11 @@
                             <% let degreeLevel=degreeFullName.slice(0, 2).join(" "); %>
                         <% let degreeName = degreeFullName.slice(2, degreeFullName.length).join(" "); %>
                         
-                        <a href=" /degree-structure/<%=degreeRoute %>" class="text-decoration: none;">
+                        <a href=" /degree-structure/<%=degreeRoute %>" class="link">
                                 <div class="card-full-card">
                                     <!-- dynamically change image -->
-                                    <img class="image" src="img/image-<%= i %>@2x.png" />
+                                    
+                                    <img class="image" src="img/image-<%= (i % 9) %>@2x.png" />
 
                                     <div class="data">
                                         <div class="title-row">

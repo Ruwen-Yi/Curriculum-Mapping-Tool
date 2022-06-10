@@ -21,6 +21,7 @@
   <script src="/js/request.js"></script>
   <script src="/js/edit-course.js"></script>
   <script src="/js/add-course.js"></script>
+  <script src="/js/delete-degree.js"></script>
   
   <title>degree-structure</title>
 </head>
@@ -257,6 +258,7 @@
         loading.remove();
         footer.style.opacity = "1";
         add_course_button.style.opacity = "1";
+        add_delete_button();
 
       })
       .catch(err => {
