@@ -129,3 +129,8 @@ add_new_degree_form_data = {
     new_degree_name: 'Master of XXXXX',
     stream: []
 }
+
+let delete_degree_data = {
+    delete: true, //will always be true
+    degree_name: "Master of XXX"
+}
