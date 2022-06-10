@@ -13,7 +13,7 @@ function show_add_board() {
 
     let innerHTML = `
     <div id="add_board" style="position: fixed; display: flex; width: 100%; height: 100%; justify-content: center; align-items:center; background-color: rgba(0, 0, 0, 0.3);z-index:10;text-align: center;">
-        <div style="width: 700px; height: 400px; background-color: white;padding: 0.5rem 2rem;border-radius: 0.5rem;box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); max-width: 100%;overflow-y: scroll;overflow-x: hidden;font-family: "Blinker";">
+        <div style="width: 700px; height: 400px; background-color: white;padding: 0.5rem 2rem;border-radius: 0.5rem; max-width: 100%;overflow-y: scroll;overflow-x: hidden;font-family: "Blinker";">
         <style>
         @import url("https://fonts.googleapis.com/css?family=Blinker:400,300,700,600");
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');

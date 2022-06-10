@@ -13,7 +13,7 @@ window.onload = () => {
 function show_add_degree_board() {
     let innerHTML = `
     <div id="add_degree_board" style="position: fixed; display: flex; width: 100%; height: 100%; justify-content: center; align-items:center; z-index:10;">
-        <div style="position: relative; left: -13%; width: 700px; height: auto; background-color: white;padding: 0.5rem 2rem; border-radius: 0.5rem;box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); max-width: 100%;overflow-y: hidden;overflow-x: hidden;font-family: "Blinker";"">
+        <div style="position: relative; left: -13%; width: 700px; height: auto; background-color: white;box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); padding: 0.5rem 2rem; border-radius: 0.5rem;box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); max-width: 100%;overflow-y: hidden;overflow-x: hidden;font-family: "Blinker";"">
             
         <style>
         @import url("https://fonts.googleapis.com/css?family=Blinker:400,300,700,600");
@@ -68,7 +68,7 @@ function show_add_degree_board() {
         }
 
         .modal-body{
-            margin:18% 5%;
+            margin:10% 5%;
         }
         
         label {
@@ -227,9 +227,9 @@ function show_add_degree_board() {
 function send_add_new_degree_form() {
     let new_degree = get_add_new_degree_form();
     console.log(new_degree);
-    
+
     let response = request('/add-new-degree', 'POST', new_degree);
-    response.then(res=>{console.log('response :>> ', res)});
+    response.then(res => { console.log('response :>> ', res) });
     close_add_degree_board();
     //location.reload(); //reload the page
     return;
@@ -237,19 +237,19 @@ function send_add_new_degree_form() {
 
 function get_add_new_degree_form() {
     let new_degree = {};
-    
+
     let level_options = document.getElementsByClassName('selected-level');
     let degree_level = "";
-    for(i=0; i<level_options.length; i++) {
+    for (i = 0; i < level_options.length; i++) {
         if (level_options[i].checked)
-            degree_level =level_options[i].value;
+            degree_level = level_options[i].value;
     }
 
     new_degree.new_degree_name = `${degree_level} of ${document.getElementById('degree-name').value}`;
 
     let stream_options = document.getElementsByClassName('selected_stream');
     let stream = [];
-    for(i=0; i<stream_options.length; i++) {
+    for (i = 0; i < stream_options.length; i++) {
         if (stream_options[i].checked)
             stream.push(stream_options[i].value);
     }
