@@ -22,7 +22,7 @@ function edit_course(fullname, clicked_element) {
 
 /* get the stream name where a course is edited */
 function get_stream_name(element) {
-    stream_name = element.parentNode.parentNode.parentNode.children[0].textContent.replace(/\s/g, '')
+    stream_name = element.parentNode.parentNode.parentNode.children[0].children[1].textContent.replace(/\s/g, '')
 }
 
 function show_edit_board(a_course) {
