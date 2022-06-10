@@ -134,3 +134,8 @@ let delete_degree_data = {
     delete: true, //will always be true
     degree_name: "Master of XXX"
 }
+
+let delete_stream_data = { //not "delete" data provided. once you receive data, just delete the stream
+    degree_name: "Master of XXX",
+    stream: "core"
+}

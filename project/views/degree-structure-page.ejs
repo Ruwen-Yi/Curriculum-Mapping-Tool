@@ -22,6 +22,7 @@
   <script src="/js/edit-course.js"></script>
   <script src="/js/add-course.js"></script>
   <script src="/js/delete-degree.js"></script>
+  <script src="/js/delete-stream.js"></script>
   
   <title>degree-structure</title>
 </head>
@@ -73,6 +74,11 @@
       <div class="title-row">
         <img class="vector" src="../img/vector@2x.png" />
         <div class="core-courses blinker-semi-bold-storm-gray-20px stream_name"> ${stream_name}  </div>
+        <div style="position:relative; left:89%;" >
+          <button class="delete_stream_button blinker-semi-bold-storm-gray-20px" onclick="delete_stream('${stream_name}')">
+            Delete
+          </button>
+        </div>
       </div>`;
 
       /* Create all course cards under this stream */
