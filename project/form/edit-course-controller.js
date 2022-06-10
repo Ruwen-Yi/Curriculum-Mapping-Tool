@@ -17,7 +17,7 @@ const edit_course = (req,res)=>{
     }
     if (edit_form_data.delete){
         result = "data successfully deleted";
-        qq= 'DELETE FROM adelaide.degree_course WHERE courses LIKE "'+edit_form_data.course_subject_code+'%"'+' AND stream="'+stream+'";'
+        qq= 'DELETE FROM adelaide.degree_course WHERE courses LIKE "'+edit_form_data.course_subject_code+'%"'+' AND stream="'+stream+'" AND degree="'+req.body.degree+'";'
         console.log(qq);
     }
     else{
