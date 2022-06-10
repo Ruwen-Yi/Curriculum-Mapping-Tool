@@ -3,6 +3,14 @@ const mysqlConnection = require('../app');
 
 const delete_stream = (req,res)=>{
     console.log(req.body);
+    let stream ="";
+    if(req.body.stream=="Elective"){
+        stream= "elec"
+    }else{
+        stream=req.body.stream;
+    }
+    qq='DELETE FROM adelaide.degree_course WHERE stream = "'+stream+'" AND degree = "'+req.body.degree_name+'";'
+    mysqlConnection.query(qq);
     res.send({msg:"delete succeed!"})
 }
 
