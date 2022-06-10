@@ -314,11 +314,13 @@ function get_edit_form_data(if_delete) {
     let edit_form_data = {};
 
     edit_form_data.delete = if_delete;
+    edit_form_data.degree = document.getElementById('academic-degree-name').innerHTML;
+    edit_form_data.stream = stream_name;
     edit_form_data.course_subject_code = document.getElementById("c-number").innerText;
     edit_form_data.course_name = document.getElementById("c-name").innerText;
-    edit_form_data.stream = stream_name;
     edit_form_data.pre_requisite = document.getElementById("c-pre").innerText;
     edit_form_data.incompatible = document.getElementById("c-incom").innerText;
+    console.log(edit_form_data);
     
     return edit_form_data;
 }

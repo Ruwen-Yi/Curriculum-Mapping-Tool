@@ -94,6 +94,8 @@ let add_course_form = {
 /* two examples of data sent from edit form */
 let edit_form_data = {
     delete: false,
+    degree: 'Bachelor of Information Technology',
+    stream: 'Core',
     course_subject_code: "COMP SCI 7102",
     course_name: "Computer System",
     incompatible: "COMP SCI 1102, COMP SCI 1202, COMP SCI 2009, COMP SCI 2202, or (COMP SCI 1013 and COMP SCI 1015)",
@@ -102,6 +104,8 @@ let edit_form_data = {
 
 edit_form_data = {
     delete: true,
+    degree: 'Bachelor of Information Technology',
+    stream: 'Core',
     course_subject_code: "COMP SCI 7102",
     course_name: "Computer System",
     incompatible: "COMP SCI 1102, COMP SCI 1202, COMP SCI 2009, COMP SCI 2202, or (COMP SCI 1013 and COMP SCI 1015)",
