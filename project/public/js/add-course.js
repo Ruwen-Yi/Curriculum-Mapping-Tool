@@ -335,7 +335,7 @@ function show_add_board() {
                             <option value="elective">Elective</option>
                             <option value="project">Project</option>
                         </optgroup>
-                        <optgroup label="Bachelor of Computer Science (Advanced)">
+                        <optgroup label="Bachelor of Computer Science Advanced">
                             <option value="core">Core</option>
                             <option value="elective">Elective</option>
                             <option value="project">Project</option>
