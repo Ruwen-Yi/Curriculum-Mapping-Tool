@@ -295,7 +295,7 @@ function add_click_listener() {
         let response = request('/edit-course', 'POST', form_data);
         response.then(res=>{console.log('response :>> edit', res)});
 
-        //location.reload();
+        location.reload();
         return;
     }
 
@@ -304,7 +304,7 @@ function add_click_listener() {
         let response = request('/edit-course', 'POST', form_data);
         response.then(res=>{console.log('response :>> delete', res)});
         
-        //location.reload();
+        location.reload();
         return;
     }
 }
