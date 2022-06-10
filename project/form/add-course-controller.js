@@ -32,7 +32,7 @@ const add_course = (req,res)=>{
     for(i=0;i<newC.selected_course.length;i++){
         for(ii=0;ii<newC.selected_degree_stream.length;ii++){
         for(iii=0;iii<newC.selected_degree_stream[ii].streams.length;iii++){
-        let qq ="INSERT INTO adelaide.degree_course ( degree, stream, supplement, courses, name ) VALUES ( '"+newC.selected_degree_stream[ii].degree_name+"', '"+newC.selected_degree_stream[ii].streams[iii]+"', '', '"+newC.selected_course[i].course_subject_code+" "+newC.selected_course[i].course_name+"', '"+newC.selected_course[i].course_name+"' );"
+        let qq ="INSERT INTO adelaide.degree_course ( degree, stream, supplement, courses, name ) VALUES ( '"+newC.selected_degree_stream[ii].degree_name+"', '"+newC.selected_degree_stream[ii].streams[iii]+"', '', '"+newC.selected_course[i].course_subject_code+newC.selected_course[i].course_name+"', '"+newC.selected_course[i].course_name+"' );"
         mysqlConnection.query(qq);
         }
         }
