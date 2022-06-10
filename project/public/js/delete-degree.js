@@ -2,8 +2,8 @@ function add_delete_button() {
     let footer = document.getElementsByClassName('app-bottom')[0];
     let innerHTML = `
     <div style="z-index:1000; width=100%;margin-top: 56px; display:flex; justify-content:space-between;">
-        <button style="margin-left: 47%; height:3em; width:134px;" onclick="delete_degree()">
-            Delete
+        <button class="blinker-semi-bold-storm-gray-20px" style="margin-left: 43em; height:3em; width:10em;" onclick="delete_degree()">
+            Delete This Degree
         </button>
     </div>
     `

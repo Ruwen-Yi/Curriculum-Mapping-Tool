@@ -200,7 +200,7 @@ function show_add_degree_board() {
                             <input type="checkbox" class="selected_stream" name="stream" value="core" checked style="pointer-events: none;">Core
                         </label>
                         <label class="stream_option">
-                            <input type="checkbox" class="selected_stream" name="stream" value="elective">Elective
+                            <input type="checkbox" class="selected_stream" name="stream" value="elec">Elective
                         </label>
                         <label class="stream_option">
                             <input type="checkbox" class="selected_stream" name="stream" value="project">Project
