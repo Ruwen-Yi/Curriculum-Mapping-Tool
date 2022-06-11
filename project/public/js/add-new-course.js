@@ -121,8 +121,9 @@ function show_add_board() {
         }
 
         /* Green */
-        .add:hover {
+        .save:hover {
             background-color: #03232a;
+            color:white;
         }
 
 
@@ -194,14 +195,14 @@ function get_add_form_data() {
     new_course.course_name = document.getElementById('course-name').value;
     new_course.pre_requisite = document.getElementById('course-pre').value;
     new_course.incompatible = document.getElementById('course-incom').value;
-    
+
     send_form_data(new_course);
 }
 
 function send_form_data(new_course) {
     let response = request('/add-new-course', 'POST', new_course);
-    response.then(res=>{console.log('response :>> add_new', res)});
-        
+    response.then(res => { console.log('response :>> add_new', res) });
+
     //location.reload();
     return;
 }
