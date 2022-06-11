@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css?family=Blinker:400,300,700,600");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+
+html body {
+    /* background-color: #E8f0f2; */
+    text-align: center;
+    font-family: "Blinker";
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #E8F0F2;
+}
+
+/* for footer to stick at bottom */
+.content {
+    flex: 1;
+}
+
+/* Navigation Bar */
+.navbar-brand {
+    font-weight: 600;
+    font-size: 1.5rem;
+    font-family: "Blinker";
+}
+
+.navbar {
+    height: 4.5rem;
+    padding-left: 2.1rem;
+}
+
+.img {
+    width: 40rem;
+    height: 40rem;
+}
+
+.oops {
+    font-family: "Montserrat";
+    color: #39A2DB;
+}
+
+.reminder {
+    font-family: "Montserrat";
+    color: #053742;
+    font-size: 1.2rem;
+    margin-top: 2rem;
+}
+
+/* Footer */
+.footer {
+    background-color: #053742;
+    padding: 0.5rem 0;
+    color: #E8F0F2;
+    vertical-align: auto;
+}

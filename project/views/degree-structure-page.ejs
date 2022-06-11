@@ -5,6 +5,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=100%,height=100%, maximum-scale=1.0" />
   <link rel="shortcut icon" type="image/png" href="/img/icons8-study-64.png" />
+  <!-- bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
   <link rel="stylesheet" type="text/css" href="/css/degree-structure-page.css" />
   <!-- use absolute path with '/' at first -->
   <link rel="stylesheet" type="text/css" href="/css/styleguide-dsp.css" />
@@ -23,7 +27,7 @@
   <script src="/js/add-course.js"></script>
   <script src="/js/delete-degree.js"></script>
   <script src="/js/delete-stream.js"></script>
-  
+
   <title>degree-structure</title>
 </head>
 
@@ -74,9 +78,9 @@
       <div class="title-row" style="position:relative;" >
         <img class="vector" src="../img/vector@2x.png" />
         <div class="core-courses blinker-semi-bold-storm-gray-20px stream_name"> ${stream_name}  </div>
-        <div style="position:absolute; left:94%;" >
-          <button class="delete_stream_button blinker-semi-bold-storm-gray-20px" onclick="delete_stream('${stream_name}')">
-            Delete
+        <div style="position:absolute; left:97%;" >
+          <button type="button" class="btn btn-danger delete_stream_button" onclick="delete_stream('${stream_name}')">
+            <i class="fa fa-trash-o fa-lg" aria-hidden="true"></i>
           </button>
         </div>
       </div>`;
@@ -147,7 +151,7 @@
       let card = `
       
         <div class="taskcourse-card" style="position:relative;">
-          <img src="https://anima-uploads.s3.amazonaws.com/projects/626ae7916ff5cd6d9202df32/releases/628b08db7a87b0da5cf81c73/img/edit@2x.png" class="edit" onclick="edit_course('${course_code} ${course_name}', this)" >
+          <i class="fa fa-pencil edit" onclick="edit_course('${course_code} ${course_name}', this)" aria-hidden="true"></i>
           <a href="/course-relationships/${course_code}-${course_name.split(' ').join('-')}">
             <div class="taskcard border-1px-gallery">
               <div class="main-info">
@@ -272,7 +276,7 @@
       })
 
   </script>
-  
+
 </body>
 
 </html>

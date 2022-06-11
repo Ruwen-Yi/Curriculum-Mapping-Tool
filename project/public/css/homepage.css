@@ -556,13 +556,12 @@ a {
 
 
 .mdc-list-item {
-    font-family: var(--font-family-blinker);
-    font-size: var(--font-size-l3);
-
     align-items: center;
     display: flex;
     height: 48px;
     position: relative;
+    font-family: var(--font-family-blinker);
+    vertical-align: middle;
 }
 
 .drop-down-filled-disabled-yes-primary .mdc-select:not(.mdc-select--disabled).mdc-select--focused .mdc-floating-label {

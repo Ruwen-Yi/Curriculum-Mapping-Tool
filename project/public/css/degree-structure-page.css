@@ -773,3 +773,18 @@ a {
 .majors+.core {
   margin-top: -15px;
 }
+
+.delete_stream_button {
+  color: var(--cyprus2);
+  background-color: var(--rfh85d);
+  border: none;
+}
+
+.edit{
+  padding: 2px 2px;
+}
+
+/* .edit:hover{
+  background-color: var(--rfh85d);
+  color: var(--cyprus2);
+} */
