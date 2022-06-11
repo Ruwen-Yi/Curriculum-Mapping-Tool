@@ -1,6 +1,6 @@
 /* Once a edit-icon is clicked, a edit board will show up */
-function edit_course(fullname) {
-
+var stream_name;
+function edit_course(fullname, clicked_element) {
     close_edit_board();
 
     fetch(`/course-relationships/${fullname.split(' ').join('-')}/getRelationship`)
@@ -12,16 +12,22 @@ function edit_course(fullname) {
             a_course = JSON.stringify(a_course);
 
             show_edit_board(a_course);
-
+            get_stream_name(clicked_element);
+            add_click_listener();
         })
         .catch(err => {
             console.log(err);
         })
 }
 
+/* get the stream name where a course is edited */
+function get_stream_name(element) {
+    stream_name = element.parentNode.parentNode.parentNode.children[0].children[1].textContent.replace(/\s/g, '')
+    console.log(stream_name);
+}
+
 function show_edit_board(a_course) {
     a_course = JSON.parse(a_course);
-    console.log(a_course)
 
     let innerHTML = `
     <div id="edit_board" style="position: fixed; display: flex; width: 100%; height: 100%; justify-content: center; align-items:center; background-color: rgba(0, 0, 0, 0.3);z-index:10;text-align: center;">
@@ -207,7 +213,7 @@ function show_edit_board(a_course) {
                     <h5 class="c-attribute">
                         Course number :
                     </h5>
-                    <p class="c-info" id="c-number">${JSON.stringify(a_course.course_subject_code)}
+                    <p class="c-info" id="c-number">${JSON.stringify(a_course.course_subject_code).replace(/["]+/g,'')}
                     </p>
                     <!-- <button class="edit-btn" id="btn-c-num"><i class="fa fa-pencil-square-o fa-lg"
                             aria-hidden="true"></i></button> -->
@@ -216,7 +222,7 @@ function show_edit_board(a_course) {
                     <h5 class="c-attribute">
                         Course name :
                     </h5>
-                    <p class="c-info" id="c-name">${JSON.stringify(a_course.course_name)}</p>
+                    <p class="c-info" id="c-name">${JSON.stringify(a_course.course_name).replace(/["]+/g,'')}</p>
                     <!-- <button class="edit-btn" id="btn-c-name"><i class="fa fa-pencil-square-o fa-lg"
                             aria-hidden="true"></i></button> -->
                 </div>
@@ -227,7 +233,7 @@ function show_edit_board(a_course) {
                     </h5>
                     <button class="edit-btn" id="btn-c-pre"><i class="fa fa-pencil-square-o fa-lg"
                             aria-hidden="true"></i></button>
-                    <p class="c-info-2" id="c-pre" contenteditable="false">${JSON.stringify(a_course.pre_requisite)}
+                    <p class="c-info-2" id="c-pre" contenteditable="false">${JSON.stringify(a_course.pre_requisite).replace(/["]+/g,'')}
                     </p>
 
                 </div>
@@ -238,7 +244,7 @@ function show_edit_board(a_course) {
                     </h5>
                     <button class="edit-btn" id="btn-c-incom"><i class="fa fa-pencil-square-o fa-lg"
                             aria-hidden="true"></i></button>
-                    <p class="c-info-2" id="c-incom" contenteditable="false">${JSON.stringify(a_course.incompatible)}</p>
+                    <p class="c-info-2" id="c-incom" contenteditable="false">${JSON.stringify(a_course.incompatible).replace(/["]+/g,'')}</p>
 
                 </div>
             </div>
@@ -254,7 +260,6 @@ function show_edit_board(a_course) {
     </div>`
 
     document.getElementById('degree-section').insertAdjacentHTML('afterend', innerHTML);
-
 }
 
 function close_edit_board() {
@@ -262,19 +267,61 @@ function close_edit_board() {
     if (edit_board) edit_board.remove();
 }
 
-// Edit Board: </br>
-// -----Code & Name: </br>
-// ${JSON.stringify(a_course.course_subject_code)} </br>
-// ${JSON.stringify(a_course.course_name)}  </br>
+//click edit button to make contenteditable, will combine into one function later
+function add_click_listener() {
+    $("#btn-c-pre").click(function () {
+        if ($("#c-pre").attr("contenteditable") == "false") {
+            $("#c-pre").attr("contenteditable", "true");
+            $("#c-pre").focus();
+            $("#btn-c-pre").html("<i class='fa fa-floppy-o fa-lg' aria-hidden='true'></i>");
+        } else {
+            $("#c-pre").attr("contenteditable", "false");
+            $("#btn-c-pre").html("<i class='fa fa-pencil-square-o fa-lg' aria-hidden='true'></i>");
+        }
+    });
+    
+    $("#btn-c-incom").on("click", function () {
+        if ($("#c-incom").attr("contenteditable") == "false") {
+            $("#c-incom").attr("contenteditable", "true");
+            $("#c-incom").focus();
+            $("#btn-c-incom").html("<i class='fa fa-floppy-o fa-lg' aria-hidden='true'></i>");
+        } else {
+            $("#c-incom").attr("contenteditable", "false");
+            $("#btn-c-incom").html("<i class='fa fa-pencil-square-o fa-lg' aria-hidden='true'></i>");
+        }
+    });
 
-// -----Belongs to:  </br>
-// ${JSON.stringify(a_course.belongs_to)}  </br>
+    document.getElementById('button-save').onclick = ()=>{
+        let form_data = get_edit_form_data(false);
+        let response = request('/edit-course', 'POST', form_data);
+        response.then(res=>{console.log('response :>> edit', res)});
 
-// -----Pre_requisite:  </br>
-// ${JSON.stringify(a_course.pre_requisite)}  </br>
+        location.reload();
+        return;
+    }
 
-// -----Incompatible:  </br>
-// ${JSON.stringify(a_course.incompatible)}  </br>
-// <button onclick="close_edit_board()">
-//     Cancel
-// </button>
+    document.getElementById('button-delete').onclick = ()=>{
+        let form_data = get_edit_form_data(true);
+        let response = request('/edit-course', 'POST', form_data);
+        response.then(res=>{console.log('response :>> delete', res)});
+        
+        location.reload();
+        return;
+    }
+}
+
+/* collect form data */
+function get_edit_form_data(if_delete) {
+    let edit_form_data = {};
+
+    edit_form_data.delete = if_delete;
+    edit_form_data.degree = document.getElementById('academic-degree-name').innerHTML;
+    edit_form_data.stream = stream_name;
+    edit_form_data.course_subject_code = document.getElementById("c-number").innerText;
+    edit_form_data.course_name = document.getElementById("c-name").innerText;
+    edit_form_data.pre_requisite = document.getElementById("c-pre").innerText;
+    edit_form_data.incompatible = document.getElementById("c-incom").innerText;
+    console.log(edit_form_data);
+    
+    return edit_form_data;
+}

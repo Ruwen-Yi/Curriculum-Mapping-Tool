@@ -69,7 +69,16 @@ const search_courses = (req, res)=> {
 
 /* The data structure of add course form in degree structure page */
 let add_course_form = {
-    selected_course:["COMP SCI 0000 Computer of XXX", "COMP SCI 7777 Computer of XXX"], //could be blank
+    selected_course:[
+        {
+            course_subject_code: "COMP SCI 7102",
+            course_name: "Computer System",
+        },
+        {
+            course_subject_code: "COMP SCI 7102",
+            course_name: "Computer System",
+        },
+    ], //could be blank
     selected_degree_stream:[
         {
             degree_name:"Master of Computer Science",
@@ -80,4 +89,53 @@ let add_course_form = {
             stream:["core", "elective","project", "major-ai-ml", "major-cybersecurity"]
         }
     ]
+}
+
+/* two examples of data sent from edit form */
+let edit_form_data = {
+    delete: false,
+    degree: 'Bachelor of Information Technology',
+    stream: 'Core',
+    course_subject_code: "COMP SCI 7102",
+    course_name: "Computer System",
+    incompatible: "COMP SCI 1102, COMP SCI 1202, COMP SCI 2009, COMP SCI 2202, or (COMP SCI 1013 and COMP SCI 1015)",
+    pre_requisite: "COMP SCI 1102, COMP SCI 1202, COMP SCI 2009, COMP SCI 2202, or (COMP SCI 1013 and COMP SCI 1015)"
+}
+
+edit_form_data = {
+    delete: true,
+    degree: 'Bachelor of Information Technology',
+    stream: 'Core',
+    course_subject_code: "COMP SCI 7102",
+    course_name: "Computer System",
+    incompatible: "COMP SCI 1102, COMP SCI 1202, COMP SCI 2009, COMP SCI 2202, or (COMP SCI 1013 and COMP SCI 1015)",
+    pre_requisite: "COMP SCI 1102, COMP SCI 1202, COMP SCI 2009, COMP SCI 2202, or (COMP SCI 1013 and COMP SCI 1015)"
+}
+
+/* from course overview page to add-new-course-controller.js */
+let add_new_course_form_data = { 
+    course_subject_code: 'COMP SCI c444',
+    course_name: 'cna',
+    pre_requisite: 'afWEW',
+    incompatible: 'DSFWEFE' 
+}
+
+let add_new_degree_form_data = {
+    new_degree_name: 'Master of XXXXX',
+    stream: [ 'core', 'project', 'elective' ]
+}
+
+add_new_degree_form_data = {
+    new_degree_name: 'Master of XXXXX',
+    stream: []
+}
+
+let delete_degree_data = {
+    delete: true, //will always be true
+    degree_name: "Master of XXX"
+}
+
+let delete_stream_data = { //not "delete" data provided. once you receive data, just delete the stream
+    degree_name: "Master of XXX",
+    stream: "core"
 }

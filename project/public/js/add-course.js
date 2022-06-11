@@ -335,7 +335,7 @@ function show_add_board() {
                             <option value="elective">Elective</option>
                             <option value="project">Project</option>
                         </optgroup>
-                        <optgroup label="Bachelor of Computer Science (Advanced)">
+                        <optgroup label="Bachelor of Computer Science Advanced">
                             <option value="core">Core</option>
                             <option value="elective">Elective</option>
                             <option value="project">Project</option>
@@ -346,6 +346,11 @@ function show_add_board() {
                             <option value="major-ai-ml">AI and ML Major</option>
                         </optgroup>
                         <optgroup label="Master of Cyber Security">
+                            <option value="core">Core</option>
+                            <option value="elective">Elective</option>
+                            <option value="project">Project</option>
+                        </optgroup>
+                        <optgroup label="Master of Computer Science">
                             <option value="core">Core</option>
                             <option value="elective">Elective</option>
                             <option value="project">Project</option>
@@ -380,39 +385,46 @@ function show_add_board() {
 
 /* search course, create course card and then render */
 function search_course() {
+    document.getElementsByClassName('cards')[0].innerHTML = ""; // clear previous searching result
+
     let searchingValue = document.getElementById("myInput").value.toLowerCase().split(' ').join('-');
-    alert(searchingValue);
     fetch(`/search/search-course?course=${searchingValue}`)
     .then(res=>{
         return res.json();
     })
     .then(data=>{
-        console.log(JSON.stringify(data))
-
-        //return render_course(JSON.stringify(courses_list));
+        //console.log(data);
+        return render_course(data);
     })
     
 }
 /* render the searched result */
-function render_course(courses_list){
-    //courses_list = JSON.parse(courses_list);
-    //let course = course_list[0];
-
+function render_course(data){
+    console.log(data);
+    courses_list = data;
     let course_card = "";
-    for(let i = 0; i < 4; i++){
-        course_card += create_course_card(); //pass in course_subject_code, course_name
+    for (let i=0; i<courses_list.length;i++) {
+        let course_subject_code = courses_list[i].course_subject_code;
+        let course_name = courses_list[i].course_name;
+        course_card += create_course_card(course_subject_code, course_name);
     }
 
+    if(course_card===""){
+        course_card= `
+        <div class="card" style="height:40px">
+            <h6 class="course-number">No result</h6>
+        </div>`;
+    }
     document.getElementsByClassName('cards')[0].insertAdjacentHTML('beforeend', course_card);
 }
 
 /* create course cards to be rendered */
 function create_course_card(course_subject_code, course_name) {
-    course_subject_code = "COMP SCI 0000";
-    course_name = "CCCCCC";
+    // course_subject_code = "COMP SCI 0000";
+    // course_name = "CCCCCC";
     let innerHTML = `
     <div class="card">
-        <input type="checkbox" class="card-box" value="${course_subject_code} ${course_name}" />
+        <input type="checkbox" class="card-box" data-subj-code="${course_subject_code} " data-name="${course_name}" />
         <h6 class="course-number">${course_subject_code}</h6>
         <h6 class="course-name">${course_name}</h6>
     </div>`;
@@ -425,6 +437,7 @@ function create_course_card(course_subject_code, course_name) {
 function get_form_data() {
     let selected_course = get_checkbox_data();
     let selected_degree_stream = get_option_data();
+    console.log(selected_course);
 
     let form_data = {}
     form_data.selected_course = selected_course;
@@ -432,7 +445,7 @@ function get_form_data() {
 
     send_form(form_data);
     close_add_board();
-    //location.reload(); //reload the page
+    location.reload(); //reload the page
 }
 
 /* send data to backend */
@@ -448,8 +461,12 @@ function get_checkbox_data() {
     let selected_course = [];
     
     for (let i = 0; i<boxes.length; i++) {
-        if(boxes[i].checked)
-            selected_course.push(boxes[i].value);
+        if(boxes[i].checked){
+            selected_course.push({
+                course_subject_code:`${boxes[i].getAttribute('data-subj-code')}`,
+                course_name:`${boxes[i].getAttribute('data-name')}`
+            });
+        }
     }
     //console.log(selected_course)
     return selected_course;

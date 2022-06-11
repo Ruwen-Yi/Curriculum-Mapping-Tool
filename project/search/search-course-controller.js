@@ -214,7 +214,7 @@ function setData1(data11){
         // </br> And then render it according to UI design`);
     }
     else{
-        res.status(200).send(`Invalid searching`);
+        res.render('../views/error.ejs');
     }
 }
 

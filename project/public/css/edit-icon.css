@@ -7,7 +7,11 @@
     z-index:9;
 }
 
-.edit:hover {
+.fa-pencil {
+    transition: font-size 0.1s;
+}
+
+.fa.fa-pencil.edit:hover {
     cursor: pointer;
-    background-color: aqua;
+    font-size: 30px;
 }

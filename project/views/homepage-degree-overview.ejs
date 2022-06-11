@@ -12,9 +12,12 @@
     <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css"
         rel="stylesheet" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <!--Font awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="css/styleguide.css" />
     <link rel="stylesheet" type="text/css" href="css/globals.css" />
     <script src="/js/request.js"></script>
+    <script src="/js/add-new-degree.js"></script>
 </head>
 
 <body style="margin: 0; background: #e8f0f2">
@@ -40,12 +43,14 @@
                                     one click.</div>
                             </div>
                         </div>
-                        <div class="search-bar">    
+                        <div class="search-bar">
                             <div class="search-box">
                                 <div class="search-icon">
                                     <img class="search-icon-1" src="img/search-icon@2x.png" />
                                 </div>
-                                <input id="searhing-value" type="text" name="searching_value" placeholder="Course name or course number" style="width: 390px; font-size: 20px; border:none; outline: none; padding-left: 20px;" >
+                                <input id="searhing-value" type="text" name="searching_value"
+                                    placeholder="Course name or course number"
+                                    style="width: 390px; font-size: 20px; border:none; outline: none; padding-left: 20px;">
                             </div>
                             <div class="widget-wrapper">
                                 <div class="drop-down-filled-disabled-yes-primary">
@@ -101,8 +106,8 @@
                 </div>
             </div>
         </div>
-        
-        <div class="tab-button">            
+
+        <div class="tab-button">
             <a href="/">
                 <div class="button-1">
                     <div class="degree valign-text-middle">Degree</div>
@@ -115,52 +120,62 @@
             </a>
         </div>
 
+        <div id="add-new-degree-btn" style="position: relative; width: 100%; height: 10px;">
+            <div style="position: absolute; left: 75%">
+                <i class="fa fa-plus" aria-hidden="true"></i>&nbsp;&nbsp;Add new degree
+            </div>
+        </div>
+
         <div class="body">
             <div class="body-1">
                 <div class="card-row">
-                    <% for (var i=0; i<degreeContent.length; i++){ %>
-                   
-                        <% let degreeFullName = degreeContent[i].degree.split(" "); %>   
-                        <% let degreeRoute = degreeFullName.join("-"); %>                    
-                        <% let degreeLevel = degreeFullName.slice(0, 2).join(" "); %>
+                    <% for (i=0; i<degreeContent.length; i++){ %>
+                        <% let degreeFullName=degreeContent[i].degree.split(" "); %>   
+                        <% let degreeRoute = degreeFullName.join("-"); %>
+                        <% let degreeLevel=degreeFullName.slice(0, 2).join(" "); %>
                         <% let degreeName = degreeFullName.slice(2, degreeFullName.length).join(" "); %>
                         
-                        <a href="/degree-structure/<%= degreeRoute %>" class="text-decoration: none;">  
-                            <div class="card-full-card">   
-                                <!-- dynamically change image -->
-                                <img class="image" src="img/image-<%= i %>@2x.png" />
-                                
-                                <div class="data">
-                                    <div class="title-row">
-                                        <div class="nameblinker-semi-bold-white-18px">
-                                        
-                                            <!-- dynamically change degree name -->
-                                            <span class="blinker-semi-bold-moonstone-18px"><%= degreeLevel %></span
-                                            ><span class="blinker-semi-bold-royal-blue-18px">&nbsp;</span
-                                            ><span class="blinker-semi-bold-storm-gray-18px"><%= degreeName %></span>
-                    
+                        <a href=" /degree-structure/<%=degreeRoute %>" class="link">
+                                <div class="card-full-card">
+                                    <!-- dynamically change image -->
+                                    
+                                    <img class="image" src="img/image-<%= (i % 9) %>@2x.png" />
+
+                                    <div class="data">
+                                        <div class="title-row">
+                                            <div class="nameblinker-semi-bold-white-18px">
+
+                                                <!-- dynamically change degree name -->
+                                                <span class="blinker-semi-bold-moonstone-18px">
+                                                    <%= degreeLevel %>
+                                                </span><span
+                                                    class="blinker-semi-bold-royal-blue-18px">&nbsp;</span><span
+                                                    class="blinker-semi-bold-storm-gray-18px">
+                                                    <%= degreeName %>
+                                                </span>
+
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </a>
-                      <% } %>
+                                </a>
+                                <% } %>
                 </div>
             </div>
         </div>
 
 
-    <!-- trgger search by keyboard events -->
-    <script>
-    var input = document.getElementById("searhing-value");
+        <!-- trgger search by keyboard events -->
+        <script>
+            var input = document.getElementById("searhing-value");
 
-        input.addEventListener("keypress", function(event){
-            if(event.key == "Enter"){
-                event.preventDefault();
-                document.getElementById("btnSearch").click();
-                  }
+            input.addEventListener("keypress", function (event) {
+                if (event.key == "Enter") {
+                    event.preventDefault();
+                    document.getElementById("btnSearch").click();
+                }
             });
-    </script>
+        </script>
 
 
 
@@ -174,9 +189,10 @@
     </div>
     <script>
         /* This function create a loading icon */
-        function loading(){
-          document.getElementsByClassName("card-row")[0].remove();
-          document.getElementsByClassName("body-1")[0].insertAdjacentHTML('afterbegin', 
+        function loading() {
+            document.getElementById('add-new-degree-btn').remove();
+            document.getElementsByClassName("card-row")[0].remove();
+            document.getElementsByClassName("body-1")[0].insertAdjacentHTML('afterbegin',
                 `<link rel="stylesheet" type="text/css" href="/css/loading-page.css" />
                 <div class="loading" id="loading-icon" style="position:absolute ; margin-top: 700px">Loading...</div>`)
         }
