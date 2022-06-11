@@ -70,7 +70,9 @@ const text = require('./homepage/test');
 app.get('/test', text) /* Route for testing */
 /* End of test */
 
-
+app.use('*', (req,res)=>{
+    res.render('../views/error.ejs');
+})
 /* Set up server */
 app.listen(9000, ()=>{
     console.log('Server is listening on port 9000...');
