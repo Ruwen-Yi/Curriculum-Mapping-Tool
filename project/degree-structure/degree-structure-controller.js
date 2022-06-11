@@ -3,7 +3,6 @@ const mysqlConnection = require('../app');
 
 /* Get core/elec courses from the database and then render them */
 const renderDegreeStructure = (req, res) => {
-    
     // Search database[Unfinished]
 
     // Render data, according to your UI desing

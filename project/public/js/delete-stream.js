@@ -11,7 +11,7 @@ function delete_stream(stream_name) {
         console.log(form_data)
         let response = request('/delete-stream', 'POST', form_data);
         response.then(res=>{console.log('response :>> delete', res)});
-        //location.reload();
+        location.reload();
     }
 }
 

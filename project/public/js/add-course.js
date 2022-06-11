@@ -1,7 +1,58 @@
 function add_course() {
     close_add_board();
     show_add_board();
+    get_degree_streams();
     render_course(); //delete later
+}
+function get_degree_streams(){
+    let response = request_table('/degree-structure/get-degree-streams', 'GET', {});
+    response.then(res => {
+        console.log(res)
+        
+        let data_list = []
+        let data = {degree:"", streams:[]};
+
+        data.degree = res[0].degree
+        let i = 0;
+        while(i < res.length){
+
+            if (data.degree == res[i].degree){
+                data.streams.push(res[i].streams);
+                //console.log(data.streams)
+            }
+            else {
+                data_list.push({degree:data.degree, streams:data.streams});
+
+                data.degree = res[i].degree
+                data.streams = []
+                data.streams.push(res[i].streams);
+            }
+            
+            i++;
+            
+        }
+        data_list.push({degree:data.degree, streams:data.streams});
+        
+        console.log(data_list)
+        render_options(data_list);
+    });
+}
+
+function render_options(data_list) {
+    if(!data_list) return;
+    console.log(data_list);
+
+    let innerHTML=""
+    for (let i=0; i< data_list.length; i++){
+        innerHTML +=`<optgroup label="${data_list[i].degree}" id="BCS">`
+        
+        for(let j=0; j<data_list[i].streams.length;j++){
+            innerHTML += `<option value="${data_list[i].streams[j].toLowerCase().split(' ').join('-')}">${data_list[i].streams[j]}</option>`
+        }
+
+        innerHTML += `</optgroup>`
+    }
+    document.getElementById('stream').insertAdjacentHTML('beforeend',innerHTML);
 }
 
 function close_add_board() {
@@ -400,7 +451,8 @@ function search_course() {
 }
 /* render the searched result */
 function render_course(data){
-    console.log(data);
+    //console.log(data);
+    if(!data) return;
     courses_list = data;
     let course_card = "";
     for (let i=0; i<courses_list.length;i++) {
