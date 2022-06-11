@@ -231,7 +231,7 @@ function send_add_new_degree_form() {
     let response = request('/add-new-degree', 'POST', new_degree);
     response.then(res=>{console.log('response :>> ', res)});
     close_add_degree_board();
-    //location.reload(); //reload the page
+    location.reload(); //reload the page
     return;
 }
 

@@ -350,6 +350,11 @@ function show_add_board() {
                             <option value="elective">Elective</option>
                             <option value="project">Project</option>
                         </optgroup>
+                        <optgroup label="Master of Computer Science">
+                            <option value="core">Core</option>
+                            <option value="elective">Elective</option>
+                            <option value="project">Project</option>
+                        </optgroup>
                         <optgroup label="Master of Computing and Innovation">
                             <option value="core">Core</option>
                             <option value="elective">Elective</option>
@@ -404,6 +409,12 @@ function render_course(data){
         course_card += create_course_card(course_subject_code, course_name);
     }
 
+    if(course_card===""){
+        course_card= `
+        <div class="card" style="height:40px">
+            <h6 class="course-number">No result</h6>
+        </div>`;
+    }
     document.getElementsByClassName('cards')[0].insertAdjacentHTML('beforeend', course_card);
 }
 
