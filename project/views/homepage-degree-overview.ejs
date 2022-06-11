@@ -129,11 +129,10 @@
         <div class="body">
             <div class="body-1">
                 <div class="card-row">
-                    <% for (var i=0; i<degreeContent.length; i++){ %>
-
+                    <% for (i=0; i<degreeContent.length; i++){ %>
                         <% let degreeFullName=degreeContent[i].degree.split(" "); %>   
                         <% let degreeRoute = degreeFullName.join("-"); %>
-                            <% let degreeLevel=degreeFullName.slice(0, 2).join(" "); %>
+                        <% let degreeLevel=degreeFullName.slice(0, 2).join(" "); %>
                         <% let degreeName = degreeFullName.slice(2, degreeFullName.length).join(" "); %>
                         
                         <a href=" /degree-structure/<%=degreeRoute %>" class="link">

@@ -224,6 +224,7 @@ html body {
 }
 .result-page .button:hover {
   background-color: #085566;
+  cursor: pointer;
 }
 
 
@@ -284,10 +285,6 @@ html body {
   flex-direction: column;
   gap: 10px;
   justify-content: center;
-  min-height: 67px;
-  min-width: 336px;
-  padding-bottom: 5px;
-  padding-top: 5px;
 }
 
 .result-page .frame-1 {
@@ -296,8 +293,7 @@ html body {
   flex-direction: column;
   gap: 8px;
   justify-content: center;
-  min-height: 28px;
-  min-width: 298px;
+  margin: 12px 22px;
 }
 
 .result-page .computer-networks-applications-1 {
@@ -371,6 +367,7 @@ html body {
   justify-content: flex-start;
   margin-left: 247px;
   margin-top: 22px;
+  margin-bottom: 22px;
   flex-wrap: wrap;
 }
 
