@@ -6,10 +6,11 @@ function add_delete_button() {
         .degree-delete{
             background-color:#053742;
             border:none;
+            margin-bottom: 3rem
         }
         </style>
-        <button class="btn btn-danger degree-delete" onclick="delete_degree()">
-        <i class="fa fa-trash-o" aria-hidden="true"></i>&nbsp;&nbsp;Delete This Degree
+        <button type="button" class="btn btn-danger degree-delete" onclick="delete_degree()" data-bs-toggle="tooltip" data-bs-placement="top" title="Delete this degree" style="margin-bottom:70px">
+        <i class="fa fa-trash-o" aria-hidden="true"></i>&nbsp;&nbsp;Delete degree
         </button>
     </div>
     `

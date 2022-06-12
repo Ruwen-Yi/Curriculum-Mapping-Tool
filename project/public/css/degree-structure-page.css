@@ -6,6 +6,11 @@ a {
   text-decoration: none;
 }
 
+html,
+body {
+  height: 100%;
+}
+
 .add-course {
   border: none;
   background-color: var(--rfh85d);
@@ -18,7 +23,8 @@ a {
   background-color: var(--rfh85d);
   display: flex;
   flex-direction: column;
-  height: 100%;
+  min-height: 100vh;
+  position: relative;
   /* min-height: 1440px; */
   min-width: 1440px;
   width: 100%;
@@ -747,6 +753,8 @@ a {
   padding-right: 125px;
   padding-top: 19px;
   width: 100%;
+  position: absolute;
+  bottom: 0;
 }
 
 .degree-structure-page .copyright {
@@ -780,7 +788,7 @@ a {
   border: none;
 }
 
-.edit{
+.edit {
   padding: 2px 2px;
 }
 

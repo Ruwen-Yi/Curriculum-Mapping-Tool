@@ -118,17 +118,24 @@ function show_edit_board(a_course) {
             border-radius: 5px;
         }
         
-        .add {
-            background-color: #053742;
-        }
+
         
         .save {
             background-color: #053742;
+        }
+
+        .save:hover{
+            background-color: #03232a;
+            color:white;
         }
         
         .delete {
             float: left;
             background-color: red;
+        }
+        .delete:hover{
+            background-color: #c43b3b;
+            color:white;
         }
         
         /* Green */
@@ -148,6 +155,9 @@ function show_edit_board(a_course) {
             background: #ddd;
         }
         
+        .modal-body{
+            padding:0.5rem 0;
+        }
         .module {
             text-align: left;
             font-family: Montserrat;
@@ -213,7 +223,7 @@ function show_edit_board(a_course) {
                     <h5 class="c-attribute">
                         Course number :
                     </h5>
-                    <p class="c-info" id="c-number">${JSON.stringify(a_course.course_subject_code).replace(/["]+/g,'')}
+                    <p class="c-info" id="c-number">${JSON.stringify(a_course.course_subject_code).replace(/["]+/g, '')}
                     </p>
                     <!-- <button class="edit-btn" id="btn-c-num"><i class="fa fa-pencil-square-o fa-lg"
                             aria-hidden="true"></i></button> -->
@@ -222,7 +232,7 @@ function show_edit_board(a_course) {
                     <h5 class="c-attribute">
                         Course name :
                     </h5>
-                    <p class="c-info" id="c-name">${JSON.stringify(a_course.course_name).replace(/["]+/g,'')}</p>
+                    <p class="c-info" id="c-name">${JSON.stringify(a_course.course_name).replace(/["]+/g, '')}</p>
                     <!-- <button class="edit-btn" id="btn-c-name"><i class="fa fa-pencil-square-o fa-lg"
                             aria-hidden="true"></i></button> -->
                 </div>
@@ -233,7 +243,7 @@ function show_edit_board(a_course) {
                     </h5>
                     <button class="edit-btn" id="btn-c-pre"><i class="fa fa-pencil-square-o fa-lg"
                             aria-hidden="true"></i></button>
-                    <p class="c-info-2" id="c-pre" contenteditable="false">${JSON.stringify(a_course.pre_requisite).replace(/["]+/g,'')}
+                    <p class="c-info-2" id="c-pre" contenteditable="false">${JSON.stringify(a_course.pre_requisite).replace(/["]+/g, '')}
                     </p>
 
                 </div>
@@ -244,7 +254,7 @@ function show_edit_board(a_course) {
                     </h5>
                     <button class="edit-btn" id="btn-c-incom"><i class="fa fa-pencil-square-o fa-lg"
                             aria-hidden="true"></i></button>
-                    <p class="c-info-2" id="c-incom" contenteditable="false">${JSON.stringify(a_course.incompatible).replace(/["]+/g,'')}</p>
+                    <p class="c-info-2" id="c-incom" contenteditable="false">${JSON.stringify(a_course.incompatible).replace(/["]+/g, '')}</p>
 
                 </div>
             </div>
@@ -253,7 +263,7 @@ function show_edit_board(a_course) {
             <div class="modal-footer">
                 <button class="btn delete" id="button-delete">Delete</button>
                 <button class="btn cancel" id="button-cancel" button onclick="close_edit_board()">Cancel</button>
-                <button class="btn save" id="button-save">Save changes</button>
+                <button class="btn save" id="button-save">Save</button>
             </div>
            
         </div>
@@ -279,7 +289,7 @@ function add_click_listener() {
             $("#btn-c-pre").html("<i class='fa fa-pencil-square-o fa-lg' aria-hidden='true'></i>");
         }
     });
-    
+
     $("#btn-c-incom").on("click", function () {
         if ($("#c-incom").attr("contenteditable") == "false") {
             $("#c-incom").attr("contenteditable", "true");
@@ -291,20 +301,20 @@ function add_click_listener() {
         }
     });
 
-    document.getElementById('button-save').onclick = ()=>{
+    document.getElementById('button-save').onclick = () => {
         let form_data = get_edit_form_data(false);
         let response = request('/edit-course', 'POST', form_data);
-        response.then(res=>{console.log('response :>> edit', res)});
+        response.then(res => { console.log('response :>> edit', res) });
 
         location.reload();
         return;
     }
 
-    document.getElementById('button-delete').onclick = ()=>{
+    document.getElementById('button-delete').onclick = () => {
         let form_data = get_edit_form_data(true);
         let response = request('/edit-course', 'POST', form_data);
-        response.then(res=>{console.log('response :>> delete', res)});
-        
+        response.then(res => { console.log('response :>> delete', res) });
+
         location.reload();
         return;
     }
@@ -322,6 +332,6 @@ function get_edit_form_data(if_delete) {
     edit_form_data.pre_requisite = document.getElementById("c-pre").innerText;
     edit_form_data.incompatible = document.getElementById("c-incom").innerText;
     console.log(edit_form_data);
-    
+
     return edit_form_data;
 }

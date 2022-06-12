@@ -3,6 +3,7 @@ const mysqlConnection = require('../app');
 
 /* Access data and render degree names*/
 const renderAllDegreeName = (req, res) => {
+
     let qq= 'SELECT * FROM adelaide.degree;'
     mysqlConnection.query(qq, (err, info, fields) => {
         if (!err){

@@ -119,8 +119,6 @@ function show_add_degree_board() {
             background-color: #03232a;
         }
 
-
-
         .cancel {
             background-color: #e7e7e7;
             color: black;

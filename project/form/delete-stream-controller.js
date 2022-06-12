@@ -11,6 +11,11 @@ const delete_stream = (req,res)=>{
     }
     qq='DELETE FROM adelaide.degree_course WHERE stream = "'+stream+'" AND degree = "'+req.body.degree_name+'";'
     mysqlConnection.query(qq);
+
+    /* update degree_streams table */
+    sql=`DELETE FROM adelaide.degree_streams WHERE degree = '${req.body.degree_name}' AND streams = '${req.body.stream}'`;
+    mysqlConnection.query(sql);
+
     res.send({msg:"delete succeed!"})
 }
 
