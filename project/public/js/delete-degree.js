@@ -9,8 +9,8 @@ function add_delete_button() {
             margin-bottom: 3rem
         }
         </style>
-        <button type="button" class="btn btn-danger degree-delete" onclick="delete_degree()" data-bs-toggle="tooltip" data-bs-placement="top" title="Delete this degree">
-        <i class="fa fa-trash-o" aria-hidden="true"></i>&nbsp;&nbsp;Delete
+        <button type="button" class="btn btn-danger degree-delete" onclick="delete_degree()" data-bs-toggle="tooltip" data-bs-placement="top" title="Delete this degree" style="margin-bottom:70px">
+        <i class="fa fa-trash-o" aria-hidden="true"></i>&nbsp;&nbsp;Delete degree
         </button>
     </div>
     `
