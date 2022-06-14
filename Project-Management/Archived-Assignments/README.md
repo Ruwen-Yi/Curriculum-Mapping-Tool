@@ -6,4 +6,5 @@ This folder stored the previous assignments.
  - Milestone 1 report (due 09/05/2022)
  - Final milestone plan (due 13/05/2022)
  - Testing plan (due 24/05/2022)
+ - Poster - Final presentation (due 14/06/2022)
 	 
