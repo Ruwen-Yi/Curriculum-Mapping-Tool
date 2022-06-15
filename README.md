@@ -1,6 +1,6 @@
 # Team-07 Curriculum mapping tool
 
-This project will develop a tool to visualise the courses in the Computer Science curriculum, identifying their connections, level, and degrees they are being taught in.
+This project will develop a tool to visualise the courses in the Computer Science curriculum, identifying their connections, level, and degrees they are being taught in. For files of project management, please check the branch "project-management".
 
 
 
@@ -96,9 +96,9 @@ Overview: (For details, [check here](https://uao365-my.sharepoint.com/:w:/g/pers
     Requirement 3: Degree structure [Finished]
     Requirement 4: Course relationships [Finished]  
     Requirement 5: A search functionality [Finished]  
-    Requirement 6: Add, delete, and edit a course 
+    Requirement 6: Add, delete, and edit a course [Finished]
     Requirement 7: A list of all courses [Finished] 
-    Requirement 8: Separate the degree of Bachelor of Computer Science
+    Requirement 8: Separate the degree of Bachelor of Computer Science [Finished]
 ```
 
 
