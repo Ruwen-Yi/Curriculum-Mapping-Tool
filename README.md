@@ -1,6 +1,9 @@
+For files of project management (timesheet, designs etc.), please check the branch "project-management".
+
+
 # Team-07 Curriculum mapping tool
 
-This project will develop a tool to visualise the courses in the Computer Science curriculum, identifying their connections, level, and degrees they are being taught in. For files of project management, please check the branch "project-management".
+This project will develop a tool to visualise the courses in the Computer Science curriculum, identifying their connections, level, and degrees they are being taught in. 
 
 
 
