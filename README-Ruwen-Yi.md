@@ -42,7 +42,7 @@
 
 From week 2 to week 13, including one week of mid-break:
 
-```shell
+```
 Total commits:             230 (out of 335)
 Total issues assigned:     54  (out of 120)
 Total hours:               256 hours in total, around 20 hours per week
