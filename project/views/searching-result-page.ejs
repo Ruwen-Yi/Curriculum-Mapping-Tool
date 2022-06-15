@@ -116,7 +116,7 @@
         <div class="card-row">
           <% for (var i=0; i<degrees.length; i++){ %>
             <% let degreeFullName=degrees[i].degree.split(" "); %>   
-      <% let degreeRoute = degreeFullName.join(" -"); %>
+      <% let degreeRoute = degreeFullName.join("-"); %>
               <% let degreeLevel=degreeFullName.slice(0, 2).join(" "); %>
       <% let degreeName = degreeFullName.slice(2, degreeFullName.length).join(" "); %>
                         
@@ -151,7 +151,7 @@
             <% let course_name=courses[i].course_name; %>
               <% let course_subject_and_course_code=courses[i].course_subject_code; %>
                 <% let course_code=course_subject_and_course_code.split(' ').filter(function(ii){return ii})[2] %> 
-      <a href="../course-relationships/<%= course_code%>-<%= course_name.split(' ').join(' -').toLowerCase()%>">
+      <a href="../course-relationships/<%= course_code%>-<%= course_name.split(' ').join('-').toLowerCase()%>">
                   <div class="taskcard">
                     <div class="taskcard-1 border-1px-gallery">
                       <div class="main-info">
