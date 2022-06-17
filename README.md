@@ -1,14 +1,13 @@
+# Team-07 Curriculum mapping tool
+
+This project will develop a tool to visualise the courses in the Computer Science curriculum, identifying their connections, level, and degrees they are being taught in. 
+
 ### Branch
 ```
 master: Final project version
 project-management: All project management files from week2 to week13.
 Mileston1-project: Management files and project during milestone 1.
 ```
-
-# Team-07 Curriculum mapping tool
-
-This project will develop a tool to visualise the courses in the Computer Science curriculum, identifying their connections, level, and degrees they are being taught in. 
-
 
 
 ### Client
