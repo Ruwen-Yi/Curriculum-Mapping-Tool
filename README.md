@@ -1,5 +1,9 @@
-For files of project management (timesheet, designs etc.), please check the branch "project-management".
-
+### Branch
+```
+master: Final project version
+project-management: All project management files from week2 to week13.
+Mileston1-project: Management files and project during milestone 1.
+```
 
 # Team-07 Curriculum mapping tool
 
@@ -35,29 +39,49 @@ Project Manager: Ying Liao
 Product Owner: Yingyu Wei
 ```
 
-
-
 ### File structure
 ```
 project/
 ├── app.js
 ├── degree-structure
 │   ├── degree-structure-controller.js
+│   ├── get-degree-streams-controller.js
 │   └── degree-structure-routes.js
-├── homepage-degree-name
-│   ├── degree-name-controller.js
-│   └── degree-name-routes.js
+├── homepage
+│   ├── course-overview-controller.js
+│   ├── degree-overview-controller.js
+│   └── homepage-routes.js
 ├── package-lock.json
 ├── package.json
 ├── public
-│   ├── globals.css
-│   ├── homepage.css
-│   └── styleguide.css
+│   ├── css
+│   ├── img
+│   └── js
 ├── search
 │   ├── search-course-controller.js
+│   ├── search-add-course-controller.js
 │   └── search-course-route.js
+├── form
+│   ├── add-course-controller.js
+│   ├── add-new-course-controller.js
+│   ├── add-new-degree-controller.js
+│   ├── delete-degree-controller.js
+│   ├── delete-stream-controller.js
+│   ├── edit-course-controller.js
+│   └── form-route.js
+├── course-relationship
+│   ├── course-relationship-controller.js
+│   └── course-relationship-route.js
 └── views
-    └── index.ejs
+    ├── course-relationship-page.ejs
+    ├── degree-structure-page.ejs
+    ├── error.ejs
+    ├── footer.ejs
+    ├── header.ejs
+    ├── homepage-course-overview.ejs
+    ├── homepage-degree-overview.ejs
+    ├── loading-page.ejs
+    └── searching-result-page.ejs
 ```
 
 ```
