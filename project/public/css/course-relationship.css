@@ -80,7 +80,7 @@ html body {
 }
 
 .card-section .card-title {
-    font-size: 1rem;
+    font-size: 1.3rem;
 }
 
 #pre-in .card-header {
@@ -108,7 +108,7 @@ html body {
 }
 
 #degree-cards .card-footer {
-    font-size: 0.8rem;
+    font-size: 1.1rem;
 }
 
 .degree-type {
@@ -145,7 +145,7 @@ html body {
 
 
 .card-content {
-    font-size: 0.8rem;
+    font-size: 1.3rem;
     text-align: left;
     line-height: 1.5;
 }
