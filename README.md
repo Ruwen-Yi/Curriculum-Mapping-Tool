@@ -1,10 +1,13 @@
-For files of project management (timesheet, designs etc.), please check the branch "project-management".
-
-
 # Team-07 Curriculum mapping tool
 
 This project will develop a tool to visualise the courses in the Computer Science curriculum, identifying their connections, level, and degrees they are being taught in. 
 
+### Branch
+```
+master: Final project version
+project-management: All project management files from week2 to week13.
+Mileston1-project: Management files and project during milestone 1.
+```
 
 
 ### Client
@@ -35,58 +38,49 @@ Project Manager: Ying Liao
 Product Owner: Yingyu Wei
 ```
 
-
-
 ### File structure
 ```
 project/
 ├── app.js
 ├── degree-structure
 │   ├── degree-structure-controller.js
+│   ├── get-degree-streams-controller.js
 │   └── degree-structure-routes.js
-├── homepage-degree-name
-│   ├── degree-name-controller.js
-│   └── degree-name-routes.js
+├── homepage
+│   ├── course-overview-controller.js
+│   ├── degree-overview-controller.js
+│   └── homepage-routes.js
 ├── package-lock.json
 ├── package.json
 ├── public
-│   ├── globals.css
-│   ├── homepage.css
-│   └── styleguide.css
+│   ├── css
+│   ├── img
+│   └── js
 ├── search
 │   ├── search-course-controller.js
+│   ├── search-add-course-controller.js
 │   └── search-course-route.js
+├── form
+│   ├── add-course-controller.js
+│   ├── add-new-course-controller.js
+│   ├── add-new-degree-controller.js
+│   ├── delete-degree-controller.js
+│   ├── delete-stream-controller.js
+│   ├── edit-course-controller.js
+│   └── form-route.js
+├── course-relationship
+│   ├── course-relationship-controller.js
+│   └── course-relationship-route.js
 └── views
-    └── index.ejs
-```
-
-```
-Project-Management/
-├── Archived-Assignments
-│   ├── 1. Pitch
-│   ├── 2. Business-Case-and-Project-Plan
-│   ├── 3. Milestone1-Report
-│   ├── 4. Final-milestone-plan
-├── Design-Documentation
-│   ├── 1. Wireframe-Design
-│   ├── 2. Prototype-Design
-│   ├── 3. Design-System
-│   ├── 4. Database-Structure
-│   ├── 5. Software-Architecture
-├── Meeting-Agenda-and-Minutes
-│   ├── Sprint-01
-│   ├── Sprint-02
-│   ├── Sprint-03
-│   ├── Sprint-04
-│   └── Sprint-05
-│   └── Sprint-06
-│   └── Sprint-07  
-├── Requirement-Documentation
-└── Timesheets
-    ├── Ruwen-YI
-    ├── Ying-Liao
-    ├── YingYu-Wei
-    └── Yuhao-Wang
+    ├── course-relationship-page.ejs
+    ├── degree-structure-page.ejs
+    ├── error.ejs
+    ├── footer.ejs
+    ├── header.ejs
+    ├── homepage-course-overview.ejs
+    ├── homepage-degree-overview.ejs
+    ├── loading-page.ejs
+    └── searching-result-page.ejs
 ```
 
 
