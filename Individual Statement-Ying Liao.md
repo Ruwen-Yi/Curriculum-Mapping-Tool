@@ -23,5 +23,9 @@ Name: Ying Liao ID:a1812504
 ### Project Effort:
 From week 2 to week 12, including two weeks of mid-break:
 
+
+```
 Total issues assigned:     40 (out of 120)
+
 Total hours:               219 hours in total, around 21 hours per week
+```
