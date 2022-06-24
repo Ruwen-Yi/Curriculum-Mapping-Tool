@@ -73,6 +73,6 @@ We take two weeks as one sprint. In each sprint we will have one client meeting 
 - **Client meeting date** : 02/06
 - **Group meeting date** : 
 	- 31/05
-	- 02/05
-	-......
+	- 02/06
+
 	
