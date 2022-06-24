@@ -6,7 +6,7 @@
    - **Product Owner**: Managing and prioritizing the product backlog,translating the client's oral requirements to tasks for development.
 
 
-## **Contributions**  
+## **Contributions :**  
   - Design the wireframe and was chosen by the client.
   - Design the UI /  UX system of whole application including color pattern, pictures displayed on the homepage, fonts, title, slogan and etc.
   - Design all the pages and popup modals.
@@ -15,6 +15,6 @@
   - Communicate with the client to get the feedback about the design and modify according to client's request.
     
 
-##  **Average hours investigated to the project**:
+##  **Average hours investigated to the project :**
 
     During the entire project development process(from week 2 to week 13, and one week of midbreak), my working hours are 330.5 hours in total. I put 27.5 hours of working time in this project every week.
