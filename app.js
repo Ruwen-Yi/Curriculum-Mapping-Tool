@@ -3,10 +3,12 @@ const express = require('express');
 const app = express();
 
 
-const mysql = require('mysql');
+const mysql = require('mysql2');
 const bodyParser = require("body-parser");
 const database = require('mime-db');
 const path = require('path')
+
+require('dotenv').config();
 
 
 app.set('view engine','ejs');
@@ -22,12 +24,15 @@ app.use('/public', express.static(path.resolve(__dirname+'/public/')))
 app.use(express.json());
 app.use(express.urlencoded({extended: true}))
 
+console.log(typeof process.env.NAME)
 /* Connection String to Database */
 var mysqlConnection = mysql.createConnection({
-    host: 'database-2.cwlp4i7l59rt.ap-southeast-2.rds.amazonaws.com',
-    user: 'admin',
-    password: '12345678', //请与上一步在数据库设置的密码相同
-    port: '3306'
+    host: process.env.HOST,
+    user: process.env.USER_NAME,
+    password: process.env.PASSWORD,
+    port: process.env.PORT || 3306,
+    database: process.env.DATABASE,
+    connectTimeout: 60000
 });
 
 /* To check whether the connection is succeed for Failed while running the project in console. */  
@@ -35,11 +40,13 @@ mysqlConnection.connect((err) => {
     if (!err) {
         console.log("Db Connection Succeed");
     } else {
-        console.log("Db connect Failed \n Error :" + JSON.stringify(err, undefined, 2));
+        console.log("Db connect Failed !\n Error :" + JSON.stringify(err, undefined, 2));
     }
 });
-/* Use adelaide database */
-mysqlConnection.query(`USE adelaide;`);
+// /* Use adelaide database */
+// mysqlConnection.query(`USE ${process.env.NAME};`);
+
+
 
 /* Export database */
 module.exports = mysqlConnection;
