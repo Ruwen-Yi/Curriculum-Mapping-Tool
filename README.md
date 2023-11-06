@@ -108,3 +108,9 @@ COMMUNICATION:    Discord, Microsoft Team, Email
 BACK       END:   EJS view engine, Node.js, Express, MYSQL
 FRONT      END:   CSS, HTML, Javascript
 ```
+
+
+### run on your local machine
+1. npm install
+2. node app.js
+3. open your browser http://localhost:9000
