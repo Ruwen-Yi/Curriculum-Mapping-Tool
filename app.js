@@ -24,14 +24,14 @@ app.use('/public', express.static(path.resolve(__dirname+'/public/')))
 app.use(express.json());
 app.use(express.urlencoded({extended: true}))
 
-console.log(typeof process.env.NAME)
+
 /* Connection String to Database */
 var mysqlConnection = mysql.createConnection({
-    host: process.env.HOST,
-    user: process.env.USER_NAME,
-    password: process.env.PASSWORD,
-    port: process.env.PORT || 3306,
-    database: process.env.DATABASE,
+    host: process.env.DB_HOST,
+    user: process.env.DB_USER,
+    password: process.env.DB_PASSWORD,
+    port: process.env.DB_PORT || 3306,
+    database: process.env.DB_DATABASE,
     connectTimeout: 60000
 });
 
