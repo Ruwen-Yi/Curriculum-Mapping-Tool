@@ -12,7 +12,6 @@ const add_new_degree = require('./add-new-degree-controller');
 const delete_degree = require('./delete-degree-controller');
 const delete_stream = require('./delete-stream-controller');
 
-
 /* Specifiy what function will be used after accessing a route with a http request */
 router.route('/add-course').post(add_course);
 router.route('/edit-course').post(edit_course);

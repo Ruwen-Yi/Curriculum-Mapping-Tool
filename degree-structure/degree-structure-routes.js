@@ -4,8 +4,8 @@ const express = require('express');
 const router = express.Router();
 
 /* Import functions that will be used under these routes */
-const {renderDegreeStructure} = require('./degree-structure-controller');
-const {getDegreeData} = require('./degree-structure-controller');
+const { renderDegreeStructure } = require('./degree-structure-controller');
+const { getDegreeData } = require('./degree-structure-controller');
 const get_degree_streams = require('./get-degree-streams-controller');
 
 /* Specifiy what function will be used after accessing a route with a http request */

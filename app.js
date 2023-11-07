@@ -43,15 +43,9 @@ mysqlConnection.connect((err) => {
         console.log("Db connect Failed !\n Error :" + JSON.stringify(err, undefined, 2));
     }
 });
-// /* Use adelaide database */
-// mysqlConnection.query(`USE ${process.env.NAME};`);
-
-
 
 /* Export database */
 module.exports = mysqlConnection;
-
-
 
 /* Import routes for showing degree name */
 const homepage = require('./homepage/homepage-routes');
@@ -70,12 +64,6 @@ app.use('/degree-structure', degreeStructure);
 app.use('/search', courseSearching);
 app.use('/course-relationships', courseRelationship)
 app.use('/form', formControl);
-
-
-/* Build for test, checking if expected data can be sent to a blank page */
-const text = require('./homepage/test');
-app.get('/test', text) /* Route for testing */
-/* End of test */
 
 app.use('*', (req,res)=>{
     res.render('../views/error.ejs');

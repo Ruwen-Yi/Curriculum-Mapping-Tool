@@ -3,26 +3,26 @@ const mysqlConnection = require('../app');
 
 /* Access data and render degree names*/
 const renderAllDegreeName = (req, res) => {
-    let qq= `SELECT * FROM degree;`
+    let qq = `SELECT * FROM degree;`
     mysqlConnection.query(qq, (err, info, fields) => {
-        if (!err){
-            var data =JSON.stringify(info);
+        if (!err) {
+            var data = JSON.stringify(info);
             data = JSON.parse(data);
             console.log(data[1].degree);
-            res.render("../views/homepage-degree-overview.ejs",{degreeContent:data});
+            res.render("../views/homepage-degree-overview.ejs", { degreeContent: data });
         }
-        else{
+        else {
             console.log(err);
         }
     })
-    
+
 };
 
-const addNewDegree = (req, res)=>{
+const addNewDegree = (req, res) => {
     console.log("req.body");
     console.log(req.body);
     res.send(req.body)
 }
 
 /* Export the function to be used by routes.js */
-module.exports = {renderAllDegreeName, addNewDegree};
+module.exports = { renderAllDegreeName, addNewDegree };

@@ -27,7 +27,6 @@ const edit_course = (req,res)=>{
     }   
     mysqlConnection.query(qq);
     res.send({msg:result}) // must do res.send
-
 }
 
 /* Export the function to be used by routes.js */

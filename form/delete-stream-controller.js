@@ -1,22 +1,22 @@
 /* Access database*/
 const mysqlConnection = require('../app');
 
-const delete_stream = (req,res)=>{
+const delete_stream = (req, res) => {
     console.log(req.body);
-    let stream ="";
-    if(req.body.stream=="Elective"){
-        stream= "elec"
-    }else{
-        stream=req.body.stream;
+    let stream = "";
+    if (req.body.stream == "Elective") {
+        stream = "elec"
+    } else {
+        stream = req.body.stream;
     }
-    qq='DELETE FROM degree_course WHERE stream = "'+stream+'" AND degree = "'+req.body.degree_name+'";'
+    qq = 'DELETE FROM degree_course WHERE stream = "' + stream + '" AND degree = "' + req.body.degree_name + '";'
     mysqlConnection.query(qq);
 
     /* update degree_streams table */
-    sql=`DELETE FROM degree_streams WHERE degree = '${req.body.degree_name}' AND streams = '${req.body.stream}'`;
+    sql = `DELETE FROM degree_streams WHERE degree = '${req.body.degree_name}' AND streams = '${req.body.stream}'`;
     mysqlConnection.query(sql);
 
-    res.send({msg:"delete succeed!"})
+    res.send({ msg: "delete succeed!" })
 }
 
 module.exports = delete_stream;
