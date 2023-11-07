@@ -17,12 +17,12 @@ const edit_course = (req,res)=>{
     }
     if (edit_form_data.delete){
         result = "data successfully deleted";
-        qq= 'DELETE FROM adelaide.degree_course WHERE courses LIKE "'+edit_form_data.course_subject_code+'%"'+' AND stream="'+stream+'" AND degree="'+req.body.degree+'";'
+        qq= 'DELETE FROM degree_course WHERE courses LIKE "'+edit_form_data.course_subject_code+'%"'+' AND stream="'+stream+'" AND degree="'+req.body.degree+'";'
         console.log(qq);
     }
     else{
         result = "data successfully edited";
-        qq= 'UPDATE adelaide.course SET Incompatibale="'+req.body.incompatible+'", pre_requisite="'+req.body.pre_requisite+'" WHERE course_code="'+req.body.course_subject_code+'";'
+        qq= 'UPDATE course SET Incompatibale="'+req.body.incompatible+'", pre_requisite="'+req.body.pre_requisite+'" WHERE course_code="'+req.body.course_subject_code+'";'
         console.log(qq);
     }   
     mysqlConnection.query(qq);

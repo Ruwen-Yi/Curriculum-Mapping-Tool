@@ -38,7 +38,7 @@ const add_course = (req,res)=>{
         }else{
             stream=newC.selected_degree_stream[ii].streams[iii];
         }
-        let qq ="INSERT INTO adelaide.degree_course ( degree, stream, supplement, courses, name ) VALUES ( '"+newC.selected_degree_stream[ii].degree_name+"', '"+stream+"', '', '"+newC.selected_course[i].course_subject_code+newC.selected_course[i].course_name+"', '"+newC.selected_course[i].course_name+"' );"
+        let qq ="INSERT INTO degree_course ( degree, stream, supplement, courses, name ) VALUES ( '"+newC.selected_degree_stream[ii].degree_name+"', '"+stream+"', '', '"+newC.selected_course[i].course_subject_code+newC.selected_course[i].course_name+"', '"+newC.selected_course[i].course_name+"' );"
         console.log(qq);
         mysqlConnection.query(qq);
         }
