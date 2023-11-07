@@ -4,11 +4,11 @@ const mysqlConnection = require('../app');
 /* This function add one or more course to multiple degrees' streams  */
 const add_new_degree = (req,res)=>{
     console.log(req.body);
-    let q = "INSERT INTO adelaide.degree ( degree, content ) VALUES ( '"+req.body.new_degree_name+"','' );"
+    let q = "INSERT INTO degree ( degree, content ) VALUES ( '"+req.body.new_degree_name+"','' );"
     mysqlConnection.query(q);
 
     for (i=0;i<req.body.stream.length;i++){
-        let qq  ="INSERT INTO adelaide.degree_course ( degree, stream, supplement, courses, name ) VALUES ( '"+req.body.new_degree_name+"', '"+req.body.stream[i]+"', '', '', '' );"
+        let qq  ="INSERT INTO degree_course ( degree, stream, supplement, courses, name ) VALUES ( '"+req.body.new_degree_name+"', '"+req.body.stream[i]+"', '', '', '' );"
         mysqlConnection.query(qq);
 
         /* add to degree_streams table */

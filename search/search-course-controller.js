@@ -6,10 +6,12 @@ async function searchCourse (req, res){
     const mysql2 = require('mysql2/promise');
 
     const connection = await mysql2.createConnection({
-    host: 'database-2.cwlp4i7l59rt.ap-southeast-2.rds.amazonaws.com',
-    user: 'admin',
-    password: '12345678', //请与上一步在数据库设置的密码相同
-    database: 'adelaide'
+        host: process.env.DB_HOST,
+        user: process.env.DB_USER,
+        password: process.env.DB_PASSWORD,
+        port: process.env.DB_PORT || 3306,
+        database: process.env.DB_DATABASE,
+        connectTimeout: 60000
     });
     /* all category */
     if (req.query['all-categories']){
@@ -19,7 +21,7 @@ async function searchCourse (req, res){
         
         /* ..[taken by Yuhao].. */
 
-        let [list] = await connection.execute('SELECT * FROM adelaide.course WHERE fullname LIKE "%'+queryAll+'%";');
+        let [list] = await connection.execute('SELECT * FROM course WHERE fullname LIKE "%'+queryAll+'%";');
 
         for (i=0; i<list.length; i++){
 
@@ -62,7 +64,7 @@ async function searchCourse (req, res){
         }
 
         list = setData1(list)
-        let [AllDgree] = await connection.execute('SELECT * FROM adelaide.degree WHERE degree LIKE "%'+queryAll+'%";');
+        let [AllDgree] = await connection.execute('SELECT * FROM degree WHERE degree LIKE "%'+queryAll+'%";');
         //res.send(list)
         // Render this two 
         //console.log(list);
@@ -105,7 +107,7 @@ async function searchCourse (req, res){
         /* ..[taken by Yuhao].. */
         
         
-        let qq= 'SELECT * FROM adelaide.degree WHERE degree LIKE "%'+queryDegree+'%";'
+        let qq= 'SELECT * FROM degree WHERE degree LIKE "%'+queryDegree+'%";'
         mysqlConnection.query(qq, (err, info, fields) => {
         if (!err){
             var data =JSON.stringify(info);
@@ -135,7 +137,7 @@ async function searchCourse (req, res){
     //async function main(req, res) {
 
     // list = [ {}, {}, ... ]
-    let [list] = await connection.execute('SELECT * FROM adelaide.course WHERE fullname LIKE "%'+queryCourse+'%";');
+    let [list] = await connection.execute('SELECT * FROM course WHERE fullname LIKE "%'+queryCourse+'%";');
 
     for (i=0; i<list.length; i++){
 

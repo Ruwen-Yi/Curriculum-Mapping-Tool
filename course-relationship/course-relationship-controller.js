@@ -10,14 +10,16 @@ const getRelationship = async function(req, res) {
     const mysql2 = require('mysql2/promise');
 
     const connection = await mysql2.createConnection({
-        host: 'database-2.cwlp4i7l59rt.ap-southeast-2.rds.amazonaws.com',
-        user: 'admin',
-        password: '12345678', //请与上一步在数据库设置的密码相同
-        database: 'adelaide'
+        host: process.env.DB_HOST,
+        user: process.env.DB_USER,
+        password: process.env.DB_PASSWORD,
+        port: process.env.DB_PORT || 3306,
+        database: process.env.DB_DATABASE,
+        connectTimeout: 60000
     });
 
     /* Taken by yuhao: find the course*/
-    let [a_course] = await connection.execute('SELECT * FROM adelaide.course WHERE `course_code` = "COMP SCI ' + course_code +'";');
+    let [a_course] = await connection.execute('SELECT * FROM course WHERE `course_code` = "COMP SCI ' + course_code +'";');
     //console.log(a_course)
 
     let [b_to] = await connection.execute('SELECT degree,stream,supplement FROM `degree_course` WHERE `courses` = "'+ a_course[0].fullname +'";');
