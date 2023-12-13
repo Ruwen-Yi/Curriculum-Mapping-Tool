@@ -1,5 +1,4 @@
 /* Access database*/
-const { NULL } = require('mysql/lib/protocol/constants/types');
 const mysqlConnection = require('../app');
 
 /* This function add one or more course to multiple degrees' streams  */
