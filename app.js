@@ -22,6 +22,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 /* Get a database connection */
+let maxTry = 3;
 function getDatabaseConnetion() {
     // Configure the database connection
     const mysqlConfig = {
@@ -49,6 +50,9 @@ function getDatabaseConnetion() {
     // Get a new connection if on connection error
     mysqlConnection.on("error", (err) => {
         console.error("MySQL connection error:", err);
+        
+        if (--maxTry < 0) return;
+
         mysqlConnection = getDatabaseConnetion();
     });
 
