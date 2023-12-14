@@ -52,7 +52,7 @@ function getDatabaseConnetion() {
         console.error("MySQL connection error:", err);
         
         if (--maxTry < 0) return;
-
+        console.log("replacing the connection with a new one")
         mysqlConnection = getDatabaseConnetion();
     });
 
