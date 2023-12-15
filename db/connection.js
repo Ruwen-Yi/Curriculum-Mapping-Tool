@@ -14,13 +14,11 @@ let mysqlConnection = mysql.createConnection(mysqlConfig);
 
 // Check whether the connection is succeed
 mysqlConnection.connect((err) => {
-    if (!err) {
-        console.log("Db Connection Succeed");
-    } else {
-        console.log(
-        "Db connect Failed !\n Error :" + JSON.stringify(err, undefined, 2)
-        );
+    if (err) {
+        console.error("Db connect Failed.\n" + err.stack);
     }
+    
+    console.log("Db Connection Succeed");
 });
 
 // Get a new connection if on connection error
