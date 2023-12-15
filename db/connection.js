@@ -26,6 +26,7 @@ let retry = 0;
 mysqlConnection.on("error", (err) => {
     console.error("MySQL connection error:", err);
     
+    // Stop getting a new connection if exceed three times 
     if (++retry > 3) return;
     
     console.log("replacing the connection with a new one")
