@@ -2,7 +2,6 @@
 const express = require("express");
 const app = express();
 
-const mysql = require("mysql2");
 const bodyParser = require("body-parser");
 const database = require("mime-db");
 const path = require("path");
@@ -22,45 +21,48 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 /* Get a database connection */
-let maxTry = 3;
-function getDatabaseConnetion() {
-    // Configure the database connection
-    const mysqlConfig = {
-        host: process.env.DB_HOST,
-        user: process.env.DB_USER,
-        password: process.env.DB_PASSWORD,
-        port: process.env.DB_PORT || 3306,
-        database: process.env.DB_DATABASE,
-    };
+// let maxTry = 3;
+// function getDatabaseConnetion() {
+//     // Configure the database connection
+//     const mysqlConfig = {
+//         host: process.env.DB_HOST,
+//         user: process.env.DB_USER,
+//         password: process.env.DB_PASSWORD,
+//         port: process.env.DB_PORT || 3306,
+//         database: process.env.DB_DATABASE,
+//     };
 
-    // Get a database connection
-    let mysqlConnection = mysql.createConnection(mysqlConfig);
+//     // Get a database connection
+//     let mysqlConnection = mysql.createConnection(mysqlConfig);
 
-    // Check whether the connection is succeed
-    mysqlConnection.connect((err) => {
-        if (!err) {
-            console.log("Db Connection Succeed");
-        } else {
-            console.log(
-            "Db connect Failed !\n Error :" + JSON.stringify(err, undefined, 2)
-            );
-        }
-    });
+//     // Check whether the connection is succeed
+//     mysqlConnection.connect((err) => {
+//         if (!err) {
+//             console.log("Db Connection Succeed");
+//         } else {
+//             console.log(
+//             "Db connect Failed !\n Error :" + JSON.stringify(err, undefined, 2)
+//             );
+//         }
+//     });
 
-    // Get a new connection if on connection error
-    mysqlConnection.on("error", (err) => {
-        console.error("MySQL connection error:", err);
+//     // Get a new connection if on connection error
+//     mysqlConnection.on("error", (err) => {
+//         console.error("MySQL connection error:", err);
         
-        if (--maxTry < 0) return;
-        console.log("replacing the connection with a new one")
-        mysqlConnection = getDatabaseConnetion();
-    });
+//         if (--maxTry < 0) return;
+//         console.log("replacing the connection with a new one")
+//         mysqlConnection = getDatabaseConnetion();
+//     });
 
-    return mysqlConnection;
-}
+//     return mysqlConnection;
+// }
 
-/* Export database connection */
-let mysqlConnection = getDatabaseConnetion();
+// /* Export database connection */
+// let mysqlConnection = getDatabaseConnetion();
+// module.exports = mysqlConnection;
+
+const mysqlConnection = require("./db/connection.js");
 module.exports = mysqlConnection;
 
 /* Import routes for showing degree name */
