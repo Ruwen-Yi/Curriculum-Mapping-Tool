@@ -7,7 +7,7 @@ const router = express.Router();
 /* Import functions that will be used under these routes */
 const { addNewDegree } = require('./degree-overview-controller');
 const { renderAllDegreeName } = require('./degree-overview-controller');
-const renderAllCourses = require('./course-overview-controller');
+const {renderAllCourses} = require('./course-overview-controller');
 
 /* Specifiy what function will be used after accessing a route with a http request */
 router.route('/').get(renderAllDegreeName);

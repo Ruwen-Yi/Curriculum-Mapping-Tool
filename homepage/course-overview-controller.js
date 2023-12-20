@@ -1,86 +1,40 @@
 /* Access database*/
-// const asyncConnection = require('../db/asyncConnection.js');
 const mysqlConnection = require('../app');
 
-const connection = mysqlConnection;
-
-async function main(req, res) {
-    let list = []; 
+function renderAllCourses(req, res) {
     new Promise((resolve, reject) => {
-        connection.execute(
+        // fetch courses
+        mysqlConnection.execute(
             "SELECT * FROM `course`",
             null,
-            (err, courses) => (err ? reject(err) : resolve(courses.slice(0,5)))
+            (err, courses) => (err ? reject(err) : resolve(courses))
         );
     })
     .then(courses => {
         console.log(courses);
-        // add degrees info to every course
-        const promises = courses.map(course => fetchDegreesByCourse(course));
+        // fetch degrees info of every course and store into the course object
+        const promises = courses.map(course => fetchDegreesInfoByCourse(course));
         return Promise.all(promises);
     })
-    .then((results) => {
-        console.log(JSON.stringify(results, null, 2));
-        let list = setData1(results);
+    .then(courses => {
+        console.log(JSON.stringify(courses, null, 2));
+        // make a new course list with formatted info of each course
+        let list = formatCoursesInfo(courses);
         res.render("../views/homepage-course-overview.ejs", { course_list: list });
     })
     .catch(err => {
         console.error(err.stack);
     })
-
-    // for (i = 0; i < list.length; i++) {
-
-    //     const query = 'SELECT degree,stream,supplement FROM `degree_course` WHERE `courses` = ?';
-    //     [b_to] = await connection.execute(query, [list[i].fullname]);
-    //     let bt = [];
-    //     let info = {
-    //         degree: "",
-    //         courses: "",
-    //         stream: "",
-    //         supplement: "",
-    //         full: ""
-    //     }
-    //     for (ii = 0; ii < b_to.length; ii++) {
-    //         var reg = RegExp(/Master/)
-    //         var part1, part2, part3;
-
-    //         if (b_to[ii].degree.match(reg)) {
-    //             part1 = b_to[ii].degree.replace("Master of ", "M-");
-    //         } else if (b_to[ii].degree == "") {
-    //             part1 = ""
-    //         } else {
-    //             part1 = b_to[ii].degree.replace("Bachelor of ", "B-");
-    //         }
-
-    //         if (b_to[ii].stream == "") {
-    //             part2 = "";
-    //         } else {
-    //             part2 = "-" + b_to[ii].stream;
-    //         }
-
-    //         if (b_to[ii].supplement == "") {
-    //             part3 = "";
-    //         } else {
-    //             part3 = "-" + b_to[ii].supplement
-    //         }
-
-    //         bb = part1 + part2 + part3;
-    //         info = b_to[ii];
-    //         info.full = bb;
-    //         bt.push(info)
-    //     }
-    //     list[i].belongs_to = bt;
-    // }
-
-    // list = setData1(list)
-    // res.render("../views/homepage-course-overview.ejs", { course_list: list });
 }
 
-function fetchDegreesByCourse(course) {
+// this function return a course object with a new property called "belongs_to"
+// the value of the property is an array
+// the array contains all the degrees that the course belongs to. 
+function fetchDegreesInfoByCourse(course) {
     return (
         new Promise((resolve, reject) => {
             const query = 'SELECT degree,stream,supplement FROM `degree_course` WHERE `courses` = ?';
-            connection.execute(
+            mysqlConnection.execute(
                 query, 
                 [course.fullname],
                 (err, result) => (err ? reject(err) : resolve(result))
@@ -89,22 +43,25 @@ function fetchDegreesByCourse(course) {
         .then(degrees => {
             course.belongs_to = [];
             
+            // format each degree info
             degrees.forEach((item, index) => {
                 let {degree, stream, supplement} = item;
                 
                 degree = degree.trim() ? degree.replace("Master of ", "Ms-").replace("Bachelor of ", "Bc-") : "";
                 stream = stream.trim() ? ("-" + stream) : "";
                 supplement = supplement.trim() ? ("-" + supplement) : "";
+                
                 // to be edited
                 course.belongs_to[index] = {};
                 course.belongs_to[index].full = degree + stream + supplement;
             })
+
             return course;
         })
     )   
 }
 
-function setData1(data11){
+function formatCoursesInfo(data11){
     let courses=[];
     for(i=0;i<data11.length;i++){
         let course = {
@@ -122,11 +79,9 @@ function setData1(data11){
         course.incompatible = data11[i].Incompatibale;
         course.belongs_to = data11[i].belongs_to;
         courses.push(course);
-
-        //console.log(course)
     }
     return courses;
 };
 
 /* Export the function to be used by routes.js */
-module.exports = main;
+module.exports = {renderAllCourses};
