@@ -111,6 +111,7 @@ FRONT      END:   CSS, HTML, Javascript
 
 
 ### run on your local machine
+Make sure you have set up your database based on the user manual and replace the .env variables.
 1. npm install
 2. node app.js
-3. open your browser http://localhost:9000
+3. open your browser http://localhost:3000
